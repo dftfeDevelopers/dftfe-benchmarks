@@ -1,0 +1,60 @@
+####################################################################### 
+# 
+# This file contains crystal structure data downloaded from the 
+# Cambridge Structural Database (CSD) hosted by the Cambridge 
+# Crystallographic Data Centre (CCDC).
+# 
+# Full information about CCDC data access policies and citation 
+# guidelines are available at http://www.ccdc.cam.ac.uk/access/V1 
+# 
+# Audit and citation data items may have been added by the CCDC. 
+# Please retain this information to preserve the provenance of 
+# this file and to allow appropriate attribution of the data. 
+# 
+#######################################################################
+@<TRIPOS>MOLECULE
+131499
+    16    16     1     0     0
+SMALL
+NO_CHARGES
+****
+Generated from the CSD
+
+@<TRIPOS>ATOM
+     1 C1       2.6675   0.3404   2.3599   C.ar      1 RES1   0.0000
+     2 C2       3.6236   1.3556   2.2593   C.ar      1 RES1   0.0000
+     3 C3       4.6176   1.4820   3.2276   C.ar      1 RES1   0.0000
+     4 C4       4.6528   0.6025   4.3075   C.ar      1 RES1   0.0000
+     5 C5       3.6881  -0.3988   4.4223   C.ar      1 RES1   0.0000
+     6 C6       2.7061  -0.5357   3.4474   C.ar      1 RES1   0.0000
+     7 C7       1.6071   0.1405   1.3229   C.2       1 RES1   0.0000
+     8 O1       1.1026  -0.9819   1.1493   O.2       1 RES1   0.0000
+     9 N1       1.2443   1.2071   0.6022   N.am      1 RES1   0.0000
+    10 H1       3.6086   2.0393   1.4126   H         1 RES1   0.0000
+    11 H2       5.3598   2.2673   3.1324   H         1 RES1   0.0000
+    12 H3       5.4226   0.6986   5.0635   H         1 RES1   0.0000
+    13 H4       3.6968  -1.0779   5.2734   H         1 RES1   0.0000
+    14 H5       1.9630  -1.3238   3.5118   H         1 RES1   0.0000
+    15 H6       0.4734   1.1007  -0.0605   H         1 RES1   0.0000
+    16 H7       1.4867   2.1452   0.8963   H         1 RES1   0.0000
+@<TRIPOS>BOND
+     1     1     2   ar
+     2     2     3   ar
+     3     3     4   ar
+     4     4     5   ar
+     5     5     6   ar
+     6     6     1   ar
+     7     7     1    1
+     8     8     7    2
+     9     9     7   am
+    10    10     2    1
+    11    11     3    1
+    12    12     4    1
+    13    13     5    1
+    14    14     6    1
+    15    15     9    1
+    16    16     9    1
+@<TRIPOS>SUBSTRUCTURE
+     1 RES1        1 GROUP             0 ****  ****    0  
+@<TRIPOS>CRYSIN
+    5.5490    5.0330   21.5480   90.0000   89.2200   90.0000    14     1

@@ -1,10 +1,13 @@
 Description of the example
 --------------------------
-This example demonstrates a ground-state calculation with fully periodic boundary conditions on BCC Mo supercell with a mono-vacancy. Norm-conserving pseudopotential and GGA exchange correlation is used.
+This example demonstrates an all-electron ground-state calculation with non-periodic boundary conditions and ionic relaxation on Benzamide. GGA exchange correlation and Fermi-Dirac smearing temperatrure of 500 K are used.
 
-How the input parameters are set
---------------------------------
+Studies to be performed
+------------------------
+* Ground-state calculation: convergence study of ground-state energy and ionic forces with respect to discretization, and validation against NWChem. 
 
-Discussion on the results
--------------------------
+* Ionic relaxation and validation against NWChem.
 
+
+Discussion on the input parameters and the results
+-------------------------------------------

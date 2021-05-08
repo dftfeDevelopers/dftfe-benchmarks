@@ -16,11 +16,11 @@ This example demonstrates a ground-state calculation with non-periodic boundary 
 
 * **example3** (To be done by Bikash)
 
-This example demonstrates an all-electron ground-state calculation with non-periodic boundary conditions and ionic relaxation on Benzamide. Norm-conserving pseudopotential and GGA exchange correlation are used.
+This example demonstrates an all-electron ground-state calculation with non-periodic boundary conditions and ionic relaxation on Benzamide. GGA exchange correlation is used.
 
 * **example4** (To be done by Nelson)
 
-This example demonstrates an all-electron ground-state calculation with fully periodic boundary conditions and cell relaxation on GaAs unit cell. Multiple k-points for sampling the Brillouin zone, norm-conserving pseudopotential, and GGA exchange correlation are used.
+This example demonstrates an all-electron ground-state calculation with fully periodic boundary conditions and cell relaxation on GaAs cubic diamond unit cell. Multiple k-points for sampling the Brillouin zone, and GGA exchange correlation are used.
 
 * **example5** (To be done by Phani and Phani's group)
 
@@ -32,7 +32,7 @@ This example demonstrates a ground-state calculation with semi-periodic boundary
 
 * **example7** (To be done by Ian)
 
-DNA
+DNA molecule with 8 base pairs
 
 * **example8** (To be done by Sambit)
 
