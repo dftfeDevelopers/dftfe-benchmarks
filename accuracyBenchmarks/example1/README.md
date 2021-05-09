@@ -10,3 +10,5 @@ Studies to be performed
 Discussion on the input parameters and the results
 -------------------------------------------
 
+* Energy per atom comparison with QE reference: 1.7e-4 Ha/atom
+* Ionic forces comparison with QE reference: 2.5e-4 Ha/Bohr (max absolute error among all atoms and force components)
