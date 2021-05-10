@@ -9,30 +9,31 @@ The two important FE discretization related parameters in DFT-FE, which the user
 
 List and brief description of the examples
 ==========================================
+Examples 2, 7, 8 and 9 are not yet set up.
 
 * **example1** 
 
-This example demonstrates a ground-state calculation with fully periodic boundary conditions on BCC Mo supercell with a mono-vacancy. Norm-conserving pseudopotential and GGA exchange correlation are used.
+This example demonstrates a ground-state calculation with fully periodic boundary conditions on BCC Mo supercell with a mono-vacancy. Norm-conserving pseudopotential and PBE exchange correlation are used.
 
 * **example2** 
 
-This example demonstrates a ground-state calculation with non-periodic boundary conditions on Al nanoparticle. Norm-conserving pseudopotential and GGA exchange correlation are used.
+This example demonstrates a ground-state calculation with non-periodic boundary conditions on Al nanoparticle. Norm-conserving pseudopotential and PBE exchange correlation are used.
 
 * **example3** (To be done by Bikash)
 
-This example demonstrates an all-electron ground-state calculation with non-periodic boundary conditions and ionic relaxation on Benzamide. GGA exchange correlation is used.
+This example demonstrates an all-electron ground-state calculation with non-periodic boundary conditions and ionic relaxation on Benzamide. PBE exchange correlation is used.
 
 * **example4** (To be done by Nelson)
 
-This example demonstrates an all-electron ground-state calculation with fully periodic boundary conditions and cell relaxation on GaAs cubic diamond unit cell. Multiple k-points for sampling the Brillouin zone, and GGA exchange correlation are used.
+This example demonstrates an all-electron ground-state calculation with fully periodic boundary conditions and cell relaxation on GaAs cubic diamond unit cell. Multiple k-points for sampling the Brillouin zone, and PBE exchange correlation are used.
 
 * **example5** (To be done by Phani and Phani's group)
 
-This example demonstrates a ground-state calculation with fully periodic boundary conditions and combined ionic-cell relaxation on Al12Mg17 intermetallic. Multiple k-points for sampling the Brillouin zone, norm-conserving pseudopotential, and GGA exchange correlation are used.
+This example demonstrates a ground-state calculation with fully periodic boundary conditions and combined ionic-cell relaxation on Al12Mg17 intermetallic. Multiple k-points for sampling the Brillouin zone, norm-conserving pseudopotential, and PBE exchange correlation are used.
 
 * **example6** (To be done by Bikash)
 
-This example demonstrates a ground-state calculation with semi-periodic boundary conditions and ionic relaxation on InP-water layer. Multiple k-points for sampling the Brillouin zone along the periodic directions, norm-conserving pseudopotential and GGA exchange correlation are used.
+This example demonstrates a ground-state calculation with semi-periodic boundary conditions and ionic relaxation on water molecule over InP slab. Multiple k-points for sampling the Brillouin zone along the periodic directions, norm-conserving pseudopotential and PBE exchange correlation are used.
 
 * **example7** (To be done by Ian)
 

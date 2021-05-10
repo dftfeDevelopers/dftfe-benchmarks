@@ -1,6 +1,6 @@
 Description of the example
 ==========================
-This example demonstrates an all-electron ground-state calculation with fully periodic boundary conditions and cell relaxation on GaAs cubic diamond unit cell. Multiple k-points for sampling the Brillouin zone, GGA exchange correlation, and spin-unpolarized calculation, Fermi-Dirac smearing temperature of 500 K are used.
+This example demonstrates an all-electron ground-state calculation with fully periodic boundary conditions and cell relaxation on GaAs cubic diamond unit cell. Multiple k-points for sampling the Brillouin zone, PBE exchange correlation, and spin-unpolarized calculation, Fermi-Dirac smearing temperature of 500 K are used.
 
 Studies to be performed
 =======================

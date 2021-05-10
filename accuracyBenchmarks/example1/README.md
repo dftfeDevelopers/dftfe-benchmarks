@@ -1,6 +1,6 @@
 Description of the example
 ==========================
-This example demonstrates a ground-state calculation with fully periodic boundary conditions on BCC Mo 4x4x4 supercell with a mono-vacancy. ONCV pseudopotential from sg15 database, GGA exchange correlation, and Fermi-Dirac smearing temperature of 500 K are used.
+This example demonstrates a ground-state calculation with fully periodic boundary conditions on BCC Mo 4x4x4 supercell with a mono-vacancy. ONCV pseudopotential from sg15 database, PBE exchange correlation, and Fermi-Dirac smearing temperature of 500 K are used.
 
 Studies to be performed
 =======================

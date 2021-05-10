@@ -1,6 +1,6 @@
 Description of the example
 ==========================
-This example demonstrates a ground-state calculation with semi-periodic boundary conditions and ionic relaxation on InP-water layer. Multiple k-points for sampling the Brillouin zone along the periodic directions, ONCV pseudopotential and GGA exchange correlation are used.
+This example demonstrates a ground-state calculation with semi-periodic boundary conditions and ionic relaxation on water molecule over InP slab. Multiple k-points for sampling the Brillouin zone along the periodic directions, ONCV pseudopotential from PseudoDojo database, PBE exchange correlation, and Fermi-Dirac smearing temperature of 500 K are used. Periodic boundary conditions along X and Y directions and non-periodic boundary conditions along Z direction with a vaccum layer are employed.
 
 Studies to be performed
 =======================

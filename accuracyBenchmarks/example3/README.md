@@ -1,6 +1,6 @@
 Description of the example
 ==========================
-This example demonstrates an all-electron ground-state calculation with non-periodic boundary conditions and ionic relaxation on Benzamide. GGA exchange correlation and Fermi-Dirac smearing temperatrure of 500 K are used.
+This example demonstrates an all-electron ground-state calculation with non-periodic boundary conditions and ionic relaxation on Benzamide. PBE exchange correlation and Fermi-Dirac smearing temperatrure of 500 K are used.
 
 Studies to be performed
 =======================
