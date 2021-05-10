@@ -16,8 +16,8 @@ Study1---ground-state calcualtion results
 -------
 * The run successfully converged in 19 SCF iterations.
 
-* DFT-FE Energy per atom comparison with QE reference: 8.2e-5 Ha/atom
+* DFT-FE Energy per atom comparison with QE reference: 8.2e-5 Ha/atom. In particular we compared the "Total energy per atom" printed from DFT-FE output and "(Total energy+TS)/totalNumberAtoms" from QE, since QE's Total energy is the free energy.
 
-* DFT-FE Ionic forces comparison with QE reference: 5.1e-5 Ha/Bohr (max absolute error among all atoms and force components)
+* DFT-FE Ionic forces comparison with QE reference: 5.1e-5 Ha/Bohr (max absolute error among all atoms and force components). 
 
 * DFT-FE Cell stress comparison with QE reference: 2.6e-6 Ha/Bohr^3 (max absolute error among all stress components)
