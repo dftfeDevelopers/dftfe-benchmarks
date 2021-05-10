@@ -4,7 +4,7 @@ This example demonstrates an all-electron ground-state calculation with non-peri
 
 Studies to be performed
 =======================
-* 1) Ground-state calculation: convergence study of ground-state energy and ionic forces with respect to discretization, and validation against NWChem. 
+* 1) Ground-state calculation: convergence study of ground-state energy and ionic forces to reach chemical accuracy with respect to discretization, and validation against NWChem. 
 * 2) Ionic relaxation and validation against NWChem.
 
 

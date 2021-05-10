@@ -1,11 +1,11 @@
 Description of the example
 ==========================
-This example demonstrates a ground-state calculation with semi-periodic boundary conditions and ionic relaxation on InP-water layer. Multiple k-points for sampling the Brillouin zone along the periodic directions, norm-conserving pseudopotential and PBE exchange correlation are used.
+This example demonstrates a ground-state calculation with fully periodic boundary conditions and combined ionic-cell relaxation on Al12Mg17 intermetallic. Multiple k-points for sampling the Brillouin zone, norm-conserving pseudopotential, PBE exchange correlation, and Fermi-Dirac smearing temperature of 500 K are used.
 
 Studies to be performed
 =======================
-* 1) Ground-state calculation: convergence study of ground-state energy and ionic forces with respect to FE discretization, and validation against QUANTUM ESPRESSO (QE).
-* 2) Ionic and validation against QE.
+* 1) Ground-state calculation: convergence study of ground-state energy and ionic forces to reach chemical accuracy with respect to FE discretization and k-points, and validation against QUANTUM ESPRESSO (QE) for Gamma point and multiple k-point case.
+* 2) Combined ionic and cell relaxation with converged parameters and validation against QE.
 
 
 Discussion on the input parameters and the results
