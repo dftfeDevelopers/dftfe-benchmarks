@@ -4,15 +4,20 @@ This example demonstrates a ground-state calculation with fully periodic boundar
 
 Studies to be performed
 =======================
-* Compute the reference ground-state energy and forces using QUANTUM ESPRESSO (QE) at a high plane-wave cutoff of 50 Ha.
-* Ground-state calculation using DFT-FE at a FE discretization commensurate with chemical accuracy (~1e-4 Ha/atom in energy and ~1e-4 Ha/Bohr in forces)
+* 1) Ground-state calculation using DFT-FE at a FE discretization commensurate with chemical accuracy (~1e-4 Ha/atom in energy, ~1e-4 Ha/Bohr in ionic forces and ~5e-6 Ha/Bohr^3 in cell stresses). The reference ground-state energy, ionic forces, and cell streses are computed using QUANTUM ESPRESSO (QE) at a high plane-wave cutoff of 50 Ha.
 
 
 Discussion on the input parameters and the results
 =================================================
-* Please refer to full input parameters list and their associated description in the manual of DFT-FE. Below, we will go over the key input parameters and comments pertaining to such fully periodic metallic systems.
+* Since it a homogeneous metallic system, we use Keker preconditioner implemented in DFT-FE, via the ANDERSON\_WITH\_KERKER choice for the MIXING METHOD. We also use a MIXING PARAMETER value of 0.7, which is higher than the default value of 0.2.
 
-Results
+
+Study1---ground-state calcualtion results
 -------
-* DFT-FE Energy per atom comparison with QE reference: 1.7e-4 Ha/atom
-* DFT-FE Ionic forces comparison with QE reference: 2.5e-4 Ha/Bohr (max absolute error among all atoms and force components)
+* The run successfully converged in 19 SCF iterations.
+
+* DFT-FE Energy per atom comparison with QE reference: 8.2e-5 Ha/atom
+
+* DFT-FE Ionic forces comparison with QE reference: 5.1e-5 Ha/Bohr (max absolute error among all atoms and force components)
+
+* DFT-FE Cell stress comparison with QE reference: 2.6e-6 Ha/Bohr^3 (max absolute error among all stress components)
