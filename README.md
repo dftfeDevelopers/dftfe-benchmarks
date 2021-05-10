@@ -1,5 +1,5 @@
 This repository has two primary types of benchmarks for
-the DFT-FE code
+the [https://sites.google.com/umich.edu/dftfe][DFT-FE code]
 
 ### Accuracy benchmarks/Examples ###
 The **accuracyBenchmarks** directory contains examples involving small system sizes, which are designed to cover most of the capabilities of the DFT-FE code. Dependening on the type of example, they are also validated against another open-source code (if available). 
