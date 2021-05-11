@@ -19,7 +19,7 @@ This example demonstrates a ground-state calculation with fully periodic boundar
 
 This example demonstrates a ground-state calculation with non-periodic boundary conditions on Al nanoparticle. Norm-conserving pseudopotential and PBE exchange correlation are used.
 
-* **example3** (To be done by Bikash)
+* **example3** (To be done by Bikash, also test on Greatlakes GPU nodes)
 
 This example demonstrates an all-electron ground-state calculation with non-periodic boundary conditions and ionic relaxation on Benzamide. PBE exchange correlation is used.
 
@@ -27,7 +27,7 @@ This example demonstrates an all-electron ground-state calculation with non-peri
 
 This example demonstrates an all-electron ground-state calculation with fully periodic boundary conditions and cell relaxation on GaAs cubic diamond unit cell. Multiple k-points for sampling the Brillouin zone, and PBE exchange correlation are used.
 
-* **example5** (To be done by Phani and Phani's group)
+* **example5** (To be done by Phani and Phani's group, also test on GPU nodes in Phani's group for Gamma point case)
 
 This example demonstrates a ground-state calculation with fully periodic boundary conditions and combined ionic-cell relaxation on Al12Mg17 intermetallic. Multiple k-points for sampling the Brillouin zone, norm-conserving pseudopotential, and PBE exchange correlation are used.
 
@@ -35,7 +35,7 @@ This example demonstrates a ground-state calculation with fully periodic boundar
 
 This example demonstrates a ground-state calculation with semi-periodic boundary conditions and ionic relaxation on water molecule over InP slab. Multiple k-points for sampling the Brillouin zone along the periodic directions, norm-conserving pseudopotential and PBE exchange correlation are used.
 
-* **example7** (To be done by Ian)
+* **example7** (To be done by Ian, also test on Greatlakes GPU nodes)
 
 DNA molecule with 8 base pairs
 
