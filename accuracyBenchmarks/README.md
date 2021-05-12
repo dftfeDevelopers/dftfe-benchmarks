@@ -4,7 +4,7 @@ General guidelines on Finite-element discretization input parameters
 ============================================================================
 We refer to DFT-FE manual (provide link) for full input parameters list, their associated description, and the precedure to setup the input file. The manual also provides more in-depth discussion on the usage of the key input parameters in DFT-FE. Below, we briefly discuss the Finite-element (FE) discretization related input parameters which will be repeatedly used in all the examples. Other input parameters specific to the example are discussed inside the associated example subfolder.
 
-The three important FE discretization related parameters in DFT-FE, which the user needs to set are the POLYNOMIAL ORDER, MESH SIZE AROUND ATOM, and ATOM BALL RADIUS.
+The three important FE discretization related parameters in DFT-FE, which the user needs to set are the **POLYNOMIAL ORDER, MESH SIZE AROUND ATOM, and ATOM BALL RADIUS**.
 
 * First, the POLYNOMIAL ORDER sets the order of the piecewise continuous FE interpolating polynomial, with higher values affording faster convergence rates with respect to discretization. Based on our numerical investigations, we recommend POLYNOMIAL ORDER=7 for soft pseudopotentials (<20 Ha plane-wave cutoff), POLYNOMIAL ORDER=6 for medium/hard pseudpotentials, and POLYNOMIAL ORDER=5 for all-electron calculations to be most computationally efficient choices on both CPUs and GPUs.
 
