@@ -12,7 +12,7 @@ The three important FE discretization related parameters in DFT-FE, which the us
 
 * Thrid, the ATOM BALL RADIUS input paramter denotes the radius of ball enclosing every atom (in a.u.), inside which the mesh size is set close to MESH SIZE AROUND ATOM and coarse-grained in the region outside the enclosing balls. For the default value of 0.0, a heuristically determined value is used, which is good enough for most cases but can be a bit conservative choice for fully non-periodic and semi-periodic problems as well as all-electron problems. To improve the computational efficiency user may experiment with values of ATOM BALL RADIUS ranging between 3.0 to 6.0 for pseudopotential problems, and ranging between 1.0 to 2.5 for all-electron problems.
 
-* Finally, for all-electron calculations MESH SIZE AT ATOM is another additional but important FE discretization parameter. By default for all-electron problems this is set to 0.1 times MESH SIZE AROUND ATOM. However, the may need to manually tune this parameter to obtain efficient FE mesh for all-electron problems. See examples 3 and 4 for more discussion on usage of MESH SIZE AT ATOM for all-electron problems.
+* Finally, for all-electron calculations MESH SIZE AT ATOM is another additional which sets the size of the finite elements in the immediate vicinity of the atom. By default for all-electron problems this is set to 0.1 times MESH SIZE AROUND ATOM. However, the may need to manually tune this parameter to obtain efficient FE mesh for all-electron problems. See examples 3 and 4 for more discussion on usage of MESH SIZE AT ATOM for all-electron problems.
 
 
 List and brief description of the examples
