@@ -1,15 +1,16 @@
 Description of the example
 ==========================
-This example demonstrates a ground-state calculation with fully periodic boundary conditions on BCC Mo supercell with a mono-vacancy. Norm-conserving pseudopotential and PBE exchange correlation is used.
+This example demonstrates a ground-state calculation with fully non-periodic boundary conditions on DNA molecule with 8 basepairs. ONCV pseudopotential from PseudoDojo database, PBE exchange correlation and Fermi-Dirac smearing temperature of 500 K are used. Non-periodic boundary conditions along X, Y, Z directions are employed with a vaccum layer in all directions.
 
 Studies to be performed
 =======================
-* Ground-state calculation
-
+* Ground-state calculation: Spin-unpolarized calculation with convergence study of ground-state energy and ionic forces with respect to FE discretization to reach chemical accuracy. Validation with Quantum espresso refined calculation.
+* Ground-state calculation: Spin-polarized ground-state calculation using mesh parameters obained in the above study and validate the ground-state energy and forces with Quantum espresso.
+* Ionic relaxation for both spin-unpolarized and spin-polarized calculation and validation with Quantum espresso.
 
 Discussion on the input parameters and the results
 ==================================================
+Study1 -- Ground-state calculation results
+Study2 -- Ionic relaxation results
 
-Results
--------
 

@@ -12,7 +12,7 @@ Discussion on the input parameters and the results
 * Since it a homogeneous metallic system, we use Keker preconditioner implemented in DFT-FE, via the ANDERSON\_WITH\_KERKER choice for the MIXING METHOD. We also use a MIXING PARAMETER value of 0.7, which is higher than the default value of 0.2.
 
 
-Study1---ground-state calcualtion results
+Study1---ground-state calculation results
 -------
 * The run successfully converged in 19 SCF iterations.
 
