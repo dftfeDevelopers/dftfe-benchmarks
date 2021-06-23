@@ -1,6 +1,6 @@
 Description of the example
 ==========================
-This example demonstrates a ground-state calculation with fully periodic boundary conditions on BCC Mo 4x4x4 supercell with a mono-vacancy. ONCV pseudopotential from sg15 database, PBE exchange correlation, and Fermi-Dirac smearing temperature of 500 K are used.
+This example demonstrates a ground-state calculation with fully periodic boundary conditions on BCC Mo 4x4x4 supercell with a mono-vacancy, containing 127 Mo atoms (1778 electrons) ONCV pseudopotential from sg15 database, PBE exchange correlation, and Fermi-Dirac smearing temperature of 500 K are used.
 
 Studies to be performed
 =======================
@@ -15,6 +15,8 @@ Discussion on the input parameters and the results
 Study1---ground-state calculation results
 -------
 * The run successfully converged in 19 SCF iterations.
+
+* POLYNOMIAL ORDER=7 and MESH SIZE AROUND ATOM=2.0 are found to be sufficient to obtain chemical accuracy as shown below. Total degrees of freedom are 614125 (4835 per atom).
 
 * DFT-FE Energy per atom comparison with QE reference: 8.2e-5 Ha/atom. In particular we compared the "Total energy per atom" printed from DFT-FE output and "(Total energy+TS)/totalNumberAtoms" from QE, since QE's Total energy is the free energy.
 
