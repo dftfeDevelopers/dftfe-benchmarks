@@ -9,10 +9,11 @@ Studies to be performed
 
 Discussion on the input parameters and the results
 ==================================================
-* An atom ball radius of 4 bohr is used and a mesh size around atom of 2.3 is chosen. Anderson Mixing scheme is used with a Mixing History of 10 and Mixing parameter of 0.1
+* Anderson Mixing scheme is used with a Mixing History of 10 and Mixing parameter of 0.1. 
 
 Study1 -- Ground-state calculation results
 ------------------------------------------
 * The run successfully converged in 39 SCF iterations.
+* POLYNOMIAL ORDER = 7 and MESH SIZE AROUND ATOM = 2.3 with ATOM BALL RADIUS = 4.0 are found to be sufficient to obtain chemical accuracy as described below. Total degrees of freedom are around 1339596 (9112 DoFs/atom)
 * DFT-FE energy per atom comparison with QE reference: 3e-06 Ha/atom. In particular we compared the "Total energy per atom" printed from DFT-FE output and "(Total energy+TS)/totalNumberAtoms" from QE, since QE's Total energy is the free energy.
 * DFT-FE Ionic forces comparison with QE reference: 1.4e-04 Ha/Bohr (max absolute error among all atoms and force components)
