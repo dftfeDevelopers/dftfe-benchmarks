@@ -10,7 +10,10 @@ Studies to be performed
 
 Discussion on the input parameters and the results
 ==================================================
-Study1 -- Ground-state calculation results
-Study2 -- Ionic relaxation results
 
+Study1---Ground-state calculation results
+--------------------------------
+
+Study2---Ionic relaxation results
+------------------------
 
