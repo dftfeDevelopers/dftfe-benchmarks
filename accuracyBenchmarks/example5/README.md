@@ -6,6 +6,7 @@ Studies to be performed
 =======================
 * 1) Ground-state calculation: convergence study of ground-state energy and ionic forces to reach chemical accuracy with respect to FE discretization and k-points, and validation against QUANTUM ESPRESSO (QE) for Gamma point and multiple k-point case.
 * 2) Combined ionic and cell relaxation with converged parameters and validation against QE.
+* 3) GPU run for Gamma-point case with validation against CPU run
 
 
 Discussion on the input parameters and the results
