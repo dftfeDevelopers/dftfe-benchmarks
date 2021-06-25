@@ -1,6 +1,6 @@
 Description of the example
 ==========================
-This example demonstrates a ground-state calculation and ionic relaxation on DNA molecule with 8 basepairs employing non-periodic boundary conditions in all 3 directions. ONCV pseudopotential from PseudoDojo database, PBE exchange correlation and Fermi-Dirac smearing temperature of 500 K are used. Non-periodic boundary conditions along X, Y, Z directions are employed with a vaccum layer in all directions.
+This example demonstrates a ground-state calculation and ionic relaxation on an Fe(II) complex employing non-periodic boundary conditions in all 3 directions. ONCV pseudopotential from PseudoDojo database, PBE exchange correlation and Fermi-Dirac smearing temperature of 500 K are used. Non-periodic boundary conditions along X, Y, Z directions are employed with a vaccum layer in all directions.
 
 Studies to be performed
 =======================
