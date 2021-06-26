@@ -4,7 +4,7 @@ This example demonstrates a ground-state calculation with semi-periodic boundary
 
 Studies to be performed
 =======================
-* 1) Ground-state calculation: convergence study of ground-state energy and ionic forces to reach chemical accuracy with respect to FE discretization and k-points, and validation against QUANTUM ESPRESSO (QE).
+* 1) Ground-state calculation: convergence study of ground-state energy and ionic forces to reach chemical accuracy (see examples 1 and 2) with respect to FE discretization and k-points, and validation against QUANTUM ESPRESSO (QE).
 * 2) Ionic relaxation and validation against QE.
 
 
