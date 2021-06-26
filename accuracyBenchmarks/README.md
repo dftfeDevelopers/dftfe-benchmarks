@@ -18,8 +18,6 @@ To conclude, for most cases and for pseudopotential problems, choosing POLYNOMIA
 
 List and brief description of the examples
 ==========================================
-Examples 2, 7, 8 and 9 are not yet set up.
-
 * **example1** 
 
 This example demonstrates a ground-state calculation with fully periodic boundary conditions on BCC Mo supercell with a mono-vacancy. Norm-conserving pseudopotential and PBE exchange correlation are used.
