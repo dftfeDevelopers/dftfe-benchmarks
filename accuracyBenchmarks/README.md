@@ -18,11 +18,11 @@ To conclude, for most cases and for pseudopotential problems, choosing POLYNOMIA
 
 List and brief description of the examples
 ==========================================
-* **example1** 
+* **example1** (Demo for BCC Mo SuperCell with fully Periodic boundary conditions) 
 
 This example demonstrates a ground-state calculation with fully periodic boundary conditions on BCC Mo supercell with a mono-vacancy. Norm-conserving pseudopotential and PBE exchange correlation are used.
 
-* **example2** 
+* **example2** (Demo for Al nanoparticle with fully Non-periodic boundary conditions)
 
 This example demonstrates a ground-state calculation with non-periodic boundary conditions on Al nanoparticle. Norm-conserving pseudopotential and PBE exchange correlation are used.
 
@@ -44,12 +44,11 @@ This example demonstrates a ground-state calculation with semi-periodic boundary
 
 * **example7** (To be done by Ian, also test on Greatlakes GPU nodes)
 
-DNA molecule with 8 base pairs
+This example demonstrates a spin-polarized and spin-unpolarized ground-state calculations with non-periodic boundary conditions and ionic relaxation on a molecule containing Fe(II) complex. Norm conserving pseudopotential and PBE exchange correlation is used.
 
 * **example8** (To be done by Sambit)
 
-Bilayer of WS2
+This example demonstrates a spin-polarized and spin-unpolarized ground-state calculations with non-periodic boundary conditions and ionic relaxation on a isolated system containing WS2 bi-layer . Norm conserving pseudopotential and PBE exchange correlation is used
 
 * **example9** (To be done by Sambit and Phani's group)
-
-Lithium lanthanum Zirconate
+This example demonstrates a spin-polarized and spin-unpolarized ground-state calculations with fully periodic boundary conditions along with combined ionic-cell and stress relaxation on LLZO (Lithium-Lanthanum-Zirconium-Oxide) unit-cell. Gamma point for sampling the Brillouin zone, norm-conserving pseudopotential, and PBE exchange correlation are used.
