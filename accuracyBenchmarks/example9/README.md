@@ -12,9 +12,15 @@ Studies to be performed
 Discussion on the input parameters and the results
 ==================================================
 
-Study1 -- Ground-state calculation results
-------------------------------------------
+Study1 -- Ground-state calculation results (Spin-unpolarized)
+------------------------------------------------------------
 
-Study2 -- Ionic relaxation results
----------------------------------- 
+Study2 -- Ground-state calculation results (Spin-polarized)
+------------------------------------------------------------
 
+Study3 -- Geometric relaxation results (Spin-unpolarized)
+------------------------------------------------------------
+
+
+Study4 -- Geometric relaxation results (Spin-polarized)
+------------------------------------------------------------
