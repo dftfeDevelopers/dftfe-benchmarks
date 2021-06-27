@@ -6,7 +6,7 @@ employed with a vaccum layer in all directions.
 
 Studies to be performed
 =======================
-* Ground-state calculation: Spin-unpolarized calculation with convergence study of ground-state energy and ionic forces with respect to FE discretization to reach chemical accuracy. Validation with Quantum espresso refined calculation.
+* Ground-state calculation: Spin-unpolarized calculation with convergence study of ground-state energy and ionic forces with respect to FE discretization to reach chemical accuracy (see examples 1 and 2). Validation with Quantum espresso refined calculation.
 * Ground-state calculation: Spin-polarized ground-state calculation using mesh parameters obained in the above study and validate the ground-state energy and forces with Quantum espresso.
 * Ionic relaxation with both spin-unpolarized and spin-polarized calculation by constraining the relaxation of atoms normal to the bilayer.
 

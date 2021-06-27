@@ -4,7 +4,7 @@ This example demonstrates a ground-state calculation with fully periodic boundar
 
 Studies to be performed
 =======================
-* 1) Ground-state calculation using DFT-FE at a FE discretization commensurate with chemical accuracy (~1e-4 Ha/atom in energy, ~1e-4 Ha/Bohr in ionic forces and ~5e-6 Ha/Bohr^3 in cell stresses). The reference ground-state energy, ionic forces, and cell streses are computed using QUANTUM ESPRESSO (QE) at a high plane-wave cutoff of 50 Ha.
+* 1) Ground-state calculation using DFT-FE at a FE discretization commensurate with chemical accuracy (~1e-4 Ha/atom in energy, ~1e-4 Ha/Bohr in ionic forces and ~1e-6 Ha/Bohr^3 in cell stresses). The reference ground-state energy, ionic forces, and cell streses are computed using QUANTUM ESPRESSO (QE) at a high plane-wave cutoff of 50 Ha.
 
 
 Discussion on the input parameters and the results

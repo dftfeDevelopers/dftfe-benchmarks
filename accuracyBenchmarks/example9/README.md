@@ -4,7 +4,7 @@ This example demonstrates a ground-state calculation, ionic relaxation, cell rel
 
 Studies to be performed
 =======================
-* Ground-state calculation: Spin-unpolarized calculation with convergence study of ground-state energy, ionic forces and cell stresses with respect to FE discretization to reach chemical accuracy. Validation with Quantum espresso refined calculation.
+* Ground-state calculation: Spin-unpolarized calculation with convergence study of ground-state energy, ionic forces and cell stresses with respect to FE discretization to reach chemical accuracy (see examples 1 and 2). Validation with Quantum espresso refined calculation.
 * Ground-state calculation: Spin-polarized ground-state calculation using mesh parameters obtained in the above study and validate the ground-state energy, forces and stresses with Quantum espresso.
 * Ionic relexation and cell relaxation for both spin-unpolarized and spin-polarized calculation and validation with Quantum espresso.
 
@@ -12,9 +12,15 @@ Studies to be performed
 Discussion on the input parameters and the results
 ==================================================
 
-Study1 -- Ground-state calculation results
-------------------------------------------
+Study1 -- Ground-state calculation results (Spin-unpolarized)
+------------------------------------------------------------
 
-Study2 -- Ionic relaxation results
----------------------------------- 
+Study2 -- Ground-state calculation results (Spin-polarized)
+------------------------------------------------------------
 
+Study3 -- Geometric relaxation results (Spin-unpolarized)
+------------------------------------------------------------
+
+
+Study4 -- Geometric relaxation results (Spin-polarized)
+------------------------------------------------------------

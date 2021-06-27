@@ -4,7 +4,7 @@ This example demonstrates an all-electron ground-state calculation with fully pe
 
 Studies to be performed
 =======================
-* 1) Ground-state calculation for both Gamma-point and multiple k-point. Convergence study of ground-state energy and cell stresses to reach chemical accuracy with respect to discretization and k-points, and validation against ELK (widely used LAPW+lo code). 
+* 1) Ground-state calculation for both Gamma-point and multiple k-point. Convergence study of ground-state energy and cell stresses to reach chemical accuracy (see examples 1 and 2) with respect to discretization and k-points, and validation against ELK (widely used LAPW+lo code). 
 * 2) Volumetric cell relaxation and validation against ELK.
 
 
