@@ -9,14 +9,45 @@ Studies to be performed
 * Ionic relexation and cell relaxation for both spin-unpolarized and spin-polarized calculation and validation with Quantum espresso.
 
 
-Discussion on the input parameters and the results
+Discussion on the input parameters and the results:
 ==================================================
+1) DFT-FE:
+        a) Starting Magnetization 0.08
+        b) Polynomial Order      = 7
+        c) MESH SIZE AROUND ATOM  = 1.2
+        d) ATOM BALL RADIUS         = 4
+        e) SCF Tolerance            =1E-5
+        f) Mixing Method            = Anderson, mixing parameter 0.2
+        g) No. of degree of freedom = 2803221
+        
+2)QE:  
+        a) Starting Magnetization:
+                                        starting_magnetization(Li)= 0.33,
+                                        starting_magnetization(O)= 0.1667,
+                                        starting_magnetization(La)= 0.09,
+                                        starting_magnetization(Zr)=0.1667 
+        b) ecutwfc                  = 200 Ry                                     
+        
+
 
 Study1 -- Ground-state calculation results (Spin-unpolarized)
 ------------------------------------------------------------
 
+
+
 Study2 -- Ground-state calculation results (Spin-polarized)
 ------------------------------------------------------------
+1) GPU CPU Comparison:
+    a) Energy Difference = 1.62E-8 Ha/atom
+    b) Force Difference = 1.6E-7 Ha/bohr (max absolute error among all atoms and force components)
+    c) Stress Difference = 1.31E-7 Ha/bohr**3 (Hydrodynamic Stress error)
+    d) No. of scf iterations 25(CPU) & 25(GPU)
+
+2) Ground State Comparison with QE(200 Ry energy cut off):
+    a) Energy Difference = 2.80E-06 Ha/atom
+    b) Force Difference = 6.79E-05 Ha/bohr (max absolute error among all atoms and force components)
+    c) Stress Difference = 2.62E-06 Ha/bohr**3 (Hydrodynamic Stress error)
+    d) No. of scf iterations 25(DFT-FE) & 13(QE)
 
 Study3 -- Geometric relaxation results (Spin-unpolarized)
 ------------------------------------------------------------
@@ -24,3 +55,20 @@ Study3 -- Geometric relaxation results (Spin-unpolarized)
 
 Study4 -- Geometric relaxation results (Spin-polarized)
 ------------------------------------------------------------
+1) Relaxed State Comparison with QE(85 Ry):
+    a) Energy Difference = 1.06E-05 Ha/atom
+    b) Force Difference = 2.55E-04 Ha/bohr (max absolute error among all atoms and force components)
+    c) Stress Difference = 4.82E-06 Ha/bohr**3 (Hydrodynamic Stress error)
+2) Relaxed Co-ordinates:
+    a) Quantum Espresso:
+                        24.9176176	0.0000000	0.0000000
+                        0.0000000	24.9191797	0.0000000
+                        0.0000000	0.0000000	23.8884463
+    b) DFT-FE:
+                        24.9150902	0.0000000	0.0000000
+                        0.0000000	24.9151757	0.0000000
+                        0.0000000	0.0000000	23.8931448
+    c) Max Error is 0.01966 %                     
+                    
+
+    
