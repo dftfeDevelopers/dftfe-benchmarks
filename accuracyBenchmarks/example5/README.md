@@ -28,7 +28,7 @@ Discussion on the input parameters and the results:
 
 Study1---Ground-state calculation results
 --------------------------------
-# GPU CPU Comparison:
+# GPU v/s CPU Comparison:
     a) Energy Difference = 3.62E-12 Ha/atom
     b) Force Difference = 1.11E-05 Ha/bohr (max absolute error among all atoms and force components)
     c) Stress Difference = 1.06013E-07 Ha/bohr**3 (Hydrodynamic Stress error)
