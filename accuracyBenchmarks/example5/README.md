@@ -11,46 +11,49 @@ Studies to be performed
 
 Discussion on the input parameters and the results
 ==================================================
-1) DFT-FE:
+Discussion on the input parameters and the results:
+==================================================
+# DFT-FE:
+
         a) Polynomial Order      = 6
         b) MESH SIZE AROUND ATOM  = 0.9
-        c) ATOM BALL RADIUS         = 5
+        c) ATOM BALL RADIUS         = 5.0
         d) SCF Tolerance            =1E-5
-        e) Mixing Method            = ANDERSON_WITH_KERKER, mixing parameter 0.2
+        e) Mixing Method            = ANDERSON_WITH_KERKER
         f) No. of degree of freedom = 2352637
-        h) No. of KS Wavefunctions = 245
         
-2)QE:  
+# QE:  
+        a) ecutwfc                  = 100 Ha                                    
+        
 
-        b) ecutwfc                  = 200 Ry
 Study1---Ground-state calculation results
 --------------------------------
-1) GPU CPU Comparison:
-    a) Energy Difference = 1.62E-8 Ha/atom
-    b) Force Difference = 1.6E-7 Ha/bohr (max absolute error among all atoms and force components)
-    c) Stress Difference = 1.31E-7 Ha/bohr**3 (Hydrodynamic Stress error)
-    d) No. of scf iterations 25(CPU) & 25(GPU)
+# GPU CPU Comparison:
+    a) Energy Difference = 3.62E-12 Ha/atom
+    b) Force Difference = 1.11E-05 Ha/bohr (max absolute error among all atoms and force components)
+    c) Stress Difference = 1.06013E-07 Ha/bohr**3 (Hydrodynamic Stress error)
+    d) No. of scf iterations 18(CPU) & 14(GPU)
 
-2) Ground State Comparison with QE(200 Ry energy cut off):
-    a) Energy Difference = 2.80E-06 Ha/atom
-    b) Force Difference = 6.79E-05 Ha/bohr (max absolute error among all atoms and force components)
-    c) Stress Difference = 2.62E-06 Ha/bohr**3 (Hydrodynamic Stress error)
-    d) No. of scf iterations 25(DFT-FE) & 13(QE)
+# Ground State Comparison with QE(100 Ha energy cut off):
+    a) Energy Difference = 1.84E-05 Ha/atom
+    b) Force Difference = 2.95E-04 Ha/bohr (max absolute error among all atoms and force components)
+    c) Stress Difference = 7.44199E-06 Ha/bohr**3 (Hydrodynamic Stress error)
+    
 Study2---Combined ionic and cell relaxation results
 ------------------------
-1) Relaxed State Comparison with QE(85 Ry):
-    a) Energy Difference = 1.06E-05 Ha/atom
-    b) Force Difference = 2.55E-04 Ha/bohr (max absolute error among all atoms and force components)
-    c) Stress Difference = 4.82E-06 Ha/bohr**3 (Hydrodynamic Stress error)
-2) Relaxed Co-ordinates:
-    a) Quantum Espresso:
-                        24.9176176	0.0000000	0.0000000
-                        0.0000000	24.9191797	0.0000000
-                        0.0000000	0.0000000	23.8884463
-    b) DFT-FE:
-                        24.9150902	0.0000000	0.0000000
-                        0.0000000	24.9151757	0.0000000
-                        0.0000000	0.0000000	23.8931448
-    c) Max Error is 0.01966 %                     
+* Relaxed State Comparison with QE(50 Ha and koint rule 4x4x4)and DFT-FE(poly 6 mesh 0.9 and kpoint rule 4x4x4, , scf tolerance 5e-5):  
+    a) Energy Difference = 1.06E-05 Ha/atom  
+    b) Force Difference = 2.55E-04 Ha/bohr (max absolute error among all atoms and force components)  
+    c) Stress Difference = 4.82E-06 Ha/bohr**3 (Hydrodynamic Stress error)  
+* Relaxed Vectors:
+    *  Quantum Espresso:  
+                         19.903699232	0.0000000	0.0000000   
+                         0.0000000	19.903699232	0.0000000   
+                         0.0000000	0.0000000	19.903699232   
+    *  DFT-FE:  
+                        1.990369923161319932e+01	0.000000000000000000e+00	0.000000000000000000e+00     
+                        0.000000000000000000e+00	1.990369923161319932e+01	0.000000000000000000e+00     
+                        0.000000000000000000e+00	0.000000000000000000e+00	1.990369923161319932e+01     
+    *  Max Error is 0.0 %                    
                     
 
