@@ -15,7 +15,7 @@ Discussion on the input parameters and the results:
         a) Starting Magnetization = 0.08
         b) Polynomial Order      = 7
         c) MESH SIZE AROUND ATOM  = 1.2
-        d) ATOM BALL RADIUS         = 4
+        d) ATOM BALL RADIUS         = 4.0
         e) SCF Tolerance            =1E-5
         f) Mixing Method            = Anderson
         g) MIXING PARAMETER          =0.2
