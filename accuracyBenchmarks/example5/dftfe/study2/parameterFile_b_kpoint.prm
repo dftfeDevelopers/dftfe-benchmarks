@@ -1,0 +1,69 @@
+set VERBOSITY= 4
+subsection Geometry
+  set NATOMS=58
+  set NATOM TYPES=2
+  set ATOMIC COORDINATES FILE      = coordinates.inp           
+  set DOMAIN VECTORS FILE = domainBoundingVectors.inp 
+  subsection Optimization
+    set CELL STRESS              = true
+    set ION FORCE                 = true
+   set STRESS TOL            = 4e-6
+   set FORCE TOL = 2e-4
+    set CELL OPT              = true
+    set ION OPT               = true
+    set CELL CONSTRAINT TYPE  = 9
+    set ION RELAX FLAGS FILE = ionflags.inp
+  end
+end
+
+
+subsection Boundary conditions
+  set PERIODIC1                       = true
+  set PERIODIC2                       = true
+  set PERIODIC3                       = true
+end
+
+subsection Finite element mesh parameters
+  set POLYNOMIAL ORDER=6
+  subsection Auto mesh generation parameters
+    set MESH SIZE AROUND ATOM  = 0.9
+    set ATOM BALL RADIUS = 5
+  end
+end
+
+subsection DFT functional parameters
+  set EXCHANGE CORRELATION TYPE   = 4
+  set PSEUDOPOTENTIAL CALCULATION = true  
+  set PSEUDOPOTENTIAL FILE NAMES LIST = pseudo.inp
+end
+
+
+subsection Parallelization
+  set NPKPT=32
+end
+
+
+
+subsection Brillouin zone k point sampling options
+  set USE TIME REVERSAL SYMMETRY = true
+  subsection Monkhorst-Pack (MP) grid generation
+    set SAMPLING POINTS 1 = 4
+    set SAMPLING POINTS 2 = 4
+    set SAMPLING POINTS 3 = 4
+    set SAMPLING SHIFT 1  = 1
+    set SAMPLING SHIFT 2  = 1
+    set SAMPLING SHIFT 3  = 1
+  end
+end
+
+subsection SCF parameters
+  set TEMPERATURE                      = 500
+  set TOLERANCE                        = 5e-5
+  set MIXING HISTORY                    =50
+  set MIXING PARAMETER                  =0.2
+  set MIXING METHOD                     =ANDERSON_WITH_KERKER
+  subsection Eigen-solver parameters
+      set NUMBER OF KOHN-SHAM WAVEFUNCTIONS =   245
+  end
+end
+

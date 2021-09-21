@@ -1,0 +1,19 @@
+#!/bin/sh
+#SBATCH --job-name=Al12Mg17 # Job name
+#SBATCH --ntasks=48
+#SBATCH --cpus-per-task=1 
+#SBATCH --nodes=1
+#SBATCH --time=06:00:00 # Time limit hrs:min:sec
+#SBATCH -o cpu4.out
+#SBATCH --partition=debug
+
+echo "Number of Nodes Allocated      = $SLURM_JOB_NUM_NODES"
+echo "Number of Tasks Allocated      = $SLURM_NTASKS"
+echo "Number of Cores/Task Allocated = $SLURM_CPUS_PER_TASK"
+
+module load openmpiintel19slurm20
+module load intel19
+module load mkl/2021.2.0
+
+
+srun -n 48 --mpi=pmi2    /shared/softwares2020/qe6.7_cpu/install_intel19.05_slurm20_qe6.7_cpu/bin/pw.x -inp Al12Mg17_ecut100_k4.scf.in> Al12Mg17_ecut100_k4_nosym.scf.out
