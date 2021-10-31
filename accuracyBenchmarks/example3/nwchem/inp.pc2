@@ -1,0 +1,44 @@
+start benzamide_pc2_DIIS
+title "benzamide DIIS in pc-2 basis set with grid medium"
+
+memory total 4000 mb
+geometry units au
+  C	-0.618956126	-0.4269245332	-0.5396939316
+  C	1.187810892	1.49152529	-0.729800366
+  C	3.066198524	1.730386655	1.100021309
+  C	3.132716879	0.06837264843	3.140736404
+  C	1.309698218	-1.823809984	3.357676947
+  C	-0.5460127028	-2.082513472	1.515383081
+  C	-2.622821564	-0.8046807583	-2.499339782
+  O	-3.576188326	-2.925709208	-2.827396213
+  N	-3.308414153	1.210900981	-3.861265302
+  H	1.159465002	2.783530949	-2.329831361
+  H	4.468753153	3.214388474	0.9201193946
+  H	4.587427945	0.2499753159	4.569369251
+  H	1.326138834	-3.107122903	4.966022736
+  H	-1.950268085	-3.571806523	1.637081435
+  H	-4.765203918	1.009834136	-5.113586714
+  H	-2.850344573	2.983652931	-3.305496888
+end
+
+basis
+  C library pc-2 file pc-2
+  O library pc-2 file pc-2
+  N library pc-2 file pc-2
+  H library pc-2 file pc-2 
+end
+
+dft
+ xc xpbe96 cpbe96
+ iterations 100
+ convergence density 1.0e-6
+ grid medium
+ mult 1
+ direct
+ decomp
+ smear 0.0015835 # 500K
+ print "convergence" "final vectors analysis"
+end
+
+task dft optimize 
+print "total time" "ma stats"
