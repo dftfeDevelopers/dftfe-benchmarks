@@ -14,7 +14,6 @@ Discussion on the input parameters and the results
 
 DFT-FE
 ==================================================
-'''
     a) Spin unpolarized 
     b) Polynomial Order      = 4
     c) MESH SIZE AROUND ATOM  = 0.3
@@ -24,17 +23,13 @@ DFT-FE
     g) Anderson MIXING PARAMETER  = 0.2 (default)
     h) Kerker Mixing parameter = 0.05 (default) 
     i) No. of degree of freedom = 1766008
-'''
 
 NWChem
 ==================================================
-
-'''
     a) Spin unpolarized 
     b) Basis = pc-3
     c) SCF Tolerance            = 1e-6
     d) Quadrture grid  = medium (default) 
-'''
 
 Study1---Ground-state calculation results
 --------------------------------
