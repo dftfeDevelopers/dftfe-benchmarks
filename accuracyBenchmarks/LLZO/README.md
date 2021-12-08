@@ -56,7 +56,7 @@ Study3 -- Geometric relaxation results (Spin-unpolarized)
 
 Study4 -- Geometric relaxation results (Spin-polarized)
 ------------------------------------------------------------
-* Relaxed State Comparison with QE(42.5 Ha):  
+* Relaxed State Comparison with QE(42.5 Ha ecut):  
     a) Energy Difference = 1.06E-05 Ha/atom  
     b) Force Difference = 2.55E-04 Ha/bohr (max absolute error among all atoms and force components)  
     c) Stress Difference = 4.82E-06 Ha/bohr**3 (Hydrodynamic Stress error)  
