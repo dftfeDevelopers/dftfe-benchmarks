@@ -1,6 +1,6 @@
 Description of the example
 ==========================
-This example demonstrates a ground-state calculation, ionic relaxation, cell relaxation on Lithium Lanthanum Zirconate unit-cell employing periodic boundary conditions in all directions. ONCV pseudopotentials from SG15 database, PBE exchange correlation and Fermi-Dirac smearing temperature of 500 K are used. 
+This example demonstrates a ground-state calculation, ionic relaxation, cell relaxation on Lithium Lanthanum Zirconate unit-cell employing periodic boundary conditions in all directions. ONCV pseudopotentials from pseudodojo database, PBE exchange correlation and Fermi-Dirac smearing temperature of 500 K are used. 
 
 Studies to be performed
 =======================

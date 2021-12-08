@@ -23,7 +23,7 @@ Discussion on the input parameters and the results:
         f) No. of degree of freedom = 2352637
         
 # QE:  
-        a) ecutwfc                  = 100 Ha                                    
+        a) ecutwfc                  = 50 Ha                                    
         
 
 Study1---Ground-state calculation results
