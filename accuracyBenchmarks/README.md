@@ -18,34 +18,30 @@ To conclude, for most cases and for pseudopotential problems, choosing POLYNOMIA
 
 List and brief description of the examples
 ==========================================
-* **example1** (Demo for BCC Mo SuperCell with fully Periodic boundary conditions) 
+* **BCCMo**
 
 This example demonstrates a ground-state calculation with fully periodic boundary conditions on BCC Mo supercell with a mono-vacancy. Norm-conserving pseudopotential and PBE exchange correlation are used.
 
-* **example2** (Demo for Al nanoparticle with fully Non-periodic boundary conditions)
+* **AlNP** 
 
 This example demonstrates a ground-state calculation with non-periodic boundary conditions on Al nanoparticle. Norm-conserving pseudopotential and PBE exchange correlation are used.
 
-* **example3** (To be done by Bikash, also test on Greatlakes GPU nodes)
+* **Benzamide** 
 
 This example demonstrates an all-electron ground-state calculation with non-periodic boundary conditions and ionic relaxation on Benzamide. PBE exchange correlation is used.
 
-* **example4** (To be done by Nelson)
-
-This example demonstrates an all-electron ground-state calculation with fully periodic boundary conditions and cell relaxation on GaAs cubic diamond unit cell. Multiple k-points for sampling the Brillouin zone, and PBE exchange correlation are used.
-
-* **example5** (To be done by Phani and Phani's group, also test on GPU nodes in Phani's group for Gamma point case)
+* **Al12Mg17**
 
 This example demonstrates a ground-state calculation with fully periodic boundary conditions and combined ionic-cell relaxation on Al12Mg17 intermetallic. Multiple k-points for sampling the Brillouin zone, norm-conserving pseudopotential, and PBE exchange correlation are used.
 
-* **example6** (To be done by Bikash)
+* **InP-water** (To be done by Bikash)
 
 This example demonstrates a ground-state calculation with semi-periodic boundary conditions and ionic relaxation on water molecule over InP slab. Multiple k-points for sampling the Brillouin zone along the periodic directions, norm-conserving pseudopotential and PBE exchange correlation are used.
 
-* **example7** (To be done by Sambit)
+* **WS2-bilayer** (To be done by Sambit)
 
 This example demonstrates a spin-polarized and spin-unpolarized ground-state calculations with non-periodic boundary conditions and ionic relaxation on a isolated system containing WS2 bi-layer . Norm conserving pseudopotential and PBE exchange correlation is used
 
-* **example8** (To be done by Sambit and Phani's group)
+* **LLZO** (To be done by Sambit remaining part)
 
 This example demonstrates a spin-polarized and spin-unpolarized ground-state calculations with fully periodic boundary conditions along with combined ionic-cell and stress relaxation on LLZO (Lithium-Lanthanum-Zirconium-Oxide) unit-cell. Gamma point for sampling the Brillouin zone, norm-conserving pseudopotential, and PBE exchange correlation are used.
