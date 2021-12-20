@@ -1,6 +1,6 @@
 subsection Geometry
   set NATOMS=16
-  set NATOM TYPES4
+  set NATOM TYPES=4
   set ATOMIC COORDINATES FILE = coordinates.inp
   set DOMAIN VECTORS FILE = domainVectors.inp
 
