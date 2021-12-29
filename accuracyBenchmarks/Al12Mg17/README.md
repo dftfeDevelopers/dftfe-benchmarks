@@ -11,8 +11,6 @@ Studies to be performed
 
 Discussion on the input parameters and the results
 ==================================================
-Discussion on the input parameters and the results:
-==================================================
 # DFT-FE:
 
         a) Polynomial Order      = 6
