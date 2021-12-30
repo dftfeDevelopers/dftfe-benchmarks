@@ -34,14 +34,14 @@ This example demonstrates an all-electron ground-state calculation with non-peri
 
 This example demonstrates a ground-state calculation with fully periodic boundary conditions and combined ionic-cell relaxation on Al12Mg17 intermetallic. Multiple k-points for sampling the Brillouin zone, norm-conserving pseudopotential, and PBE exchange correlation are used.
 
-* **InP-water** (To be done by Bikash)
+* **InP-water**
 
 This example demonstrates a ground-state calculation with semi-periodic boundary conditions and ionic relaxation on water molecule over InP slab. Multiple k-points for sampling the Brillouin zone along the periodic directions, norm-conserving pseudopotential and PBE exchange correlation are used.
 
-* **WS2-bilayer** (To be done by Sambit)
+* **WS2-bilayer** 
 
 This example demonstrates a spin-polarized and spin-unpolarized ground-state calculations with non-periodic boundary conditions and ionic relaxation on a isolated system containing WS2 bi-layer . Norm conserving pseudopotential and PBE exchange correlation is used
 
-* **LLZO** (To be done by Sambit remaining part)
+* **LLZO** 
 
 This example demonstrates a spin-polarized and spin-unpolarized ground-state calculations with fully periodic boundary conditions along with combined ionic-cell and stress relaxation on LLZO (Lithium-Lanthanum-Zirconium-Oxide) unit-cell. Gamma point for sampling the Brillouin zone, norm-conserving pseudopotential, and PBE exchange correlation are used.
