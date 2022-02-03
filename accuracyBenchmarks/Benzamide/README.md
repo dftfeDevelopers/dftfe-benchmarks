@@ -4,7 +4,7 @@ This example demonstrates an all-electron ground-state calculation with non-peri
 
 Studies to be performed
 =======================
-* 1) Ground-state calculation: convergence study of ground-state energy and ionic forces to reach chemical accuracy (see examples 1 and 2) with respect to discretization, and validation against NWChem. 
+* 1) Spin unpolarized ground-state calculation: convergence study of ground-state energy and ionic forces to reach chemical accuracy (see examples 1 and 2) with respect to discretization, and validation against NWChem. 
 
 
 Discussion on the input parameters and the results
@@ -13,19 +13,17 @@ Discussion on the input parameters and the results
 
 DFT-FE
 ==================================================
-    a) Spin unpolarized 
-    b) Polynomial Order      = 5
-    c) MESH SIZE AROUND ATOM  = 0.4
-    d) SCF Tolerance            = 1e-5
-    e) Mixing Method            = Anderson
-    f) Anderson MIXING PARAMETER  = 0.2 (default)
+    a) Polynomial Order      = 5
+    b) MESH SIZE AROUND ATOM  = 0.4
+    c) SCF Tolerance            = 1e-5
+    d) Mixing Method            = Anderson
+    e) Anderson MIXING PARAMETER  = 0.2 (default)
 
 NWChem
 ==================================================
-    a) Spin unpolarized 
-    b) Basis = pc-3
-    c) SCF Tolerance            = 1e-6
-    d) Quadrture grid  = medium (default) 
+    a) Basis = pc-3
+    b) SCF Tolerance            = 1e-6
+    c) Quadrture grid  = medium (default) 
 
 Study1---Ground-state calculation results
 --------------------------------
