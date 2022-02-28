@@ -11,7 +11,7 @@ Studies to be performed
 
 Discussion on the input parameters and the results
 ==================================================
-# DFT-FE:
+* DFT-FE:
 
         a) Polynomial Order      = 6
         b) MESH SIZE AROUND ATOM  = 0.9
@@ -20,19 +20,19 @@ Discussion on the input parameters and the results
         e) Mixing Method            = ANDERSON_WITH_KERKER
         f) No. of degree of freedom = 2352637
         
-# QE:  
+* QE:  
         a) ecutwfc                  = 50 Ha                                    
         
 
 Study1---Ground-state calculation results
 --------------------------------
-# GPU v/s CPU Comparison:
+* GPU v/s CPU Comparison:
     a) Energy Difference = 3.62E-12 Ha/atom
     b) Force Difference = 1.11E-05 Ha/bohr (max absolute error among all atoms and force components)
     c) Stress Difference = 1.06013E-07 Ha/bohr**3 (Hydrodynamic Stress error)
     d) No. of scf iterations 18(CPU) & 14(GPU)
 
-# Ground State Comparison with QE(100 Ha energy cut off):
+* Ground State Comparison with QE(100 Ha energy cut off):
     a) Energy Difference = 1.84E-05 Ha/atom
     b) Force Difference = 2.95E-04 Ha/bohr (max absolute error among all atoms and force components)
     c) Stress Difference = 7.44199E-06 Ha/bohr**3 (Hydrodynamic Stress error)
