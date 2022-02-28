@@ -11,7 +11,7 @@ Studies to be performed
 
 Discussion on the input parameters and the results:
 ==================================================
-# DFT-FE:
+* DFT-FE:
         a) Starting Magnetization = 0.08
         b) Polynomial Order      = 7
         c) MESH SIZE AROUND ATOM  = 1.2
@@ -21,7 +21,7 @@ Discussion on the input parameters and the results:
         g) MIXING PARAMETER          =0.2
         g) No. of degree of freedom = 2803221
         
-# QE:  
+* QE:  
         a) Starting Magnetization:
                                         starting_magnetization(Li)= 0.33,
                                         starting_magnetization(O)= 0.1667,
@@ -38,13 +38,13 @@ Study1 -- Ground-state calculation results (Spin-unpolarized)
 
 Study2 -- Ground-state calculation results (Spin-polarized)
 ------------------------------------------------------------
-# GPU CPU Comparison:
+* GPU CPU Comparison:
     a) Energy Difference = 1.62E-8 Ha/atom
     b) Force Difference = 1.6E-7 Ha/bohr (max absolute error among all atoms and force components)
     c) Stress Difference = 1.31E-7 Ha/bohr**3 (Hydrodynamic Stress error)
     d) No. of scf iterations 25(CPU) & 25(GPU)
 
-# Ground State Comparison with QE(100 Ha energy cut off):
+* Ground State Comparison with QE(100 Ha energy cut off):
     a) Energy Difference = 2.80E-06 Ha/atom
     b) Force Difference = 6.79E-05 Ha/bohr (max absolute error among all atoms and force components)
     c) Stress Difference = 2.62E-06 Ha/bohr**3 (Hydrodynamic Stress error)
