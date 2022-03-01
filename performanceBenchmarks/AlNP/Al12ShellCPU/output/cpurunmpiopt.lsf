@@ -1,0 +1,14 @@
+#!/bin/bash
+# Begin LSF Directives
+#BSUB -P MAT230
+#BSUB -W 1:30
+#BSUB -nnodes 100
+#BSUB -J Al12Shell
+#BSUB -o Al12Shell.%J
+#BSUB -e Al12Shell.%J
+	 
+date
+
+export OMP_NUM_THREADS=1
+
+jsrun --smpiargs "-gpu" -n 600 -a 7 -c 7 -g 1 -r 6 -d packed -b packed:1  ./dftfe parameterFileCPU.prm>outputCPU100Nodes

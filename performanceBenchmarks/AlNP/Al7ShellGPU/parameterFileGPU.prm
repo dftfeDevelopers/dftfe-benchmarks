@@ -1,0 +1,76 @@
+set VERBOSITY = 4
+
+subsection GPU
+  set USE GPU=true
+  set AUTO GPU BLOCK SIZES=false
+  set FINE GRAINED GPU TIMINGS=true
+  set USE GPUDIRECT MPI ALL REDUCE = false
+  set SUBSPACE ROT FULL CPU MEM = true
+  set USE ELPA GPU KERNEL = true
+  set GPU MEM OPT MODE = true
+end
+
+subsection Boundary conditions
+  set PERIODIC1                       = false
+  set PERIODIC2                       = false
+  set PERIODIC3                       = false
+  set SMEARED NUCLEAR CHARGES = true
+  set FLOATING NUCLEAR CHARGES = true
+end
+
+
+subsection DFT functional parameters
+  set EXCHANGE CORRELATION TYPE   = 4
+  set PSEUDOPOTENTIAL CALCULATION = true
+  set PSEUDOPOTENTIAL FILE NAMES LIST = pseudo.inp
+end
+
+
+subsection Finite element mesh parameters
+  set POLYNOMIAL ORDER = 7
+  subsection Auto mesh generation parameters
+    set MESH SIZE AROUND ATOM=2.1
+    set ATOM BALL RADIUS=4.0
+  end
+end
+
+subsection Geometry
+  set NATOMS=1415
+  set NATOM TYPES=1
+  set ATOMIC COORDINATES FILE = coordinatesAl7Shell.inp
+  set DOMAIN VECTORS FILE = domainVectors.inp
+  subsection Optimization
+    set ION FORCE = true
+  end
+end
+
+subsection Poisson problem parameters
+  set MAXIMUM ITERATIONS = 10000
+  set TOLERANCE          = 1e-8
+end
+
+
+subsection SCF parameters
+  set MIXING PARAMETER =0.05
+  set COMPUTE ENERGY EACH ITER = false
+  set MIXING HISTORY   = 20
+  set MAXIMUM ITERATIONS               = 100
+  set TEMPERATURE                      = 500
+  set TOLERANCE                        = 1e-4
+  subsection Eigen-solver parameters
+      set NUMBER OF KOHN-SHAM WAVEFUNCTIONS = 2520
+      set CHEBYSHEV POLYNOMIAL DEGREE=35
+      set CHEBYSHEV POLYNOMIAL DEGREE SCALING FACTOR FIRST SCF = 1.5
+      set CHEBYSHEV FILTER TOLERANCE=1e-2
+      set CHEBY WFC BLOCK SIZE=168
+      set WFC BLOCK SIZE=504
+      set SUBSPACE ROT DOFS BLOCK SIZE=20000
+      set USE MIXED PREC CHEBY=true
+      set REUSE LANCZOS UPPER BOUND=true
+      set ALLOW MULTIPLE PASSES POST FIRST SCF=false
+      set USE MIXED PREC PGS O                                 = true
+      set USE MIXED PREC PGS SR                                = true
+      set USE MIXED PREC XTHX SPECTRUM SPLIT                   = true
+      set SPECTRUM SPLIT CORE EIGENSTATES                      = 1512
+  end
+end

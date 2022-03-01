@@ -1,0 +1,20 @@
+#!/bin/bash
+# Begin LSF Directives
+#BSUB -P MAT230
+#BSUB -W 00:30
+#BSUB -alloc_flags gpumps
+#BSUB -nnodes 20
+#BSUB -J Al7Shell
+#BSUB -o Al7Shell.%J
+#BSUB -e Al7Shell.%J
+	 
+date
+
+export OMP_NUM_THREADS=1
+export PAMI_IBV_ENABLE_DCT=1
+export PAMI_ENABLE_STRIPING=0
+export PAMI_IBV_ADAPTER_AFFINITY=1
+export PAMI_IBV_DEVICE_NAME="mlx5_0:1,mlx5_3:1"
+export PAMI_IBV_DEVICE_NAME_1="mlx5_3:1,mlx5_0:1"
+
+jsrun --smpiargs "-gpu -mca coll_ibm_tune_results $XML10300" -n 120 -a 3 -c 7 -g 1 -r 6 -d packed -b packed:2 -l gpu-gpu  ./dftfe parameterFileGPU.prm>outputGPUFullSCF_20Nodes_ballradius6_opt_new
