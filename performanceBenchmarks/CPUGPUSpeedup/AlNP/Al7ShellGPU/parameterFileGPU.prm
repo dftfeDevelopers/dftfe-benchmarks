@@ -68,8 +68,8 @@ subsection SCF parameters
       set USE MIXED PREC CHEBY=true
       set REUSE LANCZOS UPPER BOUND=true
       set ALLOW MULTIPLE PASSES POST FIRST SCF=false
-      set USE MIXED PREC PGS O                                 = true
-      set USE MIXED PREC PGS SR                                = true
+      set USE MIXED PREC CGS O                                 = true
+      set USE MIXED PREC CGS SR                                = true
       set USE MIXED PREC XTHX SPECTRUM SPLIT                   = true
       set SPECTRUM SPLIT CORE EIGENSTATES                      = 1512
   end

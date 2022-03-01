@@ -5,16 +5,14 @@ subsection GPU
   set AUTO GPU BLOCK SIZES=false
   set FINE GRAINED GPU TIMINGS=true
   set USE GPUDIRECT MPI ALL REDUCE = false
-  set USE ELPA GPU KERNEL = true
-  set GPU MEM OPT MODE = true
+  set USE ELPA GPU KERNEL=true
 end
 
 subsection Boundary conditions
-  set PERIODIC1                       = false
-  set PERIODIC2                       = false
-  set PERIODIC3                       = false
-  set SMEARED NUCLEAR CHARGES = true
-  set FLOATING NUCLEAR CHARGES = true
+  set PERIODIC1                       = true
+  set PERIODIC2                       = true
+  set PERIODIC3                       = true
+  set SELF POTENTIAL RADIUS=4.0
 end
 
 
@@ -27,20 +25,26 @@ end
 
 subsection Finite element mesh parameters
   set POLYNOMIAL ORDER = 7
+  set POLYNOMIAL ORDER ELECTROSTATICS=7
   subsection Auto mesh generation parameters
     set MESH SIZE AROUND ATOM=2.1
-    set ATOM BALL RADIUS=4.0
+    set ATOM BALL RADIUS=10.0
   end
 end
 
 subsection Geometry
-  set NATOMS=6525
+  set NATOMS=431
   set NATOM TYPES=1
-  set ATOMIC COORDINATES FILE = shell12.dftfe
+  set ATOMIC COORDINATES FILE      = coordinates.inp
   set DOMAIN VECTORS FILE = domainVectors.inp
   subsection Optimization
-    set ION FORCE = true
+    set ION FORCE = false
   end
+end
+
+subsection Helmholtz problem parameters
+  set ABSOLUTE TOLERANCE HELMHOLTZ = 1e-8
+  set MAXIMUM ITERATIONS HELMHOLTZ = 10000
 end
 
 subsection Poisson problem parameters
@@ -50,27 +54,29 @@ end
 
 
 subsection SCF parameters
-  set MIXING PARAMETER =0.025
+  set MIXING PARAMETER =0.5
   set COMPUTE ENERGY EACH ITER = false
-  set MIXING HISTORY   = 20
-  set MAXIMUM ITERATIONS               = 200
+  set MIXING METHOD= ANDERSON_WITH_KERKER
+  set KERKER MIXING PARAMETER=0.05
+  set MIXING HISTORY   = 10
+  set MAXIMUM ITERATIONS               = 4
   set TEMPERATURE                      = 500
   set TOLERANCE                        = 1e-4
   subsection Eigen-solver parameters
-      set NUMBER OF KOHN-SHAM WAVEFUNCTIONS = 11760
+      set NUMBER OF KOHN-SHAM WAVEFUNCTIONS = 3600
       set CHEBYSHEV POLYNOMIAL DEGREE=35
-      set CHEBYSHEV POLYNOMIAL DEGREE SCALING FACTOR FIRST SCF = 1.5
-      set CHEBYSHEV FILTER TOLERANCE=1e-3
-      set CHEBY WFC BLOCK SIZE=210
-      set WFC BLOCK SIZE=840
+      set CHEBYSHEV POLYNOMIAL DEGREE SCALING FACTOR FIRST SCF = 1.0
+      set CHEBYSHEV FILTER TOLERANCE=10
+      set CHEBY WFC BLOCK SIZE=600
+      set WFC BLOCK SIZE=600
       set SUBSPACE ROT DOFS BLOCK SIZE=20000
       set USE MIXED PREC CHEBY=true
       set REUSE LANCZOS UPPER BOUND=true
-      set ALLOW MULTIPLE PASSES POST FIRST SCF=true
+      set ALLOW MULTIPLE PASSES POST FIRST SCF=false
       set USE MIXED PREC CGS O                                 = true
       set USE MIXED PREC CGS SR                                = true
       set USE MIXED PREC XTHX SPECTRUM SPLIT                   = true
-      set SPECTRUM SPLIT CORE EIGENSTATES                      = 7560
-      set SCALAPACKPROCS=40
+      set SPECTRUM SPLIT CORE EIGENSTATES                      = 2400
+      set SCALAPACKPROCS=0
   end
 end
