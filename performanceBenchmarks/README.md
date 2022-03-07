@@ -6,7 +6,7 @@ All benchmark calculations are run using ONCV pseudopotentials and finite-elemen
 
 * **Architectures used for the benchmarks**
 
-  * Summit: 6 NVIDIA V100 GPUs and 2 IBM POWER9 CPUs (42 cores total) per node
+i. Summit: 6 NVIDIA V100 GPUs and 2 IBM POWER9 CPUs (42 cores total) per node
   
 
 * **Computational cost benchmarks**
