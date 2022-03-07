@@ -5,6 +5,7 @@ Ground-state DFT performance for pseudopotential DFT calulations using DFT-FE v1
 All benchmark calculations are run using ONCV pseudopotentials and finite-element discretization parameters are commensurate with chemical accuracy (~1e-4 Ha/atom in ground-state energy, ~1e-4 Ha/Bohr in ionic forces and ~5e-6 Ha/Bohr^3 in cell stresses).
 
 * **Computational cost benchmarks**
+
 Phani: create table with following columns: (system, architecture and resources used (number of nodes), total wall time, average per scf wall-time, CPU-GPU speedup 
 
 * **Strong parallel scaling**
