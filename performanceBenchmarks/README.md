@@ -1,1 +1,4 @@
-To be populated
+This directory contains performance benchmarks for the DFT-FE code on various medium and large-scale benchmark systems. The performance of the benchmark systems will be tracked as the architectures evolve (upcoming exascale machines) and future methodology and implmentation enhancements in DFT-FE while maintaining the same accuracy. Additional performance benchmarks will also be added in the future as new capabilites are added into DFT-FE for example hybrid exchange-correlation functionals, time-dependent DFT, enriched finite-elements for large-scale all-electron calculations etc. 
+
+General guidelines on Finite-element discretization input parameters
+============================================================================
