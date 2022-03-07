@@ -4,21 +4,21 @@ Ground-state DFT performance for pseudopotential DFT calulations using DFT-FE v1
 ==================================================================================
 All benchmark calculations are run using ONCV pseudopotentials and finite-element discretization parameters are commensurate with chemical accuracy (~1e-4 Ha/atom in ground-state energy, ~1e-4 Ha/Bohr in ionic forces and ~5e-6 Ha/Bohr^3 in cell stresses).
 
-**Architectures used for the benchmarks**
+Architectures used for the benchmarks
 ----------
-      * Summit: 6 NVIDIA V100 GPUs and 2 IBM POWER9 CPUs (42 cores total) per node
+      i. Summit: 6 NVIDIA V100 GPUs and 2 IBM POWER9 CPUs (42 cores total) per node
   
 
-**Computational cost benchmarks**
+Computational cost benchmarks
 --------------
 
 Phani: create table with following columns: (system and benchmark relative folder path, architecture and resources used (number of nodes), total wall time, average per scf wall-time, CPU-GPU speedup)
 
 we will use different rows for different architectures
 
-**Strong parallel scaling**
+Strong parallel scaling
 -----------
 
 
-**Minimum wall-time**
+Minimum wall-time
 --------------
