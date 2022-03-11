@@ -19,6 +19,9 @@ Discussion on the input parameters and the results:
         e) SCF Tolerance            =1E-5
         f) Mixing Method            = Anderson
         g) MIXING PARAMETER          =0.2
+        i) ION OPT =true (for ionic forces relaxation)
+        j) CELL OPT=true (for cell stress relaxation)
+        k) CELL CONSTRAINT TYPE=9 (cell relax along domain vector components v1x, v2y and v3z)
         
 * QE:  
         a) Starting Magnetization (for spin-polarized calculations):

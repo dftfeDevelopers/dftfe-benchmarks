@@ -12,7 +12,6 @@ subsection Geometry
     set CELL OPT              = true
     set ION OPT               = true
     set CELL CONSTRAINT TYPE  = 9
-    set ION RELAX FLAGS FILE = ion_force_flag.inp
   end
 end
 
