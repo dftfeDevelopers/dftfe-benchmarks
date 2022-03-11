@@ -12,7 +12,7 @@ i. Summit: 6 NVIDIA V100 GPUs and 2 IBM POWER9 CPUs (42 cores total) per node
 Computational cost benchmarks
 --------------
 
-Phani: create table with following columns: (material system,  DFT-FE version, raw data relative folder path, architecture and resources used (number of nodes), total wall time, average per scf wall-time, CPU-GPU speedup)
+Phani: create table with following columns: (material system,  number of atoms (number of electrons), DFT-FE version, raw data relative folder path, architecture and resources used (number of nodes), total wall time, average per scf wall-time, CPU-GPU speedup)
 
 we will use different rows for different architectures and DFT-FE versions 
 
