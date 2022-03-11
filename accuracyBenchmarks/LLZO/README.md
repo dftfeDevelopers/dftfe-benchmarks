@@ -12,17 +12,16 @@ Studies to be performed
 Discussion on the input parameters and the results:
 ==================================================
 * DFT-FE:
-        a) Starting Magnetization = 0.08
+        a) Starting Magnetization = 0.08 (for spin-polarized calculations)
         b) Polynomial Order      = 7
         c) MESH SIZE AROUND ATOM  = 1.2
         d) ATOM BALL RADIUS         = 4.0
         e) SCF Tolerance            =1E-5
         f) Mixing Method            = Anderson
         g) MIXING PARAMETER          =0.2
-        g) No. of degree of freedom = 2803221
         
 * QE:  
-        a) Starting Magnetization:
+        a) Starting Magnetization (for spin-polarized calculations):
                                         starting_magnetization(Li)= 0.33,
                                         starting_magnetization(O)= 0.1667,
                                         starting_magnetization(La)= 0.09,
@@ -33,7 +32,11 @@ Discussion on the input parameters and the results:
 
 Study1 -- Ground-state calculation results (Spin-unpolarized)
 ------------------------------------------------------------
-
+* Ground State Comparison with QE(100 Ha energy cut off):
+    a) Energy Difference =  Ha/atom
+    b) Force Difference =  Ha/bohr (max absolute error among all atoms and force components)
+    c) Stress Difference =  Ha/bohr**3 (Hydrodynamic Stress error)
+    d) No. of scf iterations (DFT-FE) & (QE)
 
 
 Study2 -- Ground-state calculation results (Spin-polarized)
@@ -52,7 +55,20 @@ Study2 -- Ground-state calculation results (Spin-polarized)
 
 Study3 -- Geometric relaxation results (Spin-unpolarized)
 ------------------------------------------------------------
-
+* Relaxed State Comparison with QE(42.5 Ha ecut):  
+    a) Energy Difference =  Ha/atom  
+    b) Force Difference =  Ha/bohr (max absolute error among all atoms and force components)  
+    c) Stress Difference =  Ha/bohr**3 (Hydrodynamic Stress error)  
+* Relaxed Vectors:
+    *  Quantum Espresso:  
+                         24.9176176	0.0000000	0.0000000   
+                         0.0000000	24.9191797	0.0000000   
+                         0.0000000	0.0000000	23.8884463   
+    *  DFT-FE:  
+                        24.9150902	0.0000000	0.0000000     
+                        0.0000000	24.9151757	0.0000000     
+                        0.0000000	0.0000000	23.8931448     
+    *  Max Error is 0.01966 % 
 
 Study4 -- Geometric relaxation results (Spin-polarized)
 ------------------------------------------------------------
