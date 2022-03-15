@@ -2,7 +2,7 @@ This directory contains examples, which are designed to cover most of the capabi
 
 General guidelines on Finite-element discretization input parameters
 ============================================================================
-We refer to DFT-FE [here](https://github.com/dftfeDevelopers/dftfe/blob/manual/manual-develop.pdf)) for full input parameters list, their associated description, and the precedure to setup the input file. The manual also provides more in-depth discussion on the usage of the key input parameters in DFT-FE. Below, we briefly discuss the Finite-element (FE) discretization related input parameters which will be repeatedly used in all the examples. Other input parameters specific to the example are discussed inside the associated example subfolder.
+We refer to DFT-FE [manual](https://github.com/dftfeDevelopers/dftfe/blob/manual/manual-develop.pdf) for full input parameters list, their associated description, and the precedure to setup the input file. The manual also provides more in-depth discussion on the usage of the key input parameters in DFT-FE. Below, we briefly discuss the Finite-element (FE) discretization related input parameters which will be repeatedly used in all the examples. Other input parameters specific to the example are discussed inside the associated example subfolder.
 
 The three important FE discretization related parameters in DFT-FE, which the user needs to set are the **POLYNOMIAL ORDER, MESH SIZE AROUND ATOM, and ATOM BALL RADIUS**.
 
