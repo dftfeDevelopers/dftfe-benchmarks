@@ -1,7 +1,7 @@
 subsection Geometry
   set NATOMS=192
   set NATOM TYPES=4
-  set ATOMIC COORDINATES FILE      = coordinates.inp           
+  set ATOMIC COORDINATES FILE      = coordinatesLLZO.inp           
   set DOMAIN VECTORS FILE = domainVectors.inp 
   subsection Optimization
     set CELL STRESS              = true
