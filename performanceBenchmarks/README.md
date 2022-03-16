@@ -13,8 +13,19 @@ Computational cost benchmarks
 --------------
 
 Phani: create table with following columns: (material system,  number of atoms (number of electrons), DFT-FE version, raw data relative folder path, architecture and resources used (number of nodes), total wall time, average per scf wall-time, CPU-GPU speedup)
-
 we will use different rows for different architectures and DFT-FE versions 
+
+
+| Material System  | Number of atoms (No. of electrons) | Number of Nodes (GPUs) | Total wall time | Average wall-time per SCF | CPU-GPU speedup |  
+| ---------------- | ---------------------------------- | ---------------------- | --------------- | ------------------------- | --------------- |
+|                  |                                    |			 |                 |     		       |                 |
+|                  |                                    |			 |                 |			       |                 |
+|                  |					|			 |                 |                           |                 |
+|                  |					|			 |                 |                           |                 |
+|                  |					|			 |                 |                           |                 |
+|                  | 					|			 |                 |                           |                 |
+|                  |					|			 |                 |                           |                 |
+
 
 Strong parallel scaling
 -----------
