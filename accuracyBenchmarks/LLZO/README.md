@@ -36,15 +36,15 @@ Discussion on the input parameters and the results:
 Study1 -- Ground-state calculation results (Spin-unpolarized)
 ------------------------------------------------------------
 * Ground State Comparison with QE(100 Ha energy cut off):
-    a) Energy Difference =  Ha/atom
-    b) Force Difference =  Ha/bohr (max absolute error among all atoms and force components)
-    c) Stress Difference =  Ha/bohr**3 (Hydrodynamic Stress error)
+    a) Energy Difference = 1.4e-5  Ha/atom
+    b) Force Difference =  9e-5 Ha/bohr (max absolute error among all atoms and force components)
+    c) Stress Difference = 2.6e-6 Ha/bohr**3 (Hydrodynamic Stress error)
     d) No. of scf iterations (DFT-FE) & (QE)
 
 
 Study2 -- Ground-state calculation results (Spin-polarized)
 ------------------------------------------------------------
-* GPU CPU Comparison:
+* GPU CPU Comparison (both DFT-FE):
     a) Energy Difference = 1.62E-8 Ha/atom
     b) Force Difference = 1.6E-7 Ha/bohr (max absolute error among all atoms and force components)
     c) Stress Difference = 1.31E-7 Ha/bohr**3 (Hydrodynamic Stress error)
@@ -54,7 +54,6 @@ Study2 -- Ground-state calculation results (Spin-polarized)
     a) Energy Difference = 2.80E-06 Ha/atom
     b) Force Difference = 6.79E-05 Ha/bohr (max absolute error among all atoms and force components)
     c) Stress Difference = 2.62E-06 Ha/bohr**3 (Hydrodynamic Stress error)
-    d) No. of scf iterations 25(DFT-FE) & 13(QE)
 
 Study3 -- Geometric relaxation results (Spin-unpolarized)
 ------------------------------------------------------------
