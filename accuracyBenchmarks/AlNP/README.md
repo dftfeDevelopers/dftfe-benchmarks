@@ -2,7 +2,7 @@ Description of the example
 ==========================
 This example demonstrates a ground-state calculation with fully non-periodic boundary conditions on Al nanoparticle with 147 atoms. ONCV pseudopotential from Pseudo-dojo database and PBE exchange correlation, and Fermi-Dirac smearing temperature of 500 K are used.
 
-Studies to be performed
+Studies performed
 =======================
 * Ground-state calculation using DFT-FE at a FE discretization commensurate with chemical accuracy(~1e-4 Ha/atom in energy, ~1e-4 Ha/Bohr in ionic forces). The referenace ground-state energy, ionic forces are computed using QUANTUM ESPRESSO (QE) at a high plane-wave cutoff of 50 Ha.
 

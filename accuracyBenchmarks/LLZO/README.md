@@ -2,7 +2,7 @@ Description of the example
 ==========================
 This example demonstrates a ground-state calculation, ionic relaxation, cell relaxation on Lithium Lanthanum Zirconate unit-cell employing periodic boundary conditions in all directions. ONCV pseudopotentials from pseudodojo database, PBE exchange correlation and Fermi-Dirac smearing temperature of 500 K are used. 
 
-Studies to be performed
+Studies performed
 =======================
 * Ground-state calculation: Spin-unpolarized calculation with convergence study of ground-state energy, ionic forces and cell stresses with respect to FE discretization to reach chemical accuracy (see examples 1 and 2). Validation with Quantum espresso refined calculation.
 * Ground-state calculation: Spin-polarized ground-state calculation using mesh parameters obtained in the above study and validate the ground-state energy, forces and stresses with Quantum espresso.
@@ -29,17 +29,16 @@ Discussion on the input parameters and the results:
                                         starting_magnetization(O)= 0.1667,
                                         starting_magnetization(La)= 0.09,
                                         starting_magnetization(Zr)=0.1667 
-        b) ecutwfc                  = 100 Ha                                    
+        b) ecutwfc                  = 42.5 Ha                                    
         
 
 
 Study1 -- Ground-state calculation results (Spin-unpolarized)
 ------------------------------------------------------------
-* Ground State Comparison with QE(100 Ha energy cut off):
+* Ground State Comparison with QE(42.5 Ha energy cut off):
     a) Energy Difference = 1.4e-5  Ha/atom
     b) Force Difference =  9e-5 Ha/bohr (max absolute error among all atoms and force components)
     c) Stress Difference = 2.6e-6 Ha/bohr**3 (Hydrodynamic Stress error)
-    d) No. of scf iterations (DFT-FE) & (QE)
 
 
 Study2 -- Ground-state calculation results (Spin-polarized)
