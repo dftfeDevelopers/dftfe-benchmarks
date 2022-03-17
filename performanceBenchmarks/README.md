@@ -43,7 +43,7 @@ Minimum wall-time
 Minimum total run wall-time including initialization costs and computation of ionic forces achieved on OLCF Summit GPU nodes at a parallel scaling efficiency of
 
 
-| Material System  | Number of atoms (No. of electrons) | Number of Nodes (GPUs) | Total wall time (sec)| 
-| ---------------- | ---------------------------------- | ---------------------- | --------------- | 
-|                  |                                    |			 |                 |     		      
-|                  |                                    |			 |                 |			      
+| Material System        | Number of atoms (No. of electrons) | k-points | Number of Nodes (GPUs) | Total wall time (sec)| 
+| ----------------       | ---------------------------------- | ---------| ---------------------- |----------------------| 
+| BCC Mo6x6x6 monvacancy |  431 (6,034)                       |	Gamma  |        64 (384)          |        82.5          |     		      
+| BCC Mo6x6x6 monvacancy |  1,023 (14,322)                    |	Gamma  |	   224 (1,344)        |        140.2         |			      
