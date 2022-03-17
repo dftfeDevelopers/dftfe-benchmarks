@@ -39,7 +39,7 @@ Study2 --- Ionic relaxation results (Spin unpolarized)
 
 Study3 --- Ground-state calculation results (Spin polarized)
 -------------------------------------------
-* Ground State Comparison with QE(100 Ha energy cut off):
+* Ground State Comparison with QE:
     a) Energy Difference = 4.1E-05 Ha/atom
     b) Force Difference =  2.2e-4 Ha/bohr (max absolute error among all atoms and force components)
     c) Net magetization = 2.23 Bohr magneton from both DFT-FE and QE
