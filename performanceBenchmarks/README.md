@@ -6,7 +6,7 @@ All benchmark calculations are run using ONCV pseudopotentials and finite-elemen
 
 Architectures used for the benchmarks:
 -------------
-i. Summit: 6 NVIDIA V100 GPUs and 2 IBM POWER9 CPUs (42 cores total) per node
+i. OLCF Summit: 6 NVIDIA V100 GPUs and 2 IBM POWER9 CPUs (42 cores total) per node
   
 
 Computational cost benchmarks
@@ -29,9 +29,13 @@ we will use different rows for different architectures and DFT-FE versions
 
 Strong parallel scaling
 -----------
-Solarized dark             |  Solarized Ocean
+
+Strong parallel scaling of wall-time per SCF iteration step on OLCF Summit GPU nodes using DFT-FE v1.0. Please refer to (arxiv paper link) for details on the breakdown of the wall-time into various computational steps.
+
+BCC Mo6x6x6 monvacancy  (431 atoms, 6,034 electrons)            |  BCC Mo8x8x8 monvacancy (1,023 atoms, 14,322 electrons)
 :-------------------------:|:-------------------------:
 ![](./DFTFEv1.0/Summit/GroundStateCalculations/StrongParallelScaling/mo6xscalingnew.png)  |  ![](./DFTFEv1.0/Summit/GroundStateCalculations/StrongParallelScaling/mo8xscalingnew.png)
+
 
 Minimum wall-time
 --------------
