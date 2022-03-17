@@ -29,7 +29,7 @@ we will use different rows for different architectures and DFT-FE versions
 
 Strong parallel scaling
 -----------
-
+![plot](./DFTFEv1.0/Summit/GroundStateCalculations/StrongParallelScaling/mo6xscalingnew.png)
 
 Minimum wall-time
 --------------
