@@ -1,7 +1,7 @@
 Description of the example
 ==========================
 This example demonstrates a ground-state calculation and ionic relaxation on a bilayer of WS2 employing non periodic boundary conditions in all 3 directions.
-ONCV pseudopotential from PseudoDojo database, PBE exchange correlation and Fermi-Dirac smearing temperature of 500 K are used. Non-periodic boundary conditions along x, Y, Z directions are
+ONCV pseudopotential from PseudoDojo database, PBE exchange correlation and Fermi-Dirac smearing temperature of 500 K are used. Non-periodic boundary conditions along X, Y, Z directions are
 employed with a vaccum layer in all directions.
 
 Studies performed
@@ -17,7 +17,6 @@ Discussion on the input parameters and the results
         a) Polynomial Order      = 7
         b) MESH SIZE AROUND ATOM  = 1.6
         c) ATOM BALL RADIUS         = 6.0
-        d) SCF Tolerance            =5E-5
         e) Mixing Method            = Anderson
         f) MIXING PARAMETER          =0.2
         g) ION OPT =true (for ionic forces relaxation)
@@ -30,8 +29,8 @@ Discussion on the input parameters and the results
 Study1 --- Ground-state calculation results (Spin unpolarized)
 -------------------------------------------
 * Ground State Comparison with QE:
-    a) Energy Difference = 1.4e-5  Ha/atom
-    b) Force Difference =  9e-5 Ha/bohr (max absolute error among all atoms and force components)
+    a) Energy Difference = 1.6e-5  Ha/atom
+    b) Force Difference =  1.8e-4 Ha/bohr (max absolute error among all atoms and force components)
 
 Study2 --- Ionic relaxation results (Spin unpolarized)
 -----------------------------------
@@ -41,8 +40,9 @@ Study2 --- Ionic relaxation results (Spin unpolarized)
 Study3 --- Ground-state calculation results (Spin polarized)
 -------------------------------------------
 * Ground State Comparison with QE(100 Ha energy cut off):
-    a) Energy Difference = 2.80E-06 Ha/atom
-    b) Force Difference =  9e-5 Ha/bohr (max absolute error among all atoms and force components)
+    a) Energy Difference = 4.1E-05 Ha/atom
+    b) Force Difference =  2.2e-4 Ha/bohr (max absolute error among all atoms and force components)
+    c) Net magetization = 2.23 Bohr magneton from both DFT-FE and QE
 
 Study4 --- Ionic relaxation results (Spin polarized)
 -----------------------------------
