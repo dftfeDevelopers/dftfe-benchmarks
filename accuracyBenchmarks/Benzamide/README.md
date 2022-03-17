@@ -2,7 +2,7 @@ Description of the example
 ==========================
 This example demonstrates an all-electron ground-state calculation with non-periodic boundary conditions and ionic relaxation on Benzamide. PBE exchange correlation and Fermi-Dirac smearing temperatrure of 500 K are used.
 
-Studies to be performed
+Studies performed
 =======================
 1) Spin unpolarized ground-state calculation: convergence study of ground-state energy and ionic forces to reach chemical accuracy (defined in the common README) with respect to discretization, and validation against NWChem. 
 
