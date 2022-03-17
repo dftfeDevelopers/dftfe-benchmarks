@@ -2,7 +2,7 @@ This directory contains performance benchmarks using the DFT-FE code on various 
 
 Performance benchmarks for pseudopotential DFT ground-state calulations
 ==================================================================================
-All benchmark calculations are run using ONCV pseudopotentials and finite-element discretization parameters are commensurate with chemical accuracy (~1e-4 Ha/atom in ground-state energy, ~1e-4 Ha/Bohr in ionic forces and ~5e-6 Ha/Bohr^3 in cell stresses).
+All benchmark calculations are run using ONCV pseudopotentials and finite-element discretization parameters are commensurate with chemical accuracy (~1e-4 Ha/atom in ground-state energy, ~1e-4 Ha/Bohr in ionic forces and ~5e-6 Ha/Bohr^3 in cell stresses). 
 
 Architectures used for the benchmarks:
 -------------
@@ -30,12 +30,20 @@ we will use different rows for different architectures and DFT-FE versions
 Strong parallel scaling
 -----------
 
-Strong parallel scaling of wall-time per SCF iteration step on OLCF Summit GPU nodes using DFT-FE v1.0. Please refer to (arxiv paper link) for details on the breakdown of the wall-time into various computational steps.
+Strong parallel scaling of wall-time per SCF iteration step on OLCF Summit GPU nodes. Please refer to (arxiv paper link) for details on the breakdown of the wall-time into various computational steps.
 
-BCC Mo6x6x6 monvacancy  (431 atoms, 6,034 electrons)            |  BCC Mo8x8x8 monvacancy (1,023 atoms, 14,322 electrons)
+BCC Mo6x6x6 monvacancy  (431 atoms, 6,034 electrons---Gamma point)            |  BCC Mo8x8x8 monvacancy (1,023 atoms, 14,322 electrons---Gamma point)
 :-------------------------:|:-------------------------:
 ![](./DFTFEv1.0/Summit/GroundStateCalculations/StrongParallelScaling/mo6xscalingnew.png)  |  ![](./DFTFEv1.0/Summit/GroundStateCalculations/StrongParallelScaling/mo8xscalingnew.png)
 
 
 Minimum wall-time
 --------------
+
+Minimum total run wall-time including initialization costs and computation of ionic forces achieved on OLCF Summit GPU nodes at a parallel scaling efficiency of
+
+
+| Material System  | Number of atoms (No. of electrons) | Number of Nodes (GPUs) | Total wall time (sec)| 
+| ---------------- | ---------------------------------- | ---------------------- | --------------- | 
+|                  |                                    |			 |                 |     		      
+|                  |                                    |			 |                 |			      
