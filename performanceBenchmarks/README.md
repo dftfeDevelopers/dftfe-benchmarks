@@ -46,4 +46,4 @@ Minimum total run wall-time including initialization costs and computation of io
 | Material System        | Number of atoms (No. of electrons) | k-points | Number of Nodes (GPUs) | Total wall time (sec)| 
 | ----------------       | ---------------------------------- | ---------| ---------------------- |----------------------| 
 | BCC Mo6x6x6 monvacancy |  431 (6,034)                       |	Gamma  |        64 (384)          |        82.5          |     		      
-| BCC Mo6x6x6 monvacancy |  1,023 (14,322)                    |	Gamma  |	   224 (1,344)        |        140.2         |			      
+| BCC Mo8x8x8 monvacancy |  1,023 (14,322)                    |	Gamma  |	   224 (1,344)        |        140.2         |			      
