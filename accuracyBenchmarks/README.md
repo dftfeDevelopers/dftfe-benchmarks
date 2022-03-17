@@ -40,7 +40,7 @@ This example demonstrates a ground-state calculation with semi-periodic boundary
 
 * **WS2-bilayer**
 
-This example demonstrates a spin-polarized and spin-unpolarized ground-state calculations with non-periodic boundary conditions and ionic relaxation on a isolated system containing WS2 bi-layer . Norm conserving pseudopotential and PBE exchange correlation is used
+This example demonstrates a spin-polarized and spin-unpolarized ground-state calculations with non-periodic boundary conditions and ionic relaxation on a isolated system containing WS2 bi-layer. Norm conserving pseudopotential and PBE exchange correlation is used
 
 * **LLZO** 
 
