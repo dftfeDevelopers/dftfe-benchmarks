@@ -57,27 +57,22 @@ Study2 -- Ground-state calculation results (Spin-polarized)
 Study3 -- Geometric relaxation results (Spin-unpolarized)
 ------------------------------------------------------------
 * Relaxed State Comparison with QE(42.5 Ha ecut):  
-    a) Energy Difference =  Ha/atom  
-    b) Force Difference =  Ha/bohr (max absolute error among all atoms and force components)  
-    c) Stress Difference =  Ha/bohr**3 (Hydrodynamic Stress error)  
-* Relaxed Vectors:
+    a) Energy Difference =7.3e-6  Ha/atom  
+* Relaxed lattice Vectors:
     *  Quantum Espresso:  
-                         24.9176176	0.0000000	0.0000000   
-                         0.0000000	24.9191797	0.0000000   
-                         0.0000000	0.0000000	23.8884463   
+                         24.9176 0.00000 0.00000   
+                         0.00000 24.6637 0.00000   
+                         0.00000 0.00000 23.0713  
     *  DFT-FE:  
-                        24.9150902	0.0000000	0.0000000     
-                        0.0000000	24.9151757	0.0000000     
-                        0.0000000	0.0000000	23.8931448     
-    *  Max Error is 0.01966 % 
+                        24.9100	0.00000	0.00000     
+                        0.00000 24.9100 0.00000     
+                        0.00000	0.00000	21.9104    
 
 Study4 -- Geometric relaxation results (Spin-polarized)
 ------------------------------------------------------------
 * Relaxed State Comparison with QE(42.5 Ha ecut):  
     a) Energy Difference = 1.06E-05 Ha/atom  
-    b) Force Difference = 2.55E-04 Ha/bohr (max absolute error among all atoms and force components)  
-    c) Stress Difference = 4.82E-06 Ha/bohr**3 (Hydrodynamic Stress error)  
-* Relaxed Vectors:
+* Relaxed lattice Vectors:
     *  Quantum Espresso:  
                          24.9176176	0.0000000	0.0000000   
                          0.0000000	24.9191797	0.0000000   
@@ -86,7 +81,3 @@ Study4 -- Geometric relaxation results (Spin-polarized)
                         24.9150902	0.0000000	0.0000000     
                         0.0000000	24.9151757	0.0000000     
                         0.0000000	0.0000000	23.8931448     
-    *  Max Error is 0.01966 %                     
-                    
-
-    
