@@ -6,7 +6,7 @@ subsection Geometry
   subsection Optimization
     set CELL STRESS              = true
     set ION FORCE                 = true
-    set STRESS TOL            = 4e-6
+    set STRESS TOL            = 1e-6
     set FORCE TOL = 2e-4
     set CELL OPT              = true
     set ION OPT               = true
