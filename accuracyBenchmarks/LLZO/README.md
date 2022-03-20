@@ -66,7 +66,7 @@ Study3 -- Geometric relaxation results (Spin-unpolarized)
     *  DFT-FE:  
                         24.9100	0.00000	0.00000     
                         0.00000 24.9100 0.00000     
-                        0.00000	0.00000	21.9104    
+                        0.00000	0.00000	23.9104    
 
 Study4 -- Geometric relaxation results (Spin-polarized)
 ------------------------------------------------------------
