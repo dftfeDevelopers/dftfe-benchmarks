@@ -57,7 +57,7 @@ Study2 -- Ground-state calculation results (Spin-polarized)
 Study3 -- Geometric relaxation results (Spin-unpolarized)
 ------------------------------------------------------------
 * Relaxed State Comparison with QE(42.5 Ha ecut):  
-    a) Energy Difference =7.3e-6  Ha/atom  
+    a) Energy Difference =8.5e-6  Ha/atom  
 * Relaxed lattice Vectors:
     *  Quantum Espresso:  
                          24.9176 0.00000 0.00000   
