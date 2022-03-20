@@ -61,7 +61,7 @@ Study3 -- Geometric relaxation results (Spin-unpolarized)
 * Relaxed lattice Vectors:
     *  Quantum Espresso:  
                          24.9176 0.00000 0.00000   
-                         0.00000 24.6637 0.00000   
+                         0.00000 24.9192 0.00000   
                          0.00000 0.00000 23.0713  
     *  DFT-FE:  
                         24.9100	0.00000	0.00000     
