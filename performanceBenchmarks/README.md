@@ -17,10 +17,10 @@ Computational cost benchmarks
 | BCC Mo6x6x6 Monovacancy    |            431 (6034)              |	  4 (24)	   |       0.093           |     	  0.0037             |      13.7       |  Gamma   |
 | BCC Mo8x8x8 Monovacancy    |           1023 (14,322)            |      14 (84)	   |       0.15            |	          0.006	             |      17.3       |  Gamma   |
 | BCC Mo10x10x10 Monovacancy |           1999 (27,986)            |	 40 (240)	   |       0.235           |              0.0094             |      18.0       |  Gamma   |
-| BCC Mo6x6x6 Monovacancy    |            431 (6034)              |	 40 (240)	   |	     0.125	           |		  0.0049             |      22.1       |  2x2x2   |                  |                 |
+| BCC Mo6x6x6 Monovacancy    |            431 (6034)              |	 40 (240)	   |	   0.124  	   |		  0.0049             |      22.1       |  2x2x2   |                                   
 | Al 7Shell Nanoparticle     |	         1415 (4245)              |	 20 (120)          |       0.227           |              0.0032             |      17.2       |    -     |
 | Al 12Shell Nanoparticle    | 		 6525 (19,575)		  |	190 (1140)         |       1.485           |              0.0074             |      19.3       |    -     |
-| BCC Mo13x13x13 Monovacancy |           4393 (61,502)            |	160 (960)	   |	   0.535           |		  0.0218	     |       -         |  Gamma   |                      |                 |
+| BCC Mo13x13x13 Monovacancy |           4393 (61,502)            |	160 (960)	   |	   0.535           |		  0.0218	     |       -         |  Gamma   |                                       
 | BCC Mo16x16x16 Monovacancy |           8191 (114,674)           |     600 (3600)         |       0.9             |              0.036              |       -         |  Gamma   |
 
 Strong parallel scaling
