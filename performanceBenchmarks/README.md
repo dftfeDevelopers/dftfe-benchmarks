@@ -36,7 +36,7 @@ BCC Mo6x6x6 monvacancy  (431 atoms, 6,034 electrons---Gamma point)            | 
 Minimum wall-time
 --------------
 
-Minimum total run wall-time including initialization costs and computation of ionic forces achieved on OLCF Summit GPU nodes at a parallel scaling efficiency of
+Minimum total run wall-time including initialization costs and computation of ionic forces achieved on OLCF Summit GPU nodes at a parallel scaling efficiency of around 40 %
 
 
 | Material System        | Number of atoms (No. of electrons) | k-points | Number of Nodes (GPUs) | Total wall time (sec)| 
