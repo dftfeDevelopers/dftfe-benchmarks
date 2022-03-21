@@ -26,7 +26,7 @@ Computational cost benchmarks
 Strong parallel scaling
 -----------
 
-Strong parallel scaling of wall-time per SCF iteration step on OLCF Summit GPU nodes. Please refer to (arxiv paper link) for details on the breakdown of the wall-time into various computational steps.
+Strong parallel scaling of wall-time per SCF iteration step on OLCF Summit GPU nodes. Please refer to [DFT-FE 1.0](https://arxiv.org/abs/2203.07820) (arxiv paper link) for details on the breakdown of the wall-time into various computational steps.
 
 BCC Mo6x6x6 monvacancy  (431 atoms, 6,034 electrons---Gamma point)            |  BCC Mo8x8x8 monvacancy (1,023 atoms, 14,322 electrons---Gamma point)
 :-------------------------:|:-------------------------:
