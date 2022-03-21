@@ -34,8 +34,7 @@ Study1 --- Ground-state calculation results (Spin unpolarized)
 
 Study2 --- Ionic relaxation results (Spin unpolarized)
 -----------------------------------
-* Relaxed State Comparison with QE:  
-    a) Energy Difference =  Ha/atom  
+* Ionic relaxation completed in 128 geometry updates 
 
 Study3 --- Ground-state calculation results (Spin polarized)
 -------------------------------------------
@@ -46,5 +45,4 @@ Study3 --- Ground-state calculation results (Spin polarized)
 
 Study4 --- Ionic relaxation results (Spin polarized)
 -----------------------------------
-* Relaxed State Comparison with QE:  
-    a) Energy Difference =  Ha/atom  
+* Ionic relaxation completed in 72 geometry updates 
