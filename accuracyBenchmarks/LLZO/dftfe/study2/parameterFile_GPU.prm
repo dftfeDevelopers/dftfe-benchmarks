@@ -1,3 +1,9 @@
+set SOLVER MODE=GS
+
+subsection GPU
+  set USE GPU=true
+end
+
 subsection Geometry
   set NATOMS=192
   set NATOM TYPES=4
@@ -21,11 +27,8 @@ subsection Finite element mesh parameters
   subsection Auto mesh generation parameters
     set MESH SIZE AROUND ATOM  = 1.2
     set ATOM BALL RADIUS = 4
-      end
+  end
 end
-
-
-
 
 
 subsection DFT functional parameters
@@ -39,15 +42,6 @@ end
 subsection SCF parameters
   set TEMPERATURE                      = 500
   set TOLERANCE                        = 1e-5
-  set MIXING HISTORY                    =50
   set MIXING PARAMETER                  =0.2
-  set MAXIMUM ITERATIONS                =100
   set MIXING METHOD                     =ANDERSON
-  subsection Eigen-solver parameters
-      set NUMBER OF KOHN-SHAM WAVEFUNCTIONS =   660
-  end
-end
-
-subsection GPU
-  set USE GPU=true
 end

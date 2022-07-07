@@ -1,3 +1,5 @@
+set SOLVER MODE=GS
+
 subsection Geometry
   set NATOMS=147
   set NATOM TYPES=1
@@ -29,11 +31,8 @@ subsection DFT functional parameters
 end
 
 subsection SCF parameters
-  set MIXING HISTORY   = 10
+  set MIXING METHOD=ANDERSON
   set MIXING PARAMETER = 0.1
   set TEMPERATURE                      = 500
   set TOLERANCE                        = 5e-5
-  subsection Eigen-solver parameters
-      set NUMBER OF KOHN-SHAM WAVEFUNCTIONS = 264
-  end
 end

@@ -1,3 +1,4 @@
+set SOLVER MODE=GS
 
 subsection Geometry
   set NATOMS=192
@@ -7,7 +8,7 @@ subsection Geometry
   subsection Optimization
     set CELL STRESS              = true
     set ION FORCE                 = true
-    end
+  end
 end
 
 
@@ -22,7 +23,7 @@ subsection Finite element mesh parameters
   subsection Auto mesh generation parameters
     set MESH SIZE AROUND ATOM  = 1.2
     set ATOM BALL RADIUS = 4
-      end
+  end
 end
 
 
@@ -33,18 +34,13 @@ subsection DFT functional parameters
   set EXCHANGE CORRELATION TYPE   = 4
   set PSEUDOPOTENTIAL CALCULATION = true  
   set PSEUDOPOTENTIAL FILE NAMES LIST = pseudo.inp
-  set  SPIN POLARIZATION=1
+  set SPIN POLARIZATION=1
   set START MAGNETIZATION=0.08
 end
 
 subsection SCF parameters
   set TEMPERATURE                      = 500
   set TOLERANCE                        = 1e-5
-  set MIXING HISTORY                    =50
   set MIXING PARAMETER                  =0.2
-  set MAXIMUM ITERATIONS                =100
   set MIXING METHOD                     =ANDERSON
-  subsection Eigen-solver parameters
-      set NUMBER OF KOHN-SHAM WAVEFUNCTIONS =   660
-  end
 end
