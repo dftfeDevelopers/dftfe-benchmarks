@@ -1,4 +1,4 @@
-set SOLVER MODE=GS
+set SOLVER MODE=GEOOPT
 set RESTART=false
 
 subsection Geometry
