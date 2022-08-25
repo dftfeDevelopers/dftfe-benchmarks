@@ -1,3 +1,10 @@
+set SOLVER MODE=GEOOPT
+
+subsection GPU
+  set USE GPU=true
+end
+
+
 subsection Geometry
   set NATOMS=192
   set NATOM TYPES=4
@@ -6,12 +13,10 @@ subsection Geometry
   subsection Optimization
     set CELL STRESS              = true
     set ION FORCE                 = true
+    set OPTIMIZATION MODE         = IONCELL
     set STRESS TOL            = 1e-6
     set FORCE TOL = 2e-4
-    set CELL OPT              = true
-    set ION OPT               = true
     set CELL CONSTRAINT TYPE  = 9
-    set REUSE DENSITY=1
   end
 end
 
@@ -39,14 +44,6 @@ end
 subsection SCF parameters
   set TEMPERATURE                      = 500
   set TOLERANCE                        = 1e-5
-  set MIXING HISTORY                    =50
   set MIXING PARAMETER                  =0.2
   set MIXING METHOD                     =ANDERSON
-  subsection Eigen-solver parameters
-      set NUMBER OF KOHN-SHAM WAVEFUNCTIONS =   660
-  end
-end
-
-subsection GPU
-  set USE GPU=true
 end

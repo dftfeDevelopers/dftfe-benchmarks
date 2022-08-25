@@ -1,3 +1,9 @@
+set SOLVER MODE=GS
+
+subsection GPU
+  set USE GPU=true
+end
+
 subsection Geometry
   set NATOMS=192
   set NATOM TYPES=4
@@ -40,11 +46,4 @@ subsection SCF parameters
   set MIXING HISTORY                    =50
   set MIXING PARAMETER                  =0.2
   set MIXING METHOD                     =ANDERSON
-  subsection Eigen-solver parameters
-      set NUMBER OF KOHN-SHAM WAVEFUNCTIONS =   660
-  end
-end
-
-subsection GPU
-  set USE GPU=true
 end
