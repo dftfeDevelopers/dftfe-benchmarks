@@ -36,7 +36,7 @@ end
 subsection Geometry
   set NATOMS=6525
   set NATOM TYPES=1
-  set ATOMIC COORDINATES FILE = shell12.dftfe
+  set ATOMIC COORDINATES FILE = coordinates.inp
   set DOMAIN VECTORS FILE = domainVectors.inp
   subsection Optimization
     set ION FORCE = true
