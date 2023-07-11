@@ -3,9 +3,9 @@ import numpy as np
 from numpy.linalg import inv
 
 def main():
-   xyzFile = open("p4.41x17y4s7.xyz",'r')
+   xyzFile = open("p4.41x17y4s9.xyz",'r')
    domainVectorsFile=open("domainVectors.inp",'w')
-   relaxationFlagsFile=open("relaxationFlags.inp",'w')
+   #relaxationFlagsFile=open("relaxationFlags.inp",'w')
 
    atomicNumbers=[]
    valenceNumbers=[]
@@ -105,14 +105,14 @@ def main():
 
    if (pbc[0]=='F' and pbc[1]=='F' and pbc[2]=='F'):
      for index, coord in enumerate(cartCoords):
-          ionFile.write(str(atomicNumbers[index]) + ' ' + str(valenceNumbers[index]) + ' ' + str(coord[0])+ ' ' + str(coord[1])+ ' ' + str(coord[2]) + '\n')
-          relaxationFlagsFile.write(str(1)+ ' ' + str(1)+ ' ' + str(1) + '\n')
+          ionFile.write(str(atomicNumbers[index]) + ' ' + str(valenceNumbers[index]) + ' ' + str(float(coord[0]*a2b))+ ' ' + str(float(coord[1]*a2b))+ ' ' + str(float(coord[2]*a2b)) + '\n')
+          #relaxationFlagsFile.write(str(1)+ ' ' + str(1)+ ' ' + str(1) + '\n')
    else:
      for index, coord in enumerate(cartCoords):
-          cartCoordVec=np.matrix(np.array([[coord[0]],[coord[1]],[coord[2]]]))
+          cartCoordVec=np.matrix(np.array([[coord[0]],[coord[1]],[coord[2]]])*a2b)
           fracCoordVec=domainMatInv*cartCoordVec
           ionFile.write(str(atomicNumbers[index]) + ' ' + str(valenceNumbers[index]) + ' ' + str(fracCoordVec[0,0])+ ' ' + str(fracCoordVec[1,0])+ ' ' + str(fracCoordVec[2,0]) + '\n')
-          relaxationFlagsFile.write(str(1)+ ' ' + str(1)+ ' ' + str(1) + '\n')
+          #relaxationFlagsFile.write(str(1)+ ' ' + str(1)+ ' ' + str(1) + '\n')
 
 
    xyzFile.close()
