@@ -7,6 +7,7 @@ def main():
    domainVectorsFile=open("domainVectors.inp",'w')
    #relaxationFlagsFile=open("relaxationFlags.inp",'w')
 
+   wrapTol=1e-10
    atomicNumbers=[]
    valenceNumbers=[]
    cartCoords=[]
@@ -111,6 +112,23 @@ def main():
      for index, coord in enumerate(cartCoords):
           cartCoordVec=np.matrix(np.array([[coord[0]],[coord[1]],[coord[2]]])*a2b)
           fracCoordVec=domainMatInv*cartCoordVec
+
+          if (fracCoordVec[0,0]<-wrapTol):
+              fracCoordVec[0,0]=1.0+fracCoordVec[0,0]
+          elif (fracCoordVec[0,0]>(1+wrapTol)):
+              fracCoordVec[0,0]=fracCoordVec[0,0]-1.0
+
+          if (fracCoordVec[1,0]<-wrapTol):
+              fracCoordVec[1,0]=1.0+fracCoordVec[1,0]
+          elif (fracCoordVec[1,0]>(1+wrapTol)):
+              fracCoordVec[1,0]=fracCoordVec[1,0]-1.0
+
+          if (fracCoordVec[2,0]<-wrapTol):
+              fracCoordVec[2,0]=1.0+fracCoordVec[2,0]
+          elif (fracCoordVec[2,0]>(1+wrapTol)):
+              fracCoordVec[2,0]=fracCoordVec[2,0]-1.0
+
+        
           ionFile.write(str(atomicNumbers[index]) + ' ' + str(valenceNumbers[index]) + ' ' + str(fracCoordVec[0,0])+ ' ' + str(fracCoordVec[1,0])+ ' ' + str(fracCoordVec[2,0]) + '\n')
           #relaxationFlagsFile.write(str(1)+ ' ' + str(1)+ ' ' + str(1) + '\n')
 
