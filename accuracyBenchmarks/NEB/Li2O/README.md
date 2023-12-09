@@ -17,16 +17,19 @@ Discussion on the input parameters and the results:
         e) Mixing Method            = Anderson
         f) MIXING PARAMETER          =0.2
         g) High QUAD PSP ON
+        Activation Energy       = 241.02 meV      
+        Path Length             = 3.572 bohr
 
         
 * QE:  
         a) ecutwfc                  = 37.5 Ha                                    
-        
-
+        Activation Energy       = 244.923 meV      
+        Path Length             = 3.57 bohr
 
 Study -- Nudged Elastic Band results (Spin-unpolarized)
 ------------------------------------------------------------
 * Activation Barrier comparison:
     a) Energy Difference = 4 meV
+
 
 
