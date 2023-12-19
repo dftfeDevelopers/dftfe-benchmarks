@@ -41,3 +41,7 @@ This example demonstrates a spin-polarized and spin-unpolarized ground-state cal
 * **LLZO** 
 
 This example demonstrates a spin-polarized and spin-unpolarized ground-state calculations with fully periodic boundary conditions along with combined ionic-cell and stress relaxation on LLZO (Lithium-Lanthanum-Zirconium-Oxide) unit-cell. Gamma point for sampling the Brillouin zone, norm-conserving pseudopotential, and PBE exchange correlation are used.
+
+* **NEB/Li2O**
+
+This example demonstrates a Nudged Elastic Band Lithium Oxide 2x2x2 supercell with 1 Li vacancy employing periodic boundary conditions in all directions
