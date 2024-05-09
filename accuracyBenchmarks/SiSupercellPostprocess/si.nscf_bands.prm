@@ -6,8 +6,8 @@ subsection Geometry
   set ATOMIC COORDINATES FILE      = coordinates.inp           
   set DOMAIN VECTORS FILE = domainVectors.inp 
   subsection Optimization
-    set CELL STRESS              = true
-    set ION FORCE =   true
+    set CELL STRESS              = false
+    set ION FORCE =   false
   end
 end
 
