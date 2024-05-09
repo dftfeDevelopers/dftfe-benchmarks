@@ -1,63 +1,56 @@
+Description of the example
+============================================================================
+This example demonstrates the postprocessing tools (bandstructure and density of states (DOS)) of electronic structure calculations in DFT-FE. The system under consideration is a 2x2x2 supercell of Si crystal with periodic boundary conditions.
+
+Dependencies
+============================================================================
 Following are the dependencies for postprocessing in python,
 
-- pyprocar (6.1.6)
-- periodictable (1.6.1)
-- yattag (1.15.2)
-- scipy (1.11.3)
+- pyprocar (6.1.6) (https://github.com/romerogroup/pyprocar/tree/v6.1.6)
+- periodictable (1.7.0) (https://github.com/pkienzle/periodictable/tree/v1.7.0)
+- yattag (1.15.2) (https://github.com/leforestier/yattag/tree/v1.15.2)
+- scipy (1.11.3) (https://github.com/scipy/scipy/tree/v1.11.3)
 
-For any of the postprocessing task, first append the path of DFT-FE to your system path.
-```
-sys.path.append(<path of DFTFE>)
-```
 
-bandstructure
+Below we provide a step by step procedure, that includes getting the required output files from DFT-FE and steps for post processing the data obtained. To setup input files and the detailed description of the parameters in it, the reader can refer the demo examples at https://github.com/dftfeDevelopers/dftfe/tree/publicGithubDevelop/demo.
+
+Steps
 ============================================================================
 
-Below listed files are required for plotting bandstructure,
-
-* File containing the bandstructure data
-* File containing the kpoints data
-* File containing the coordinates data
-* File containing the domain lattice vectors data
-
-In addition, a file named ”fermiEnergy.out”, containing the fermi energy (in Ha), should be there in the same directory.
-
-In the file containing the kpoint rule, mention the name of the kpoint right after the weight of the corresponding kpoint preceeded by ’#’, e.g,
-
-```
-0.5000000000 0.0000000000 0.5000000000 1 #X
-0.6250000000 0.2500000000 0.6250000000 1 #U|K
-```
-
-To plot bandstructure,import and create an instance of ”Plotters” class and finally call the corresponding function.
-```
-plotter = Plotters(...)
-plotter.plotBandStr()
-```
-<p align="center">
-  <img src="outfiles/bandsplot.png" width="450" height="300">
-  <br>
-  <p align="center">
-    Figure 1: Bandstructure of Si 2&times2&times2 supercell
-  </p>
-</p>
-  
-DOS
-============================================================================
-In addition to the files listed above for plotting bandstructure, the files containing the DOS data and pseudopotential file (pseudo.inp) are required for plotting DOS.
-
-To plot DOS,import and create an instance of ”Plotters” class and finally call the corresponding function.
-```
-plotter = Plotters(...)
-plotter.plotDOS()
-```
+1. To obtain the band structure, perform an NSCF calculation with a specified k-points path (see "kpointRuleFile.inp", "si.nscf_bands.prm").
+2. For DOS data, perform an NSCF calculation with a refined k-point mesh (see "si.nscf_dos.prm"). (Set the "WRITE DENSITY OF STATES" parameter to be "true".)
+3. For the postprocessing task, create a file similar to "bandsPlotDemo.py", given in this repository and edit it following the below instructions,
+   1. For both of the postprocessing tasks, first append the path of DFT-FE source code to your system path.
+      ```
+      sys.path.append(<path of DFTFE source code>)
+      ```
+   2. Next is to create an instance of "Plotters" class with the parameters described in the "bandsPlotDemo.py", followed by calling the corrosponsing function.
 
 
-<p align="center">
-  <img src="outfiles/dosplot.png" width="450" height="300">
-  <br>
-  <p align="center">
-    Figure 2: DOS of Si 2&times2&times2 supercell
-  </p>
-</p>
+   Please take note of the below points for postprocessing,
+   
+      * In the file containing kpoint rule, mention the name of the kpoint right after the weight of the corresponding kpoint preceeded by ’#’, e.g,
+      ```
+      0.5000000000 0.0000000000 0.5000000000 1 #X
+      0.6250000000 0.2500000000 0.6250000000 1 #U|K
+      ```
+      * File named ”fermiEnergy.out” (generated automatically from "GS" calculation in DFT-FE) should be there in the path where the other required files are present.
+      
+      
 
+      <p align="center">
+        <img src="./output/bandsplot.png" width="450" height="300">
+        <br>
+        <p align="center">
+          Figure 1: Bandstructure of Si 2&times2&times2 supercell
+        </p>
+      </p>
+      
+      
+      <p align="center">
+        <img src="./output/dosplot.png" width="450" height="300">
+        <br>
+        <p align="center">
+          Figure 2: DOS of Si 2&times2&times2 supercell
+        </p>
+      </p>
