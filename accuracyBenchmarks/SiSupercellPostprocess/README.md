@@ -24,7 +24,7 @@ Steps
       ```
       sys.path.append(<path of DFTFE source code>)
       ```
-   2. Next is to create an instance of "Plotters" class with the parameters described in the "bandsPlotDemo.py", followed by calling the corrosponsing function.
+   2. Next is to create an instance of "Plotters" class with the parameters described in the "bandsPlotDemo.py", followed by calling the corresponding function.
 
 
    Please take note of the below points for postprocessing,
@@ -34,7 +34,7 @@ Steps
       0.5000000000 0.0000000000 0.5000000000 1 #X
       0.6250000000 0.2500000000 0.6250000000 1 #U|K
       ```
-      * File named ”fermiEnergy.out” (generated automatically from "GS" calculation in DFT-FE) should be there in the path where the other required files are present.
+      * File named ”fermiEnergy.out” (generated automatically from "GS" calculation in DFT-FE) which conatins the fermi eneergy in Hartree should be there in the path where the other required files are present.
       
       
 
