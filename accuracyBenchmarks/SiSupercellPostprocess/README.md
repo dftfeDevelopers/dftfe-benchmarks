@@ -25,6 +25,7 @@ Steps
       sys.path.append(<path of DFTFE source code>)
       ```
    2. Next is to create an instance of "Plotters" class with the parameters described in the "bandsPlotDemo.py", followed by calling the corresponding function.
+   3. Finally to get the plots, the python file can be executed with the command "python bandsPlotDemo.py".
 
 
    Please take note of the below points for postprocessing,
