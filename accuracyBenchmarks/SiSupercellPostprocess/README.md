@@ -29,7 +29,7 @@ Steps
 
    Please take note of the below points for postprocessing,
    
-      * In the file containing kpoint rule, mention the name of the kpoint right after the weight of the corresponding kpoint preceeded by ’#’, e.g,
+      * In the file containing kpoint rule (kpointRuleFile.inp), mention the name of the kpoint right after the weight of the corresponding kpoint preceeded by ’#’, e.g,
       ```
       0.5000000000 0.0000000000 0.5000000000 1 #X
       0.6250000000 0.2500000000 0.6250000000 1 #U|K
