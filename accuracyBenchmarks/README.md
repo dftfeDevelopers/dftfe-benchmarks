@@ -49,4 +49,4 @@ This example demonstrates a Nudged Elastic Band Lithium Oxide 2x2x2 supercell wi
 
 * **SiSupercellPostprocess**
   
-This example demonstrates the postprocessing tools,bandstructure and density of states (DOS) plots for 2&times;2&times;2 Si supercell.
+This example demonstrates the postprocessing tools,bandstructure and density of states (DOS) plots for 2&times;2&times;2 Si supercell with fully periodic boundary conditions.
