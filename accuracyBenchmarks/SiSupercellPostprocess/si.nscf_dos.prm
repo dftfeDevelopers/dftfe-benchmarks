@@ -33,9 +33,9 @@ end
 subsection Brillouin zone k point sampling options
   set USE TIME REVERSAL SYMMETRY = true
   subsection Monkhorst-Pack (MP) grid generation
-    set SAMPLING POINTS 1 = 20
-    set SAMPLING POINTS 2 = 20
-    set SAMPLING POINTS 3 = 20
+    set SAMPLING POINTS 1 = 12
+    set SAMPLING POINTS 2 = 12
+    set SAMPLING POINTS 3 = 12
     set SAMPLING SHIFT 1  = 0
     set SAMPLING SHIFT 2  = 0
     set SAMPLING SHIFT 3  = 0
