@@ -17,7 +17,7 @@ Below we provide a step by step procedure, that includes getting the required ou
 Steps
 ============================================================================
 1. Perform a ground state calculation on the optimized cell geometry and coordinates (see "si.scf.prm"). In the parameter file, "SAVE RHO DATA" should be set to "true" for to perform subsequent NSCF calculations.
-2. To obtain the band structure, perform an NSCF calculation with a specified k-points path. (see "kpointRuleFile.inp", "si.nscf_bands.prm") (Refer https://www.materialscloud.org/work/tools/seekpath to generate the kpath)
+2. To obtain the band structure, perform an NSCF calculation with a specified k-points path. (see "kpointRuleFile.inp", "si.nscf_bands.prm") (set "LOAD RHO DATA" parameter to be "true") (Refer https://www.materialscloud.org/work/tools/seekpath to generate the kpath) 
 3. For DOS data, perform an NSCF calculation with a refined k-point mesh. (see "si.nscf_dos.prm") (Set both "WRITE DENSITY OF STATES" and "LOAD RHO DATA" parameters to be "true")
 4. For the postprocessing task, create a file similar to "bandsPlotDemo.py", given in this repository and edit it following the below instructions,
    1. For both of the postprocessing tasks, first append the path of DFT-FE source code to your system path.
