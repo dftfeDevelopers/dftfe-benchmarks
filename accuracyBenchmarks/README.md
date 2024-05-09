@@ -45,3 +45,7 @@ This example demonstrates a spin-polarized and spin-unpolarized ground-state cal
 * **NEB/Li2O**
 
 This example demonstrates a Nudged Elastic Band Lithium Oxide 2x2x2 supercell with 1 Li vacancy employing periodic boundary conditions in all directions
+
+
+* **SiSupercellPostprocess**
+This example demonstrates the postprocessing tools,bandstructure and density of states (DOS) plots for 2&times;2&times;2 Si supercell.
