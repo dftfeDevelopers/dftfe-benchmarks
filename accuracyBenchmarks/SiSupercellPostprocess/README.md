@@ -34,7 +34,7 @@ Steps
       0.5000000000 0.0000000000 0.5000000000 1 #X
       0.6250000000 0.2500000000 0.6250000000 1 #U|K
       ```
-      * File named ”fermiEnergy.out” (generated automatically from "GS" calculation in DFT-FE) which conatins the fermi eneergy in Hartree should be there in the path where the other required files are present.
+      * File named ”fermiEnergy.out” (generated automatically from "GS" calculation in DFT-FE), which conatins the fermi eneergy in Hartree, should be there in the path where the other required files are present.
       
       
 
