@@ -1,7 +1,8 @@
-import sys
-sys.path.append("/home/srinibasn/bandsPR/dftfe") # append the path of DFTFE to sys.path
+import wget
+url ="<to be replaced by actual url>"
+wget.download(url)
 
-from postProcessing.postprocessModules import Plotters
+from postprocessModules import Plotters
 '''
   filesPath: str: path to the directory where the input files are stored,
   bandsDatFile: str: name of the file containing the bandstructure data,
