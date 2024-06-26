@@ -1,8 +1,5 @@
 set SOLVER MODE=GEOOPT
-
-subsection GPU
-  set USE GPU=true
-end
+set USE GPU=true
 
 
 subsection Geometry
