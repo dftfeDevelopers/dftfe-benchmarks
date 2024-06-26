@@ -1,8 +1,5 @@
 set SOLVER MODE=GS
-
-subsection GPU
-  set USE GPU=true
-end
+set USE GPU=true
 
 subsection Geometry
   set NATOMS=192
