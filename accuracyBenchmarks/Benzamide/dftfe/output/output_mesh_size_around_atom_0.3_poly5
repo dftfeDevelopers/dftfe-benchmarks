@@ -53,7 +53,7 @@ subsection Checkpointing and Restart
   set RESTART SP FROM NO SP = false
 end
 subsection DFT functional parameters
-  set EXCHANGE CORRELATION TYPE       = 4
+  set EXCHANGE CORRELATION TYPE = GGA-PBE
   set PSEUDOPOTENTIAL CALCULATION     = false
   set PSEUDOPOTENTIAL FILE NAMES LIST = 
   set PSEUDO TESTS FLAG               = false
