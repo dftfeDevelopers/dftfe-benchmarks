@@ -50,3 +50,12 @@ This example demonstrates a Nudged Elastic Band Lithium Oxide 2x2x2 supercell wi
 * **SiSupercellPostprocess**
   
 This example demonstrates the postprocessing tools,bandstructure and density of states (DOS) plots for 2&times;2&times;2 Si supercell with fully periodic boundary conditions.
+
+
+* **Pt3Ni**
+
+This example demonstrates a hubbard calculation when all the atoms in the simulation have Hubbard correction. This is a non-periodic calculation with spin polarization.
+
+* **TiAl** 
+
+This example demonstrates a hubbard calculation when some of the atoms in the simulation have Hubbard correction. This is a periodic gamma-point calculation with spin unpolarization.
