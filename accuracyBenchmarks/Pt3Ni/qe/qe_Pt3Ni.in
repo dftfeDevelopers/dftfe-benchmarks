@@ -1,0 +1,44 @@
+ &control
+    calculation = 'scf',
+	pseudo_dir = '.'
+        restart_mode='from_scratch'
+	verbosity='high'
+    tstress=.false.
+    tprnfor=.true.
+ /
+ &system
+    ibrav = 1,
+    celldm(1) = 60.0,
+    nat  = 4,
+    ntyp = 2,
+    ecutwfc = 180,
+    occupations='smearing',
+    smearing='fd',
+    nbnd=50,
+    degauss=0.012667327478916817,
+    nspin = 2,
+    starting_magnetization(1) = 0.2,
+    starting_magnetization(2) = 0.2,
+    starting_magnetization(3) = 0.2,
+    starting_magnetization(4) = 0.2, 
+/
+ &electrons
+   conv_thr = 1e-10,
+   mixing_beta = 0.1,
+   startingwfc = 'random',
+ /
+ &ions
+ /
+ATOMIC_SPECIES
+ Ni 58.00d0 Ni.upf
+ Pt 195.00d0 Pt.upf
+ATOMIC_POSITIONS (bohr)
+Ni 0.0000   0.0000   0.0000
+Pt 3.6000   3.6000   0.0000
+Pt 0.0000   3.6000   3.6000
+Pt 3.6000   0.0000   3.6000
+K_POINTS gamma
+
+HUBBARD (atomic)
+U Pt-5d 3.0
+U Ni-3d 1.0
