@@ -23,10 +23,10 @@ Steps
    1. For both of the postprocessing tasks, first download the "postprocessModules.py" using "wget" with the url "\<to be replaced by the correct url\>".
    2. Create a file similar to "postprocessDemo.py", given in this repository, and edit it following the below instructions,
       - For bandstructure,  
-            - Create an instance of "Plotters" class for bandstructure with the parameters described in the "PostProcessDemo.py"    
+            - Create an instance of "Plotters" class for bandstructure with the parameters described in the "postprocessDemo.py"    
             - Call the function "Plotters.plotBandStr()"
       - For DOS and/or PDOS,  
-            - Create an instance of "Plotters" class for DOS and/or PDOS with the parameters described in the "PostProcessDemo.py"   
+            - Create an instance of "Plotters" class for DOS and/or PDOS with the parameters described in the "postprocessDemo.py"   
             - Call the function "Plotters.plotDos()"
    5. Finally to get the plots, the python file "postprocessDemo.py" can be executed with the command "python postprocessDemo.py".
 
