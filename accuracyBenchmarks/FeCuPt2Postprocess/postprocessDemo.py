@@ -28,18 +28,18 @@ orbitals: List: List of the orbitals to be considered for PDOS calculation. It h
 
 from postprocessModules import Plotters
 
-plotter_bands = Plotters(filesPath = "/home/srinibasn/pdos/testDir/FeCuPt2/dftfe/",
-                        bandsDatFile = "bands.out",
-                        kptsFile= "kpointRuleFile.inp",
-                        coordinatesFile = "coordinates.inp",
-                        latticeVecFile = "domainVectors.inp",
-                        pseudoPotFile = "pseudo.inp",
-                        eLimit= [-10, 16], # after shifting wrt fermi energy
-                        isPeriodic = True,
-                        numSpins = 2,
-                        spins= [1]
-                        )
-plotter_dos = Plotters(filesPath = "/home/srinibasn/pdos/testDir/FeCuPt2/dftfe/",
+# plotter_bands = Plotters(filesPath = "/home/srinibasn/dftfe_accuracy_pdos/dftfe-benchmarks/accuracyBenchmarks/FeCuPt2Postprocess/",
+#                         bandsDatFile = "bands.out",
+#                         kptsFile= "kpointRuleFile.inp",
+#                         coordinatesFile = "coordinates.inp",
+#                         latticeVecFile = "domainVectors.inp",
+#                         pseudoPotFile = "pseudo.inp",
+#                         eLimit= [-10, 20], # after shifting wrt fermi energy
+#                         isPeriodic = True,
+#                         numSpins = 2,
+#                         spins= [0]
+#                         )
+plotter_dos = Plotters(filesPath = "/home/srinibasn/dftfe_accuracy_pdos/dftfe-benchmarks/accuracyBenchmarks/FeCuPt2Postprocess/",
                    coordinatesFile = "coordinates.inp",
                    bandsDatFile="bands.out", 
                    items=dict(Pt = ['s'], Cu =['s']),
@@ -47,17 +47,17 @@ plotter_dos = Plotters(filesPath = "/home/srinibasn/pdos/testDir/FeCuPt2/dftfe/"
                    latticeVecFile = "domainVectors.inp",
                    pseudoPotFile = "pseudo.inp",
                    dosDataFile = "dosData.out",
-                   eLimit= [-10, 20], # after shifting wrt fermi energy
-                   dosLimit= [0, 1.25],
+                   eLimit= [-10, 6], # after shifting wrt fermi energy
+                   dosLimit= [0, 1],
                    isPeriodic = True,
                    plot_total= False,
                    only_tdos = False,
-                   stack_orbitals= False,
-                   atoms=[2,3],
-                   stack_species= True,
+                   stack_orbitals= True,
+                   atoms=[3],
+                   stack_species= False,
                    orbitals=[0],
                    numSpins = 2,
                    spins= [0]
                    )
-plotter_bands.plotBandStr()
+# plotter_bands.plotBandStr()
 plotter_dos.plotDos()
