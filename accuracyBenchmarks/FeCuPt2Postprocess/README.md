@@ -20,7 +20,7 @@ Steps
 2. To obtain the bandstructure, perform an NSCF calculation with a specified k-points path. (see "kpointRuleFile.inp", "feCuPt2.nscf_bands.prm") (set "LOAD RHO DATA" and "WRITE BANDS" parameters to be "true") (Refer https://www.materialscloud.org/work/tools/seekpath to generate the kpath) 
 3. For DOS and/or PDOS data, perform an NSCF calculation with a refined k-point mesh. (see "feCuPt2.nscf_pdos.prm") (Set "WRITE DENSITY OF STATES", "WRITE PROJECTED DENSITY OF STATES" and "LOAD RHO DATA" parameters to be "true")
 4. For the postprocessing task, follow the below steps,
-   1. For both of the postprocessing tasks, first download the "postprocessModules.py" using "wget" with the url "https://github.com/dftfeDevelopers/dftfe/blob/publicGithubDevelop/postProcessing/postprocessModules.py".
+   1. For both of the postprocessing tasks, first download the "postprocessModules.py" using "wget" with the url "https://raw.githubusercontent.com/dftfeDevelopers/dftfe/refs/heads/publicGithubDevelop/postProcessing/postprocessModules.py".
    2. Create a file similar to "postprocessDemo.py", given in this repository, and edit it following the below instructions,
       - For bandstructure,  
             - Create an instance of "Plotters" class for bandstructure with the parameters described in the "postprocessDemo.py"    
