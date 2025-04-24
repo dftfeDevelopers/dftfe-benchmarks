@@ -1,4 +1,4 @@
-set SOLVER MODE = NSCF
+set SOLVER MODE = BANDS
 set VERBOSITY=4
 set USE GPU   = true
 set RESTART FOLDER = ./restartFiles
@@ -21,7 +21,7 @@ subsection Brillouin zone k point sampling options
 end
 
 subsection Parallelization
-  set NPKPT                    = 2
+  set NPKPT                    = 8
 end
 
 subsection Finite element mesh parameters
@@ -43,9 +43,6 @@ subsection DFT functional parameters
   set SPIN POLARIZATION               = 1
 end
 
-subsection Post-processing Options
-  set WRITE BANDS = true
-end
 subsection SCF parameters
   subsection Eigen-solver parameters
       set HIGHEST STATE OF INTEREST FOR CHEBYSHEV FILTERING    = 45 
@@ -53,5 +50,19 @@ subsection SCF parameters
       set USE SINGLE PREC COMMUN CHEBY = false
       set OVERLAP COMPUTE COMMUN CHEBY                         = true
       set OVERLAP COMPUTE COMMUN ORTHO RR                      = true
+      set SUBSPACE PROJ SHEP GPU                               = false
   end
+end
+
+subsection GPU
+  set AUTO GPU BLOCK SIZES         = true
+  set FINE GRAINED GPU TIMINGS     = true
+  set USE ELPA GPU KERNEL          = true
+  set USE GPUDIRECT MPI ALL REDUCE = true
+end
+
+subsection Poisson problem parameters
+  set GPU MODE           = false
+  set MAXIMUM ITERATIONS = 20000
+  set TOLERANCE          = 1e-10
 end

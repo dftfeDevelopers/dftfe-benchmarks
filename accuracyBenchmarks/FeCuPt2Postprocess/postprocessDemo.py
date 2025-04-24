@@ -28,36 +28,34 @@ orbitals: List: List of the orbitals to be considered for PDOS calculation. It h
 
 from postprocessModules import Plotters
 
-# plotter_bands = Plotters(filesPath = "/home/srinibasn/dftfe_accuracy_pdos/dftfe-benchmarks/accuracyBenchmarks/FeCuPt2Postprocess/",
-#                         bandsDatFile = "bands.out",
-#                         kptsFile= "kpointRuleFile.inp",
-#                         coordinatesFile = "coordinates.inp",
-#                         latticeVecFile = "domainVectors.inp",
-#                         pseudoPotFile = "pseudo.inp",
-#                         eLimit= [-10, 20], # after shifting wrt fermi energy
-#                         isPeriodic = True,
-#                         numSpins = 2,
-#                         spins= [0]
-#                         )
-plotter_dos = Plotters(filesPath = "/home/srinibasn/dftfe_accuracy_pdos/dftfe-benchmarks/accuracyBenchmarks/FeCuPt2Postprocess/",
+plotter_bands = Plotters(filesPath = "/home/nikhilk/Downloads/dftfe-benchmarks/accuracyBenchmarks/FeCuPt2Postprocess/output/",
+                        bandsDatFile = "bands.out",
+                        kptsFile= "kpointRuleFile.inp",
+                        coordinatesFile = "coordinates.inp",
+                        latticeVecFile = "domainVectors.inp",
+                        pseudoPotFile = "pseudo.inp",
+                        eLimit= [-10, 20], # after shifting wrt fermi energy
+                        isPeriodic = True,
+                        numSpins = 2,
+                        spins= [0,1]
+                        )
+plotter_dos = Plotters(filesPath = "/home/nikhilk/Downloads/dftfe-benchmarks/accuracyBenchmarks/FeCuPt2Postprocess/output/",
                    coordinatesFile = "coordinates.inp",
                    bandsDatFile="bands.out", 
-                   items=dict(Pt = ['s'], Cu =['s']),
-                   overlay_mode = True,
+                   overlay_mode = False,
                    latticeVecFile = "domainVectors.inp",
                    pseudoPotFile = "pseudo.inp",
                    dosDataFile = "dosData.out",
                    eLimit= [-10, 6], # after shifting wrt fermi energy
-                   dosLimit= [0, 1],
+                   dosLimit= [0, 10],
                    isPeriodic = True,
-                   plot_total= False,
+                   plot_total= True,
                    only_tdos = False,
-                   stack_orbitals= True,
+                   stack_orbitals= False,
                    atoms=[3],
-                   stack_species= False,
-                   orbitals=[0],
+                   stack_species= True,
                    numSpins = 2,
-                   spins= [0]
+                   spins= [0,1]
                    )
-# plotter_bands.plotBandStr()
+plotter_bands.plotBandStr()
 plotter_dos.plotDos()
