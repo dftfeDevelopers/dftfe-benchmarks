@@ -17,3 +17,18 @@ Results
     * DFT-FE: POYNOMIAL ORDER = 5, MESH SIZE AROUND ATOM = 1.4 Bohr, ATOM BALL RADIUS = 6 Bohr (compiled with "withHigherQuadPSP = ON")
 
 * The band structures obtained from QE and DFT-FE show good agreement when using the r<sup>2</sup>SCAN exchange-correlation functional.
+
+<p align="center">
+    <img src="./dftfe/output/bandsplot.png" width="450" height="300" alt="Bandstructure DFT-FE">
+</p>
+<p align="center">
+    <span>Figure 1: Bandstructure (DFT-FE)
+</p>
+
+<p align="center">
+    <img src="./qe/output/si_bands.png" width="450" height="300" alt="Bandstructure QE">
+</p>
+
+<p align="center">
+    <span>Figure 2: Bandstructure (QE)
+</p>
