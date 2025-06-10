@@ -1,0 +1,55 @@
+set VERBOSITY = 1
+set SOLVER MODE = GS
+set USE GPU = true
+subsection Geometry
+  set NATOMS=16
+  set NATOM TYPES=1
+  set ATOMIC COORDINATES FILE      = coordinates.inp          
+  set DOMAIN VECTORS FILE = domainVectors.inp 
+end
+
+subsection Boundary conditions
+  set PERIODIC1                       = true
+  set PERIODIC2                       = true
+  set PERIODIC3                       = true
+end
+
+subsection Brillouin zone k point sampling options
+  set USE TIME REVERSAL SYMMETRY = true
+  subsection Monkhorst-Pack (MP) grid generation
+    set SAMPLING POINTS 1 = 8
+    set SAMPLING POINTS 2 = 8
+    set SAMPLING POINTS 3 = 8
+    set SAMPLING SHIFT 1  = 1
+    set SAMPLING SHIFT 2  = 1
+    set SAMPLING SHIFT 3  = 1
+  end
+end
+
+subsection Finite element mesh parameters
+  set POLYNOMIAL ORDER = 5
+  set DENSITY QUADRATURE RULE = 8
+  subsection Auto mesh generation parameters
+    set MESH SIZE AROUND ATOM = 1.4
+    set ATOM BALL RADIUS = 6
+  end
+end
+
+subsection DFT functional parameters
+  set EXCHANGE CORRELATION TYPE   = MGGA-R2SCAN
+  set PSEUDOPOTENTIAL CALCULATION = true  
+  set PSEUDOPOTENTIAL FILE NAMES LIST = pseudo.inp
+end
+subsection SCF Checkpointing and Restart
+  set SAVE QUAD DATA   = true
+end
+subsection SCF parameters
+  set TEMPERATURE                      = 500
+  set TOLERANCE                        = 1e-6
+  set MIXING METHOD                     =ANDERSON
+  set MIXING PARAMETER                 = 0.7
+  subsection Eigen-solver parameters
+    set USE SINGLE PREC CHEBY = true
+    set NUMBER OF KOHN-SHAM WAVEFUNCTIONS = 45
+  end
+end

@@ -28,7 +28,7 @@ orbitals: List: List of the orbitals to be considered for PDOS calculation. It h
 
 from postprocessModules import Plotters
 
-plotter_bands = Plotters(filesPath = "/home/nikhilk/Downloads/dftfe-benchmarks/accuracyBenchmarks/FeCuPt2Postprocess/output/",
+plotter_bands = Plotters(filesPath = "/home/srinibasn/dftfe-benchmarks/accuracyBenchmarks/FeCuPt2Postprocess/",
                         bandsDatFile = "bands.out",
                         kptsFile= "kpointRuleFile.inp",
                         coordinatesFile = "coordinates.inp",
@@ -39,7 +39,7 @@ plotter_bands = Plotters(filesPath = "/home/nikhilk/Downloads/dftfe-benchmarks/a
                         numSpins = 2,
                         spins= [0,1]
                         )
-plotter_dos = Plotters(filesPath = "/home/nikhilk/Downloads/dftfe-benchmarks/accuracyBenchmarks/FeCuPt2Postprocess/output/",
+plotter_dos = Plotters(filesPath = "/home/srinibasn/dftfe-benchmarks/accuracyBenchmarks/FeCuPt2Postprocess/",
                    coordinatesFile = "coordinates.inp",
                    bandsDatFile="bands.out", 
                    overlay_mode = False,
