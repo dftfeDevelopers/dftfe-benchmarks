@@ -1,6 +1,6 @@
 Description of the example
 ============================================================================
-This example demonstrates the ion relaxation with periodic boundary conditions for a 2x2x2 supercell of Li<sub>2</sub>O (FCC) crystal (with an Oxygen atom vacancy) that consists of 95 atoms. ONCV pseudopotentials form SG15 database along with r<sup>2</sup>SCAN exchange-correlation functional are used for the calculations.
+This example demonstrates the ion relaxation with periodic boundary conditions for a 2x2x2 supercell of Li<sub>2</sub>O (FCC) crystal (with an Oxygen atom vacancy) that consists of 95 atoms. ONCV pseudopotentials from SG15 database along with r<sup>2</sup>SCAN exchange-correlation functional are used for the calculations.
 
 
 Studies performed
