@@ -1,4 +1,5 @@
 set SOLVER MODE=GS
+set VERBOSITY=1
 set USE GPU=true
 
 subsection Geometry
