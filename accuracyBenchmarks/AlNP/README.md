@@ -13,7 +13,15 @@ Discussion on the input parameters and the results
 
 Study1 -- Ground-state calculation results
 ------------------------------------------
+* The run successfully converged in 49 SCF iterations.
+* POLYNOMIAL ORDER = 7 and MESH SIZE AROUND ATOM = 2.3 with ATOM BALL RADIUS = 4.0 are found to be sufficient to obtain chemical accuracy as described below. Total degrees of freedom are around 4308881 (29312 DoFs/atom)
+* Total Energy = -3.3821642600751841e+02 (Hartree) (previous benchmark: -3.382371304913907011e+02)
+* Sum of absolute value of all force components over all atoms: 1.286499161896206944e+00 (Hartree/Bohr) (previous benchmark: 1.287443838298015342e+00)
+
+Study1 -- Ground-state calculation results for previous benchmarks
+------------------------------------------
 * The run successfully converged in 39 SCF iterations.
-* POLYNOMIAL ORDER = 7 and MESH SIZE AROUND ATOM = 2.3 with ATOM BALL RADIUS = 4.0 are found to be sufficient to obtain chemical accuracy as described below. Total degrees of freedom are around 1339596 (9112 DoFs/atom)
+* POLYNOMIAL ORDER = 7 and MESH SIZE AROUND ATOM = 2.3 with ATOM BALL RADIUS = 4.0 are found to be sufficient to obtain chemical accuracy as described below.
+* Total degrees of freedom are around 1339596 (9112 DoFs/atom)
 * DFT-FE energy per atom comparison with QE reference: 3e-06 Ha/atom. In particular we compared the "Total energy per atom" printed from DFT-FE output and "(Total energy+TS)/totalNumberAtoms" from QE, since QE's Total energy is the free energy.
 * DFT-FE Ionic forces comparison with QE reference: 1.4e-04 Ha/Bohr (max absolute error among all atoms and force components)
