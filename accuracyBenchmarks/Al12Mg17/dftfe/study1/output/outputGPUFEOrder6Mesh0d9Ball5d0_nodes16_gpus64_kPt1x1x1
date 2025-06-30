@@ -1,0 +1,951 @@
+“RANK= 46 LOCAL_RANK= 2 gpu= 2”
+“RANK= 49 LOCAL_RANK= 1 gpu= 1”
+“RANK= 9 LOCAL_RANK= 1 gpu= 1”
+“RANK= 42 LOCAL_RANK= 2 gpu= 2”
+“RANK= 44 LOCAL_RANK= 0 gpu= 0”
+“RANK= 47 LOCAL_RANK= 3 gpu= 3”
+“RANK= 52 LOCAL_RANK= 0 gpu= 0”
+“RANK= 15 LOCAL_RANK= 3 gpu= 3”
+“RANK= 36 LOCAL_RANK= 0 gpu= 0”
+“RANK= 24 LOCAL_RANK= 0 gpu= 0”
+“RANK= 6 LOCAL_RANK= 2 gpu= 2”
+“RANK= 27 LOCAL_RANK= 3 gpu= 3”
+“RANK= 30 LOCAL_RANK= 2 gpu= 2”
+“RANK= 7 LOCAL_RANK= 3 gpu= 3”
+“RANK= 23 LOCAL_RANK= 3 gpu= 3”
+“RANK= 51 LOCAL_RANK= 3 gpu= 3”
+“RANK= 29 LOCAL_RANK= 1 gpu= 1”
+“RANK= 4 LOCAL_RANK= 0 gpu= 0”
+“RANK= 18 LOCAL_RANK= 2 gpu= 2”
+“RANK= 16 LOCAL_RANK= 0 gpu= 0”
+“RANK= 60 LOCAL_RANK= 0 gpu= 0”
+“RANK= 19 LOCAL_RANK= 3 gpu= 3”
+“RANK= 0 LOCAL_RANK= 0 gpu= 0”
+“RANK= 20 LOCAL_RANK= 0 gpu= 0”
+“RANK= 41 LOCAL_RANK= 1 gpu= 1”
+“RANK= 43 LOCAL_RANK= 3 gpu= 3”
+“RANK= 13 LOCAL_RANK= 1 gpu= 1”
+“RANK= 12 LOCAL_RANK= 0 gpu= 0”
+“RANK= 22 LOCAL_RANK= 2 gpu= 2”
+“RANK= 31 LOCAL_RANK= 3 gpu= 3”
+“RANK= 53 LOCAL_RANK= 1 gpu= 1”
+“RANK= 21 LOCAL_RANK= 1 gpu= 1”
+“RANK= 38 LOCAL_RANK= 2 gpu= 2”
+“RANK= 8 LOCAL_RANK= 0 gpu= 0”
+“RANK= 37 LOCAL_RANK= 1 gpu= 1”
+“RANK= 11 LOCAL_RANK= 3 gpu= 3”
+“RANK= 10 LOCAL_RANK= 2 gpu= 2”
+“RANK= 32 LOCAL_RANK= 0 gpu= 0”
+“RANK= 55 LOCAL_RANK= 3 gpu= 3”
+“RANK= 54 LOCAL_RANK= 2 gpu= 2”
+“RANK= 57 LOCAL_RANK= 1 gpu= 1”
+“RANK= 14 LOCAL_RANK= 2 gpu= 2”
+“RANK= 59 LOCAL_RANK= 3 gpu= 3”
+“RANK= 35 LOCAL_RANK= 3 gpu= 3”
+“RANK= 56 LOCAL_RANK= 0 gpu= 0”
+“RANK= 34 LOCAL_RANK= 2 gpu= 2”
+“RANK= 17 LOCAL_RANK= 1 gpu= 1”
+“RANK= 5 LOCAL_RANK= 1 gpu= 1”
+“RANK= 26 LOCAL_RANK= 2 gpu= 2”
+“RANK= 58 LOCAL_RANK= 2 gpu= 2”
+“RANK= 3 LOCAL_RANK= 3 gpu= 3”
+“RANK= 1 LOCAL_RANK= 1 gpu= 1”
+“RANK= 63 LOCAL_RANK= 3 gpu= 3”
+“RANK= 62 LOCAL_RANK= 2 gpu= 2”
+“RANK= 48 LOCAL_RANK= 0 gpu= 0”
+“RANK= 50 LOCAL_RANK= 2 gpu= 2”
+“RANK= 28 LOCAL_RANK= 0 gpu= 0”
+“RANK= 33 LOCAL_RANK= 1 gpu= 1”
+“RANK= 39 LOCAL_RANK= 3 gpu= 3”
+“RANK= 40 LOCAL_RANK= 0 gpu= 0”
+“RANK= 61 LOCAL_RANK= 1 gpu= 1”
+“RANK= 25 LOCAL_RANK= 1 gpu= 1”
+“RANK= 2 LOCAL_RANK= 2 gpu= 2”
+“RANK= 45 LOCAL_RANK= 1 gpu= 1”
+==========================================================================================================
+==========================================================================================================
+			Welcome to the Open Source program DFT-FE version	1.1.0-pre		        
+This is a C++ code for materials modeling from first principles using Kohn-Sham density functional theory.
+This is a real-space code for periodic, semi-periodic and non-periodic pseudopotential
+and all-electron calculations, and is based on adaptive finite-element discretization.
+For further details, and citing, please refer to our website: https://sites.google.com/umich.edu/dftfe
+==========================================================================================================
+ DFT-FE Mentors and Development leads (alphabetically) :									
+														
+ Sambit Das               - University of Michigan, USA
+ Vikram Gavini            - University of Michigan, USA
+ Phani Motamarri          - Indian Institute of Science, India
+ (A complete list of the many authors that have contributed to DFT-FE can be found in the authors file)
+==========================================================================================================
+ 	     Copyright (c) 2017-2025 The Regents of the University of Michigan and DFT-FE authors         
+ 			DFT-FE is published under [LGPL v2.1 or newer] 				
+==========================================================================================================
+==========================================================================================================
+ DFT-FE branch: publicGithubDevelop, commit: 7943a07d6c628f3ee51e9fb5da21c425addf8778
+ compiled with GPU support, using CUDA, with 32 bit integers, and with HIGHERQUAD_PSP
+==========================================================================================================
+set RESTART        = false
+set RESTART FOLDER = restartFolder
+set SOLVER MODE    = GS
+set USE GPU        = true
+set VERBOSITY      = 1
+subsection NEB
+  set ALLOW IMAGE FREEZING             = false
+  set BFGS STEP METHOD                 = QN
+  set ION RELAX FLAGS FILE             = 
+  set LBFGS HISTORY                    = 5
+  set MAXIMUM ION UPDATE STEP          = 0.5
+  set MAXIMUM NUMBER OF NEB ITERATIONS = 100
+  set MAXIMUM SPRING CONSTANT          = 5e-3
+  set MAX LINE SEARCH ITER             = 5
+  set MINIMUM SPRING CONSTANT          = 2e-3
+  set NEB COORDINATES FILE             = 
+  set NEB DOMAIN VECTORS FILE          = 
+  set NEB OPT SOLVER                   = LBFGS
+  set NUMBER OF IMAGES                 = 7
+  set PATH THRESHOLD                   = 5e-4
+end
+set KEEP SCRATCH FOLDER                             = false
+set MEM OPT MODE                                    = false
+set REPRODUCIBLE OUTPUT                             = false
+set WRITE STRUCTURE ENERGY FORCES DATA POST PROCESS = false
+subsection Boundary conditions
+  set CONSTRAINTS FROM SERIAL DOFHANDLER = false
+  set CONSTRAINTS PARALLEL CHECK         = false
+  set FLOATING NUCLEAR CHARGES           = true
+  set MULTIPOLE BOUNDARY CONDITIONS      = false
+  set PERIODIC1                          = true
+  set PERIODIC2                          = true
+  set PERIODIC3                          = true
+  set POINT WISE DIRICHLET CONSTRAINT    = false
+  set SELF POTENTIAL RADIUS              = 0.0
+  set SMEARED NUCLEAR CHARGES            = true
+end
+subsection Brillouin zone k point sampling options
+  set USE GROUP SYMMETRY         = false
+  set USE TIME REVERSAL SYMMETRY = false
+  set kPOINT RULE FILE           = 
+  subsection Monkhorst-Pack (MP) grid generation
+    set SAMPLING POINTS 1 = 1
+    set SAMPLING POINTS 2 = 1
+    set SAMPLING POINTS 3 = 1
+    set SAMPLING SHIFT 1  = 0
+    set SAMPLING SHIFT 2  = 0
+    set SAMPLING SHIFT 3  = 0
+  end
+end
+subsection DFT functional parameters
+  set AUX BASIS DATA                                    = 
+  set AUX BASIS TYPE                                    = FE
+  set EXCHANGE CORRELATION TYPE                         = GGA-PBE
+  set MODEL XC INPUT FILE                               = 
+  set NET CHARGE                                        = 0.0
+  set PSEUDOPOTENTIAL CALCULATION                       = true
+  set PSEUDOPOTENTIAL FILE NAMES LIST                   = pseudo.inp
+  set PSEUDO TESTS FLAG                                 = false
+  set PSP CUTOFF IMAGE CHARGES                          = 15.0
+  set SPIN POLARIZATION                                 = 0
+  set TOTAL MAGNETIZATION                               = 0.0
+  set USE ATOMIC MAGNETIZATION GUESS FOR CONSTRAINT MAG = false
+  subsection CONFINING POTENTIAL parameters
+    set APPLY CONFINING POTENTIAL = false
+    set C PARAM                   = 1.0
+    set INNER RADIUS              = 17.0
+    set OUTER RADIUS              = 20.0
+    set W PARAM                   = 1.0
+  end
+  subsection Dispersion Correction
+    set CN CUTOFF                  = 40.0
+    set D3 ATM                     = false
+    set D3 DAMPING TYPE            = 3
+    set D4 MBD                     = false
+    set DAMPING PARAMETERS FILE    = 
+    set DISPERSION CORRECTION TYPE = 0
+    set THREE BODY CUTOFF          = 40.0
+    set TWO BODY CUTOFF            = 94.8683298050514
+  end
+  subsection Hubbard Parameters
+    set HUBBARD PARAMETERS FILE = 
+  end
+end
+subsection Finite element mesh parameters
+  set DENSITY QUADRATURE RULE         = 0
+  set POLYNOMIAL ORDER                = 6
+  set POLYNOMIAL ORDER DENSITY NODAL  = 0
+  set POLYNOMIAL ORDER ELECTROSTATICS = 0
+  subsection Auto mesh generation parameters
+    set ATOM BALL RADIUS                  = 5
+    set AUTO ADAPT BASE MESH SIZE         = true
+    set BASE MESH SIZE                    = 0.0
+    set ERROR ESTIMATE WAVEFUNCTIONS      = 5
+    set GAUSSIAN CONSTANT FORCE GENERATOR = 0.75
+    set GAUSSIAN ORDER FORCE GENERATOR    = 4.0
+    set GAUSSIAN ORDER MOVE MESH TO ATOMS = 4.0
+    set INNER ATOM BALL RADIUS            = 0.0
+    set MESH ADAPTION                     = false
+    set MESH SIZES FILE                   = 
+    set MESH SIZE AROUND ATOM             = 0.9
+    set MESH SIZE AT ATOM                 = 0.0
+    set NUM LEVELS                        = 10
+    set TOLERANCE FOR MESH ADAPTION       = 1
+    set TOP FRAC                          = 0.1
+    set USE FLAT TOP GENERATOR            = false
+  end
+end
+subsection FunctionalTest
+  set TEST NAME = 
+end
+subsection GPU
+  set AUTO GPU BLOCK SIZES         = true
+  set FINE GRAINED GPU TIMINGS     = false
+  set SUBSPACE ROT FULL CPU MEM    = true
+  set USE DCCL                     = false
+  set USE ELPA GPU KERNEL          = false
+  set USE GPUDIRECT MPI ALL REDUCE = false
+end
+subsection Geometry
+  set ATOMIC COORDINATES FILE      = coordinates.inp
+  set ATOMIC DISP COORDINATES FILE = 
+  set DOMAIN VECTORS FILE          = domainBoundingVectors.inp
+  set NATOMS                       = 58
+  set NATOM TYPES                  = 2
+  subsection Optimization
+    set BFGS STEP METHOD           = QN
+    set CELL CONSTRAINT TYPE       = 12
+    set CELL OPT SOLVER            = LBFGS
+    set CELL STRESS                = true
+    set FORCE TOL                  = 1e-4
+    set ION FORCE                  = true
+    set ION OPT SOLVER             = LBFGS
+    set ION RELAX FLAGS FILE       = 
+    set LBFGS HISTORY              = 5
+    set MAXIMUM CELL UPDATE STEP   = 0.1
+    set MAXIMUM ION UPDATE STEP    = 0.5
+    set MAXIMUM OPTIMIZATION STEPS = 300
+    set MAXIMUM STAGGERED CYCLES   = 300
+    set MAX LINE SEARCH ITER       = 5
+    set NON SELF CONSISTENT FORCE  = false
+    set OPTIMIZATION MODE          = ION
+    set REUSE DENSITY              = 1
+    set REUSE WFC                  = true
+    set STRESS TOL                 = 1e-6
+    set USE PRECONDITIONER         = false
+  end
+end
+subsection Helmholtz problem parameters
+  set ABSOLUTE TOLERANCE HELMHOLTZ = 1e-10
+  set MAXIMUM ITERATIONS HELMHOLTZ = 10000
+end
+subsection Molecular Dynamics
+  set ATOMIC MASSES FILE          = 
+  set BOMD                        = false
+  set EXTRAPOLATE DENSITY         = 0
+  set MAX JACOBIAN RATIO FACTOR   = 1.5
+  set MAX WALL TIME               = 2592000.0
+  set NUMBER OF STEPS             = 1000
+  set STARTING TEMPERATURE        = 300.0
+  set TEMPERATURE CONTROLLER TYPE = NO_CONTROL
+  set THERMOSTAT TIME CONSTANT    = 100
+  set TIME STEP                   = 0.5
+  set TRACKING ATOMIC NO          = 0
+end
+subsection Parallelization
+  set BAND PARAL OPT           = true
+  set MPI ALLREDUCE BLOCK SIZE = 100.0
+  set NPBAND                   = 1
+  set NPKPT                    = 1
+end
+subsection Poisson problem parameters
+  set GPU MODE           = true
+  set MAXIMUM ITERATIONS = 20000
+  set TOLERANCE          = 1e-10
+  set VSELF GPU MODE     = true
+end
+subsection Post-processing Options
+  set DELTA ENERGY                       = 0.01
+  set DOS SMEAR TEMPERATURE              = 500
+  set PRINT KINETIC ENERGY               = false
+  set READ ATOMIC WFC PDOS FROM PSP FILE = false
+  set WRITE DENSITY FE MESH              = false
+  set WRITE DENSITY OF STATES            = false
+  set WRITE DENSITY QUAD DATA            = false
+  set WRITE LOCALIZATION LENGTHS         = false
+  set WRITE LOCAL DENSITY OF STATES      = false
+  set WRITE PROJECTED DENSITY OF STATES  = false
+  set WRITE WFC FE MESH                  = false
+end
+subsection SCF Checkpointing and Restart
+  set LOAD QUAD DATA        = false
+  set RESTART SP FROM NO SP = false
+  set SAVE QUAD DATA        = false
+end
+subsection SCF parameters
+  set ADAPT ANDERSON MIXING PARAMETER = false
+  set COMPUTE ENERGY EACH ITER        = false
+  set CONSTRAINT MAGNETIZATION        = false
+  set ENERGY TOLERANCE                = 1e-07
+  set KERKER MIXING PARAMETER         = 0.05
+  set MAXIMUM ITERATIONS              = 100
+  set MIXING HISTORY                  = 10
+  set MIXING METHOD                   = ANDERSON_WITH_KERKER
+  set MIXING PARAMETER                = 0.5
+  set PURE STATE                      = false
+  set RESTA FERMI WAVEVECTOR          = 5.81
+  set RESTA SCREENING LENGTH          = 6.61
+  set SPIN MIXING ENHANCEMENT FACTOR  = 1.0
+  set STARTING WFC                    = RANDOM
+  set TEMPERATURE                     = 500
+  set TOLERANCE                       = 5e-5
+  set USE ENERGY RESIDUAL METRIC      = false
+  subsection Eigen-solver parameters
+    set ALGO                                                 = NORMAL
+    set ALLOW MULTIPLE PASSES POST FIRST SCF                 = true
+    set CHEBYSHEV FILTER TOLERANCE                           = 0.0
+    set CHEBYSHEV POLYNOMIAL DEGREE                          = 0
+    set CHEBYSHEV POLYNOMIAL DEGREE SCALING FACTOR FIRST SCF = 1.34
+    set CHEBY WFC BLOCK SIZE                                 = 200
+    set HIGHEST STATE OF INTEREST FOR CHEBYSHEV FILTERING    = 0
+    set NUMBER OF CORE EIGEN STATES FOR MIXED PREC RR        = 0
+    set NUMBER OF KOHN-SHAM WAVEFUNCTIONS                    = 0
+    set ORTHOGONALIZATION TYPE                               = Auto
+    set OVERLAP COMPUTE COMMUN CHEBY                         = true
+    set OVERLAP COMPUTE COMMUN ORTHO RR                      = true
+    set RESTRICT TO SINGLE FILTER PASS                       = false
+    set REUSE LANCZOS UPPER BOUND                            = false
+    set SCALAPACKPROCS                                       = 0
+    set SCALAPACK BLOCK SIZE                                 = 0
+    set SUBSPACE PROJ SHEP GPU                               = false
+    set SUBSPACE ROT DOFS BLOCK SIZE                         = 10000
+    set TENSOR OP TYPE SINGLE PREC CHEBY                     = FP32
+    set USE APPROXIMATE OVERLAP MATRIX                       = true
+    set USE ELPA                                             = true
+    set USE MIXED PREC CGS SR                                = false
+    set USE MIXED PREC COMMUN ONLY XTOX XTHX                 = false
+    set USE MIXED PREC RR_SR                                 = false
+    set USE MIXED PREC XTHX                                  = false
+    set USE MIXED PREC XTOX                                  = false
+    set USE RESIDUAL CHFSI                                   = true
+    set USE SINGLE PREC CHEBY                                = false
+    set USE SINGLE PREC COMMUN CHEBY                         = false
+    set WFC BLOCK SIZE                                       = 400
+  end
+  subsection LOW RANK DIELECM PRECOND
+    set ADAPTIVE RANK REL TOL            = 0.3
+    set BETA TOL                         = 0.1
+    set ESTIMATE JAC CONDITION NO        = false
+    set METHOD SUB TYPE                  = ADAPTIVE
+    set POISSON SOLVER ABS TOL           = 1e-6
+    set STARTING NORM LARGE DAMPING      = 2.0
+    set USE SINGLE PREC DENSITY RESPONSE = false
+  end
+end
+Setting ORTHOGONALIZATION TYPE=CGS for pseudopotential calculations 
+=================================MPI Parallelization=========================================
+Total number of MPI tasks: 64
+k-point parallelization processor groups: 1
+Band parallelization processor groups: 1
+Number of MPI tasks for finite-element domain decomposition: 64
+============================================================================================
+Threads per MPI task: 1
+number of atoms: 58
+number of atoms types: 2
+ Warning: User has requested the number of Kohn-Sham wavefunctions to be less than orequal to half the number of electrons in the system. Setting the Kohn-Sham wavefunctionsto half the number of electrons with a 20 percent buffer to avoid convergence issues inSCF iterations
+ Setting the number of Kohn-Sham wave functions to be 241
+ Setting the number of Kohn-Sham wave functions for Device run to be: 270
+ Setting CHEBY WFC BLOCK SIZE for Device run to be 90
+ Setting WFC BLOCK SIZE for Device run to be 90
+
+Reading Pseudo-potential data for each atom from the list given in : pseudo.inp
+ Reading Pseudopotential File: Mg.upf, with atomic number: 12, and has no nonlinear core-correction
+ Reading Pseudopotential File: Al.upf, with atomic number: 13, and has data for nonlinear core-correction
+Total number of k-points 1
+-----------Reciprocal vectors along which the MP grid is to be generated-------------
+G1 : 3.156792731875667779e-01 0.000000000000000000e+00 0.000000000000000000e+00
+G2 : 0.000000000000000000e+00 3.156792731875667779e-01 0.000000000000000000e+00
+G3 : 0.000000000000000000e+00 0.000000000000000000e+00 3.156792731875667779e-01
+Atleast one atom has pseudopotential with nonlinear core correction
+Atomic system initialization, wall time: 0.317541s.
+-----------Simulation Domain bounding vectors (lattice vectors in fully periodic case)-------------
+v1 : 1.990369923161319932e+01 0.000000000000000000e+00 0.000000000000000000e+00
+v2 : 0.000000000000000000e+00 1.990369923161319932e+01 0.000000000000000000e+00
+v3 : 0.000000000000000000e+00 0.000000000000000000e+00 1.990369923161319932e+01
+-----------------------------------------------------------------------------------------
+-----Fractional coordinates of atoms------ 
+AtomId 0:  0.000000000000000000e+00 0.000000000000000000e+00 0.000000000000000000e+00
+AtomId 1:  6.720990000000000020e-01 3.279000000000000248e-01 3.279000000000000248e-01
+AtomId 2:  3.279000000000000248e-01 6.720990000000000020e-01 3.279000000000000248e-01
+AtomId 3:  3.279000000000000248e-01 3.279000000000000248e-01 6.720990000000000020e-01
+AtomId 4:  1.720990000000000020e-01 1.720990000000000020e-01 1.720990000000000020e-01
+AtomId 5:  1.433450000000000002e-01 8.566550000000000553e-01 5.403470000000000217e-01
+AtomId 6:  9.596529999999999783e-01 3.566549999999999998e-01 3.566549999999999998e-01
+AtomId 7:  1.433450000000000002e-01 5.403470000000000217e-01 8.566550000000000553e-01
+AtomId 8:  8.566550000000000553e-01 1.433450000000000002e-01 5.403470000000000217e-01
+AtomId 9:  5.403470000000000217e-01 1.433450000000000002e-01 8.566550000000000553e-01
+AtomId 10:  3.566549999999999998e-01 9.596529999999999783e-01 3.566549999999999998e-01
+AtomId 11:  3.566549999999999998e-01 3.566549999999999998e-01 9.596529999999999783e-01
+AtomId 12:  5.403470000000000217e-01 8.566550000000000553e-01 1.433450000000000002e-01
+AtomId 13:  8.566550000000000553e-01 5.403470000000000217e-01 1.433450000000000002e-01
+AtomId 14:  1.433450000000000002e-01 1.433450000000000002e-01 4.596529999999999783e-01
+AtomId 15:  4.596529999999999783e-01 1.433450000000000002e-01 1.433450000000000002e-01
+AtomId 16:  1.433450000000000002e-01 4.596529999999999783e-01 1.433450000000000002e-01
+AtomId 17:  5.000000000000000000e-01 5.000000000000000000e-01 5.000000000000000000e-01
+AtomId 18:  1.720990000000000020e-01 8.279009999999999980e-01 8.279009999999999980e-01
+AtomId 19:  8.279009999999999980e-01 1.720990000000000020e-01 8.279009999999999980e-01
+AtomId 20:  8.279009999999999980e-01 8.279009999999999980e-01 1.720990000000000020e-01
+AtomId 21:  6.720990000000000020e-01 6.720990000000000020e-01 6.720990000000000020e-01
+AtomId 22:  6.433449999999999447e-01 3.566549999999999998e-01 4.034700000000000092e-02
+AtomId 23:  4.596529999999999783e-01 8.566550000000000553e-01 8.566550000000000553e-01
+AtomId 24:  6.433449999999999447e-01 4.034700000000000092e-02 3.566549999999999998e-01
+AtomId 25:  3.566549999999999998e-01 6.433449999999999447e-01 4.034700000000000092e-02
+AtomId 26:  4.034700000000000092e-02 6.433449999999999447e-01 3.566549999999999998e-01
+AtomId 27:  8.566550000000000553e-01 4.596529999999999783e-01 8.566550000000000553e-01
+AtomId 28:  8.566550000000000553e-01 8.566550000000000553e-01 4.596529999999999783e-01
+AtomId 29:  4.034700000000000092e-02 3.566549999999999998e-01 6.433449999999999447e-01
+AtomId 30:  3.566549999999999998e-01 4.034700000000000092e-02 6.433449999999999447e-01
+AtomId 31:  6.433449999999999447e-01 6.433449999999999447e-01 9.596529999999999783e-01
+AtomId 32:  9.596529999999999783e-01 6.433449999999999447e-01 6.433449999999999447e-01
+AtomId 33:  6.433449999999999447e-01 9.596529999999999783e-01 6.433449999999999447e-01
+AtomId 34:  9.093689999999999829e-01 9.063150000000000373e-02 2.758129999999999749e-01
+AtomId 35:  7.241859999999999964e-01 9.063150000000000373e-02 9.063150000000000373e-02
+AtomId 36:  9.093689999999999829e-01 2.758129999999999749e-01 9.063150000000000373e-02
+AtomId 37:  9.063150000000000373e-02 9.093689999999999829e-01 2.758129999999999749e-01
+AtomId 38:  2.758129999999999749e-01 9.093689999999999829e-01 9.063150000000000373e-02
+AtomId 39:  9.063150000000000373e-02 7.241859999999999964e-01 9.063150000000000373e-02
+AtomId 40:  9.063150000000000373e-02 9.063150000000000373e-02 7.241859999999999964e-01
+AtomId 41:  2.758129999999999749e-01 9.063150000000000373e-02 9.093689999999999829e-01
+AtomId 42:  9.063150000000000373e-02 2.758129999999999749e-01 9.093689999999999829e-01
+AtomId 43:  4.093689999999999829e-01 4.093689999999999829e-01 2.241869999999999974e-01
+AtomId 44:  2.241869999999999974e-01 4.093689999999999829e-01 4.093689999999999829e-01
+AtomId 45:  4.093689999999999829e-01 2.241869999999999974e-01 4.093689999999999829e-01
+AtomId 46:  4.093689999999999829e-01 5.906310000000000171e-01 7.758140000000000036e-01
+AtomId 47:  2.241869999999999974e-01 5.906310000000000171e-01 5.906310000000000171e-01
+AtomId 48:  4.093689999999999829e-01 7.758140000000000036e-01 5.906310000000000171e-01
+AtomId 49:  5.906310000000000171e-01 4.093689999999999829e-01 7.758140000000000036e-01
+AtomId 50:  7.758140000000000036e-01 4.093689999999999829e-01 5.906310000000000171e-01
+AtomId 51:  5.906310000000000171e-01 2.241869999999999974e-01 5.906310000000000171e-01
+AtomId 52:  5.906310000000000171e-01 5.906310000000000171e-01 2.241869999999999974e-01
+AtomId 53:  7.758140000000000036e-01 5.906310000000000171e-01 4.093689999999999829e-01
+AtomId 54:  5.906310000000000171e-01 7.758140000000000036e-01 4.093689999999999829e-01
+AtomId 55:  9.093689999999999829e-01 9.093689999999999829e-01 7.241859999999999964e-01
+AtomId 56:  7.241859999999999964e-01 9.093689999999999829e-01 9.093689999999999829e-01
+AtomId 57:  9.093689999999999829e-01 7.241859999999999964e-01 9.093689999999999829e-01
+-----------------------------------------------------------------------------------------
+Libxc version: 6.2.2
+X Functional: J. P. Perdew, K. Burke, and M. Ernzerhof.,  Phys. Rev. Lett. 77, 3865 (1996) (DOI 10.1103/PhysRevLett.77.3865)
+C Functional: J. P. Perdew, K. Burke, and M. Ernzerhof.,  Phys. Rev. Lett. 77, 3865 (1996) (DOI 10.1103/PhysRevLett.77.3865)
+
+Finite element mesh information
+-------------------------------------------------
+FE interpolating polynomial order for Kohn-Sham eigenvalue problem: 6
+FE interpolating polynomial order for electrostatics solve: 6
+FE interpolating polynomial order for nodal electron density computation: 8
+quadrature rule for electron density and kinetic energy density computation: 9
+number of elements: 10648
+number of degrees of freedom for the Kohn-Sham eigenvalue problem : 2352637
+Minimum mesh size: 9.047136014369607793e-01
+-------------------------------------------------
+
+-----------------------------------------------------------------------------
+Rough estimate of peak memory requirement (RAM) total: 6.249017552000000109e+01 GB.
+Rough estimate of peak memory requirement (RAM) per MPI task: 9.764089925000000170e-01 GB.
+DFT-FE Message: many of the memory optimizations implemented
+in DFT-FE are useful only for larger system sizes.
+-----------------------------------------------------------------------------
+Determining the ball radius around the atom for nuclear self-potential solve... 
+...Adaptively set ball radius: 4.000000000000000000e+00
+
+Setting initial guess for wavefunctions....
+Number of wavefunctions generated randomly to be used as initial guess for starting the SCF : 270
+=============================================================================================================================
+number of electrons: 4.120000000000000000e+02
+number of eigen values: 270
+=============================================================================================================================
+
+Reading initial guess for electron-density.....
+Initial total charge after normalization: 4.120000000000000000e+02
+initialize density, wall time: 1.88631s.
+
+Pseudopotential initalization....
+
+Reading data for core electron-density to be used in nonlinear core-correction.....
+KSDFT problem initialization, wall time: 19.848s.
+Nuclear self-potential solve, wall time: 4.48656s.
+Init local PSP, wall time: 5.20836s.
+
+************************Begin Self-Consistent-Field Iteration:  1 ***********************
+Fermi Energy computed: 1.934103489655776276e-01
+***********************Self-Consistent-Field Iteration:  1 complete**********************
+Wall time for the above scf iteration: 8.672036200000000861e+00 seconds
+Number of Chebyshev filtered subspace iterations: 7
+
+************************Begin Self-Consistent-Field Iteration:  2 ***********************
+Anderson mixing parameter for Rho: 5.000000000000000000e-01
+ANDERSON_WITH_KERKER mixing, L2 norm of electron-density difference: 3.022910359721535656e-01
+Fermi Energy computed: 1.929524120778034757e-01
+***********************Self-Consistent-Field Iteration:  2 complete**********************
+Wall time for the above scf iteration: 1.461964341000000056e+00 seconds
+Number of Chebyshev filtered subspace iterations: 1
+
+************************Begin Self-Consistent-Field Iteration:  3 ***********************
+Anderson mixing parameter for Rho: 5.000000000000000000e-01
+ANDERSON_WITH_KERKER mixing, L2 norm of electron-density difference: 1.647261438809743683e-01
+Fermi Energy computed: 1.936635869589146131e-01
+***********************Self-Consistent-Field Iteration:  3 complete**********************
+Wall time for the above scf iteration: 1.456310977000000006e+00 seconds
+Number of Chebyshev filtered subspace iterations: 1
+
+************************Begin Self-Consistent-Field Iteration:  4 ***********************
+Anderson mixing parameter for Rho: 5.000000000000000000e-01
+ANDERSON_WITH_KERKER mixing, L2 norm of electron-density difference: 4.516324106811736572e-02
+Fermi Energy computed: 1.935124843506034475e-01
+***********************Self-Consistent-Field Iteration:  4 complete**********************
+Wall time for the above scf iteration: 1.431898536999999916e+00 seconds
+Number of Chebyshev filtered subspace iterations: 1
+
+************************Begin Self-Consistent-Field Iteration:  5 ***********************
+Anderson mixing parameter for Rho: 5.000000000000000000e-01
+ANDERSON_WITH_KERKER mixing, L2 norm of electron-density difference: 9.927011760151437797e-03
+Fermi Energy computed: 1.933910731053953280e-01
+***********************Self-Consistent-Field Iteration:  5 complete**********************
+Wall time for the above scf iteration: 1.422894399999999893e+00 seconds
+Number of Chebyshev filtered subspace iterations: 1
+
+************************Begin Self-Consistent-Field Iteration:  6 ***********************
+Anderson mixing parameter for Rho: 5.000000000000000000e-01
+ANDERSON_WITH_KERKER mixing, L2 norm of electron-density difference: 2.419533699897762329e-03
+Fermi Energy computed: 1.933606921911709409e-01
+***********************Self-Consistent-Field Iteration:  6 complete**********************
+Wall time for the above scf iteration: 1.400026369000000104e+00 seconds
+Number of Chebyshev filtered subspace iterations: 1
+
+************************Begin Self-Consistent-Field Iteration:  7 ***********************
+Anderson mixing parameter for Rho: 5.000000000000000000e-01
+ANDERSON_WITH_KERKER mixing, L2 norm of electron-density difference: 9.252941103310205863e-04
+Fermi Energy computed: 1.933525629582220906e-01
+***********************Self-Consistent-Field Iteration:  7 complete**********************
+Wall time for the above scf iteration: 1.379570501999999976e+00 seconds
+Number of Chebyshev filtered subspace iterations: 1
+
+************************Begin Self-Consistent-Field Iteration:  8 ***********************
+Anderson mixing parameter for Rho: 5.000000000000000000e-01
+ANDERSON_WITH_KERKER mixing, L2 norm of electron-density difference: 2.359462962250455040e-04
+Fermi Energy computed: 1.933525876084448425e-01
+***********************Self-Consistent-Field Iteration:  8 complete**********************
+Wall time for the above scf iteration: 1.359696067000000008e+00 seconds
+Number of Chebyshev filtered subspace iterations: 1
+
+************************Begin Self-Consistent-Field Iteration:  9 ***********************
+Anderson mixing parameter for Rho: 5.000000000000000000e-01
+ANDERSON_WITH_KERKER mixing, L2 norm of electron-density difference: 1.597543368537955512e-04
+Fermi Energy computed: 1.933506817058275040e-01
+***********************Self-Consistent-Field Iteration:  9 complete**********************
+Wall time for the above scf iteration: 1.354399820999999893e+00 seconds
+Number of Chebyshev filtered subspace iterations: 1
+
+************************Begin Self-Consistent-Field Iteration: 10 ***********************
+Anderson mixing parameter for Rho: 5.000000000000000000e-01
+ANDERSON_WITH_KERKER mixing, L2 norm of electron-density difference: 5.459268792237077593e-05
+Fermi Energy computed: 1.933513471815143936e-01
+***********************Self-Consistent-Field Iteration: 10 complete**********************
+Wall time for the above scf iteration: 1.333069357000000066e+00 seconds
+Number of Chebyshev filtered subspace iterations: 1
+
+************************Begin Self-Consistent-Field Iteration: 11 ***********************
+Anderson mixing parameter for Rho: 5.000000000000000000e-01
+ANDERSON_WITH_KERKER mixing, L2 norm of electron-density difference: 5.012922546605043243e-05
+Fermi Energy computed: 1.933508831790098359e-01
+***********************Self-Consistent-Field Iteration: 11 complete**********************
+Wall time for the above scf iteration: 1.321683058999999938e+00 seconds
+Number of Chebyshev filtered subspace iterations: 1
+
+************************Begin Self-Consistent-Field Iteration: 12 ***********************
+Anderson mixing parameter for Rho: 5.000000000000000000e-01
+ANDERSON_WITH_KERKER mixing, L2 norm of electron-density difference: 9.315178116492602180e-06
+Fermi Energy computed: 1.933507946067985483e-01
+***********************Self-Consistent-Field Iteration: 12 complete**********************
+Wall time for the above scf iteration: 1.294946268999999983e+00 seconds
+Number of Chebyshev filtered subspace iterations: 1
+
+SCF iterations converged to the specified tolerance after: 12 iterations.
+GS Fermi energy spin up: 1.933507946067985483e-01
+ Printing KS eigen values (spin split if this is a spin polarized calculation ) and fractional occupancies for kPoint 0
+  
+0 : -2.599205374468983365e+00       1.000000000000000000e+00
+1 : -2.599204708988064549e+00       1.000000000000000000e+00
+2 : -2.584814900325739906e+00       1.000000000000000000e+00
+3 : -2.584814868185167924e+00       1.000000000000000000e+00
+4 : -2.584814767805225788e+00       1.000000000000000000e+00
+5 : -2.584814460148151305e+00       1.000000000000000000e+00
+6 : -2.584814197627885335e+00       1.000000000000000000e+00
+7 : -2.584814125300260113e+00       1.000000000000000000e+00
+8 : -2.584813999122878236e+00       1.000000000000000000e+00
+9 : -2.584813605506033340e+00       1.000000000000000000e+00
+10 : -2.566815650206708099e+00       1.000000000000000000e+00
+11 : -2.566795145197342087e+00       1.000000000000000000e+00
+12 : -2.566794950788043650e+00       1.000000000000000000e+00
+13 : -2.566772628200715722e+00       1.000000000000000000e+00
+14 : -2.566772434786242840e+00       1.000000000000000000e+00
+15 : -2.566772314465521010e+00       1.000000000000000000e+00
+16 : -2.566772230501709995e+00       1.000000000000000000e+00
+17 : -2.566772057193163370e+00       1.000000000000000000e+00
+18 : -2.566771819214034522e+00       1.000000000000000000e+00
+19 : -2.566753873439706624e+00       1.000000000000000000e+00
+20 : -2.566753683288970578e+00       1.000000000000000000e+00
+21 : -2.566733201429825417e+00       1.000000000000000000e+00
+22 : -2.566731462144775211e+00       1.000000000000000000e+00
+23 : -2.566731173450958803e+00       1.000000000000000000e+00
+24 : -2.566731122234449991e+00       1.000000000000000000e+00
+25 : -2.566731002700687547e+00       1.000000000000000000e+00
+26 : -2.566730879236021057e+00       1.000000000000000000e+00
+27 : -2.566730579972949844e+00       1.000000000000000000e+00
+28 : -2.566729447945894194e+00       1.000000000000000000e+00
+29 : -2.566729222513538300e+00       1.000000000000000000e+00
+30 : -2.566728964783861588e+00       1.000000000000000000e+00
+31 : -2.566728905988204801e+00       1.000000000000000000e+00
+32 : -2.566728774010269998e+00       1.000000000000000000e+00
+33 : -2.566728721330211904e+00       1.000000000000000000e+00
+34 : -1.377715501286761679e+00       1.000000000000000000e+00
+35 : -1.377715482734013008e+00       1.000000000000000000e+00
+36 : -1.377715428695077460e+00       1.000000000000000000e+00
+37 : -1.377714863383631805e+00       1.000000000000000000e+00
+38 : -1.377714841276655777e+00       1.000000000000000000e+00
+39 : -1.377714778839649323e+00       1.000000000000000000e+00
+40 : -1.364313952972653787e+00       1.000000000000000000e+00
+41 : -1.364313211878100285e+00       1.000000000000000000e+00
+42 : -1.364310075666081756e+00       1.000000000000000000e+00
+43 : -1.364309824634329482e+00       1.000000000000000000e+00
+44 : -1.364309662577766868e+00       1.000000000000000000e+00
+45 : -1.364309416197743152e+00       1.000000000000000000e+00
+46 : -1.364309272811467411e+00       1.000000000000000000e+00
+47 : -1.364308884900650387e+00       1.000000000000000000e+00
+48 : -1.363188267045404967e+00       1.000000000000000000e+00
+49 : -1.363188196419658826e+00       1.000000000000000000e+00
+50 : -1.363188002148412847e+00       1.000000000000000000e+00
+51 : -1.363187879212922171e+00       1.000000000000000000e+00
+52 : -1.363187696398479254e+00       1.000000000000000000e+00
+53 : -1.363187544833171616e+00       1.000000000000000000e+00
+54 : -1.363187353244520450e+00       1.000000000000000000e+00
+55 : -1.363187323809247564e+00       1.000000000000000000e+00
+56 : -1.363186921104129645e+00       1.000000000000000000e+00
+57 : -1.363186892158181118e+00       1.000000000000000000e+00
+58 : -1.363186696377862495e+00       1.000000000000000000e+00
+59 : -1.363186429134907396e+00       1.000000000000000000e+00
+60 : -1.363186338042164047e+00       1.000000000000000000e+00
+61 : -1.363185985074095941e+00       1.000000000000000000e+00
+62 : -1.363185843482029203e+00       1.000000000000000000e+00
+63 : -1.363185793319127148e+00       1.000000000000000000e+00
+64 : -1.346508923097338828e+00       1.000000000000000000e+00
+65 : -1.346398049925967566e+00       1.000000000000000000e+00
+66 : -1.346398013021879336e+00       1.000000000000000000e+00
+67 : -1.346351273231949364e+00       1.000000000000000000e+00
+68 : -1.346351208167270830e+00       1.000000000000000000e+00
+69 : -1.346351104688807476e+00       1.000000000000000000e+00
+70 : -1.346341598227425385e+00       1.000000000000000000e+00
+71 : -1.346312844365152417e+00       1.000000000000000000e+00
+72 : -1.346312636015694508e+00       1.000000000000000000e+00
+73 : -1.346312519812379094e+00       1.000000000000000000e+00
+74 : -1.346312362883955727e+00       1.000000000000000000e+00
+75 : -1.346312192060430402e+00       1.000000000000000000e+00
+76 : -1.346311972578318139e+00       1.000000000000000000e+00
+77 : -1.346268922526991263e+00       1.000000000000000000e+00
+78 : -1.346268761701228778e+00       1.000000000000000000e+00
+79 : -1.346223174016462298e+00       1.000000000000000000e+00
+80 : -1.346215376199883407e+00       1.000000000000000000e+00
+81 : -1.346215082648380523e+00       1.000000000000000000e+00
+82 : -1.346215050512796996e+00       1.000000000000000000e+00
+83 : -1.346203829269640329e+00       1.000000000000000000e+00
+84 : -1.346203743052520663e+00       1.000000000000000000e+00
+85 : -1.346203582609460048e+00       1.000000000000000000e+00
+86 : -1.346174471207537859e+00       1.000000000000000000e+00
+87 : -1.346174422322852227e+00       1.000000000000000000e+00
+88 : -1.346164702807672864e+00       1.000000000000000000e+00
+89 : -1.346164524981991795e+00       1.000000000000000000e+00
+90 : -1.346164335578989402e+00       1.000000000000000000e+00
+91 : -1.346130016147696784e+00       1.000000000000000000e+00
+92 : -1.346129936198936061e+00       1.000000000000000000e+00
+93 : -1.346129779892638823e+00       1.000000000000000000e+00
+94 : -1.345975389676840051e+00       1.000000000000000000e+00
+95 : -1.345975326167500485e+00       1.000000000000000000e+00
+96 : -1.345975238568616117e+00       1.000000000000000000e+00
+97 : -1.345840203332696161e+00       1.000000000000000000e+00
+98 : -1.345803527376159048e+00       1.000000000000000000e+00
+99 : -1.345803479874381203e+00       1.000000000000000000e+00
+100 : -1.345803390441798530e+00       1.000000000000000000e+00
+101 : -1.345780956764017766e+00       1.000000000000000000e+00
+102 : -1.345780859002553509e+00       1.000000000000000000e+00
+103 : -1.345775402956964184e+00       1.000000000000000000e+00
+104 : -1.345775222348962741e+00       1.000000000000000000e+00
+105 : -1.345705305140665331e+00       1.000000000000000000e+00
+106 : -1.345705298346946410e+00       1.000000000000000000e+00
+107 : -1.345705177285608567e+00       1.000000000000000000e+00
+108 : -1.345669958878332295e+00       1.000000000000000000e+00
+109 : -1.345669831236980807e+00       1.000000000000000000e+00
+110 : -1.345669779395318733e+00       1.000000000000000000e+00
+111 : -1.345622238578007224e+00       1.000000000000000000e+00
+112 : -1.345622126459773193e+00       1.000000000000000000e+00
+113 : -1.345600993584556093e+00       1.000000000000000000e+00
+114 : -1.345548603658534015e+00       1.000000000000000000e+00
+115 : -1.345548359317771059e+00       1.000000000000000000e+00
+116 : -1.345548303222889874e+00       1.000000000000000000e+00
+117 : -1.345522060245149643e+00       1.000000000000000000e+00
+118 : -1.345521937218098874e+00       1.000000000000000000e+00
+119 : -1.345521825054794895e+00       1.000000000000000000e+00
+120 : -1.345511818649289815e+00       1.000000000000000000e+00
+121 : -1.345511417680260280e+00       1.000000000000000000e+00
+122 : -1.345511317941644247e+00       1.000000000000000000e+00
+123 : -1.345511110240052766e+00       1.000000000000000000e+00
+124 : -1.345437827155542054e+00       1.000000000000000000e+00
+125 : -1.345437726877642071e+00       1.000000000000000000e+00
+126 : -1.345437592293676765e+00       1.000000000000000000e+00
+127 : -1.345420815387448732e+00       1.000000000000000000e+00
+128 : -1.345420693269181900e+00       1.000000000000000000e+00
+129 : -1.345420599765285052e+00       1.000000000000000000e+00
+130 : -1.345418027891395640e+00       1.000000000000000000e+00
+131 : -1.345417864377227879e+00       1.000000000000000000e+00
+132 : -1.345417673773089851e+00       1.000000000000000000e+00
+133 : -1.345365425269438031e+00       1.000000000000000000e+00
+134 : -1.345365244927482662e+00       1.000000000000000000e+00
+135 : -1.345365163156105437e+00       1.000000000000000000e+00
+136 : -1.057108389503248896e-01       1.000000000000000000e+00
+137 : -8.113051248069561017e-02       1.000000000000000000e+00
+138 : -6.168569082540000664e-02       1.000000000000000000e+00
+139 : -6.168545335989844558e-02       1.000000000000000000e+00
+140 : -6.168534314007512870e-02       1.000000000000000000e+00
+141 : -4.446451908945846937e-02       1.000000000000000000e+00
+142 : -4.446430967156694836e-02       1.000000000000000000e+00
+143 : -4.446419136394925281e-02       1.000000000000000000e+00
+144 : -3.752808327987189330e-02       1.000000000000000000e+00
+145 : -3.752791827418931747e-02       1.000000000000000000e+00
+146 : -3.147628076576193274e-03       1.000000000000000000e+00
+147 : -3.147473798340849182e-03       1.000000000000000000e+00
+148 : 7.993228724413888042e-03       1.000000000000000000e+00
+149 : 7.993303951815664693e-03       1.000000000000000000e+00
+150 : 7.993359359441603446e-03       1.000000000000000000e+00
+151 : 1.346838453428627833e-02       1.000000000000000000e+00
+152 : 2.169544574143409538e-02       1.000000000000000000e+00
+153 : 2.169549093634942638e-02       1.000000000000000000e+00
+154 : 2.169569583940081717e-02       1.000000000000000000e+00
+155 : 3.130296257418158090e-02       1.000000000000000000e+00
+156 : 3.130300192463257580e-02       1.000000000000000000e+00
+157 : 3.130302123135519921e-02       1.000000000000000000e+00
+158 : 5.345031521238697431e-02       1.000000000000000000e+00
+159 : 5.345042732438722022e-02       1.000000000000000000e+00
+160 : 5.345051230118964825e-02       1.000000000000000000e+00
+161 : 6.271817049689050461e-02       1.000000000000000000e+00
+162 : 7.187294368093931352e-02       1.000000000000000000e+00
+163 : 9.530438949085719147e-02       1.000000000000000000e+00
+164 : 9.530444197930429406e-02       1.000000000000000000e+00
+165 : 9.530460064458246006e-02       1.000000000000000000e+00
+166 : 9.691028764230866233e-02       1.000000000000000000e+00
+167 : 9.691036626299717738e-02       1.000000000000000000e+00
+168 : 1.059697856665657578e-01       1.000000000000000000e+00
+169 : 1.084649033738745300e-01       1.000000000000000000e+00
+170 : 1.084649328267726226e-01       1.000000000000000000e+00
+171 : 1.084651566436311276e-01       1.000000000000000000e+00
+172 : 1.185273529969608219e-01       1.000000000000000000e+00
+173 : 1.185274918315610826e-01       1.000000000000000000e+00
+174 : 1.243674220466050584e-01       1.000000000000000000e+00
+175 : 1.243674874808595177e-01       1.000000000000000000e+00
+176 : 1.243675707288540294e-01       1.000000000000000000e+00
+177 : 1.409630661214129888e-01       9.999999999999957812e-01
+178 : 1.409631617412889504e-01       9.999999999999957812e-01
+179 : 1.409632590806493557e-01       9.999999999999957812e-01
+180 : 1.501905151095469237e-01       9.999999999985476062e-01
+181 : 1.501906159298745380e-01       9.999999999985476062e-01
+182 : 1.501907503704619229e-01       9.999999999985473842e-01
+183 : 1.549917235484236100e-01       9.999999999698752084e-01
+184 : 1.549918171644920073e-01       9.999999999698734321e-01
+185 : 1.606372093775339793e-01       9.999999989349745988e-01
+186 : 1.606372693464390711e-01       9.999999989349344087e-01
+187 : 1.606373615990590031e-01       9.999999989348722362e-01
+188 : 1.698914562526604166e-01       9.999996322076403210e-01
+189 : 1.797904983497282116e-01       9.998091832419636615e-01
+190 : 1.797905655453800600e-01       9.998091751455663312e-01
+191 : 1.797906742422628878e-01       9.998091620479628849e-01
+192 : 1.808569304665509081e-01       9.996258579667611777e-01
+193 : 1.808569650639386406e-01       9.996258497947335675e-01
+194 : 1.808570215739449261e-01       9.996258364464828405e-01
+195 : 1.818030775316653858e-01       9.993201522488676103e-01
+196 : 1.827633702591582587e-01       9.987538986656957496e-01
+197 : 1.827634254353537324e-01       9.987538552967426542e-01
+198 : 1.827635358930505827e-01       9.987537684715348529e-01
+199 : 1.891161915772925639e-01       9.354968589425177727e-01
+200 : 1.891163062978568898e-01       9.354924868839902263e-01
+201 : 1.891163770903696584e-01       9.354897888079886092e-01
+202 : 1.909319594350562810e-01       8.216571709936264511e-01
+203 : 1.909320170392372895e-01       8.216518399383969662e-01
+204 : 1.913647205415347219e-01       7.780442268956690999e-01
+205 : 1.913647369563855616e-01       7.780424366331694097e-01
+206 : 1.913649199568444870e-01       7.780224772479483741e-01
+207 : 1.975038983441135543e-01       6.767952078709718600e-02
+208 : 1.975040980859745221e-01       6.767156147199801519e-02
+209 : 1.975041502394253301e-01       6.766948340384658367e-02
+210 : 1.995826994324138293e-01       1.915670411644950985e-02
+211 : 2.096558427552273340e-01       3.371768359544596519e-05
+212 : 2.136659432658218061e-01       2.679081979135093137e-06
+213 : 2.136660878299494193e-01       2.678837392148613824e-06
+214 : 2.417323589839184550e-01       5.369907172806122207e-14
+215 : 2.417325004466686911e-01       5.369427442375860027e-14
+216 : 2.417325777103876971e-01       5.369165442682601802e-14
+217 : 2.689343556148406367e-01       1.857967636864713123e-21
+218 : 2.689345340103159732e-01       1.857758319476426621e-21
+219 : 2.830465207162894958e-01       2.502486019673063668e-25
+220 : 2.866786057241869079e-01       2.524457465094871690e-26
+221 : 2.866790463063983996e-01       2.523755133204854741e-26
+222 : 2.866797603853484255e-01       2.522617235258596623e-26
+223 : 2.871750085972126221e-01       1.845080488853646459e-26
+224 : 2.871758765482176901e-01       1.844069376785460428e-26
+225 : 2.871774585939124158e-01       1.842227811462811589e-26
+226 : 3.083669451285582785e-01       2.841307472839012267e-32
+227 : 3.083678255139746804e-01       2.839728123745292306e-32
+228 : 3.083796374217704361e-01       2.818623105479765254e-32
+229 : 3.107461817173234331e-01       6.323307232221773546e-33
+230 : 3.107557664000919484e-01       6.285146557522828599e-33
+231 : 3.133518483499247997e-01       1.219734737193460951e-33
+232 : 3.133637889914254737e-01       1.210571174802837881e-33
+233 : 3.133966461421202054e-01       1.185709533075509655e-33
+234 : 3.192985540328224237e-01       2.852401194857178765e-35
+235 : 3.193129115032014020e-01       2.826654063765479820e-35
+236 : 3.193469173156737728e-01       2.766595019095088844e-35
+237 : 3.261564838590663706e-01       3.751685644526458850e-37
+238 : 3.262051249906987582e-01       3.638188648639087083e-37
+239 : 3.262687205047570260e-01       3.494960878388080030e-37
+240 : 3.280217484599044497e-01       1.155111923780614941e-37
+241 : 3.281551159202396595e-01       1.061803644157657186e-37
+242 : 3.281637461606528583e-01       1.056032101770186404e-37
+243 : 3.293112390497206499e-01       5.116161523460262429e-38
+244 : 3.304443871646136621e-01       2.501185143329677587e-38
+245 : 3.304816079486312397e-01       2.443075967756218422e-38
+246 : 3.367103644852472155e-01       4.781031925300485850e-40
+247 : 3.385264530389897053e-01       1.518473482284027833e-40
+248 : 3.386411966551561292e-01       1.412327711858033316e-40
+249 : 3.388309136013075151e-01       1.252853125607125747e-40
+250 : 3.393681374799195072e-01       8.923825855935721552e-41
+251 : 3.394543059450371159e-01       8.451171421491980419e-41
+252 : 3.395669120281854525e-01       7.871028036118779150e-41
+253 : 3.516462408812789930e-01       3.827618850452020501e-44
+254 : 3.520457519051772288e-01       2.974070883379348359e-44
+255 : 3.556005237099263416e-01       3.150308454642915122e-45
+256 : 3.556435831040356543e-01       3.065792825306833343e-45
+257 : 3.564211342366018220e-01       1.876191134240045250e-45
+258 : 3.578760733585049647e-01       7.485455781605626884e-46
+259 : 3.677328387125788911e-01       1.481553474223418132e-48
+260 : 3.699085965744930982e-01       3.749326527006697111e-49
+261 : 3.786271014666099943e-01       1.522835391216042141e-51
+262 : 3.790342632585655402e-01       1.177544013893935015e-51
+263 : 3.794205893028203547e-01       9.226057112791937136e-52
+264 : 3.799234208691701364e-01       6.715836952025406902e-52
+265 : 3.818505263984386944e-01       1.988548184780740149e-52
+266 : 3.832820051114836368e-01       8.052152278374661090e-53
+267 : 3.848437588982753232e-01       3.003005726924903539e-53
+268 : 3.877331567709186855e-01       4.842346134331092744e-54
+269 : 3.991466283414971672e-01       3.585779119729270877e-57
+============================================================================================================
+
+Energy computations (Hartree)
+-------------------------------------------------------------------------------
+Band energy                                         :  -4.3793344156678586e+02
+Exchange energy                                     :  -2.7643476864573631e+02
+Correlation energy                                  :  -1.8635656209849063e+01
+Total internal energy                               :  -2.0751217291956032e+03
+Total internal energy per atom                      :  -3.5777960848200053e+01
+-------------------------------------------------------------------------------
+Total entropic energy: 1.308286461514852027e-02
+Total free energy: -2.075134812060218337e+03
+Total scf solve, wall time: 24.9386s.
+
+Ion forces (Hartree/Bohr)
+--------------------------------------------------------------------------------------------
+   0     -1.989544273106602645e-06   6.808255688106612524e-07   -1.006930719249510275e-06
+   1     1.691308591421306767e-03   -1.685876522503473862e-03   -1.690408852698502967e-03
+   2     -1.695071683444761973e-03   1.684670375065783210e-03   -1.687505446500953132e-03
+   3     -1.690108170201910787e-03   -1.688650352288382367e-03   1.686542921885386681e-03
+   4     1.690298015861773501e-03   1.690155169872864516e-03   1.691339539092229227e-03
+   5     1.396814824322599458e-04   -1.376608611539514859e-04   -6.900863382905825238e-04
+   6     6.897621142094335911e-04   -1.345738592861620009e-04   -1.402220884288846170e-04
+   7     1.364937974606978549e-04   -6.915509881997676522e-04   -1.366976912317817427e-04
+   8     -1.392429089328017788e-04   1.363730251225936385e-04   -6.904908866180586857e-04
+   9     -6.844426534422902442e-04   1.377410009785508260e-04   -1.399138528176552265e-04
+  10     -1.386291558453239814e-04   6.934473154602271983e-04   -1.344218082280235899e-04
+  11     -1.420958371985969748e-04   -1.365511178243322687e-04   6.930555109440628136e-04
+  12     -6.830880859708642061e-04   -1.399519416914966202e-04   1.390759825178056186e-04
+  13     -1.345860565706083478e-04   -6.912565184477997837e-04   1.352293071593124729e-04
+  14     1.397747354066457975e-04   1.390273601467595377e-04   6.890486694766176368e-04
+  15     6.876282324528859569e-04   1.427337205968659539e-04   1.445311098918766746e-04
+  16     1.384763631662143391e-04   6.910509143963385059e-04   1.389805525722695445e-04
+  17     -4.964714195334191147e-07   -6.520823208224917540e-07   -2.478095900692540482e-06
+  18     1.687562905936253188e-03   -1.690329419444115688e-03   -1.689779733305453446e-03
+  19     -1.690013712533591783e-03   1.691145958415053718e-03   -1.683707324130812033e-03
+  20     -1.687807210039860006e-03   -1.692648563907606096e-03   1.686836722949697220e-03
+  21     1.692980925854820073e-03   1.689180349046276453e-03   1.690332988457859953e-03
+  22     1.411616515331736571e-04   -1.404158194068423626e-04   -6.913560521129569203e-04
+  23     6.899337405193960160e-04   -1.405700012158950241e-04   -1.409781155939857089e-04
+  24     1.384221695565086147e-04   -6.880304108277113251e-04   -1.401695619319340280e-04
+  25     -1.418486936337459009e-04   1.365494887126325607e-04   -6.867174114883467517e-04
+  26     -6.878436996176906515e-04   1.381066890498907490e-04   -1.453855895552219613e-04
+  27     -1.352935312469716322e-04   6.916499814972401627e-04   -1.374375320198906181e-04
+  28     -1.412571760376884339e-04   -1.391301363828922888e-04   6.880205964934944796e-04
+  29     -6.868927824296156004e-04   -1.378727637379728588e-04   1.415938263519007229e-04
+  30     -1.376537021844509434e-04   -6.868177781982343078e-04   1.371067877379665567e-04
+  31     1.406260938135780320e-04   1.415590560823638822e-04   6.889931989043640570e-04
+  32     6.868893924376062721e-04   1.353955048161679942e-04   1.402588703872994363e-04
+  33     1.386713262556977383e-04   6.868094837793048413e-04   1.411026134702647594e-04
+  34     -2.116657027759788479e-03   2.116612139888519959e-03   6.248743027943912121e-03
+  35     -6.248521568852879668e-03   2.116860914978168674e-03   2.116244984315632238e-03
+  36     -2.116200573745516313e-03   6.249518487824045829e-03   2.116465350346419076e-03
+  37     2.116423486350296930e-03   -2.116730595057022581e-03   6.249203085989363249e-03
+  38     6.249135595512343710e-03   -2.116658528422644611e-03   2.116251828963097367e-03
+  39     2.116080229997185144e-03   -6.249250260028066384e-03   2.116597147263376850e-03
+  40     2.117025179674280038e-03   2.117059136592577221e-03   -6.248447242184179684e-03
+  41     6.249191724672791687e-03   2.116779682171357653e-03   -2.116624604894475764e-03
+  42     2.116338173311219269e-03   6.250026647626511986e-03   -2.116647095713167139e-03
+  43     -2.117782690062082473e-03   -2.116754064015199596e-03   -6.248571366037673769e-03
+  44     -6.249380357023284760e-03   -2.116417920590105660e-03   -2.117469566471713582e-03
+  45     -2.116751162835038037e-03   -6.248936060408813442e-03   -2.117000987378236422e-03
+  46     -2.117263051111059700e-03   2.116878968235004314e-03   6.247954814711163124e-03
+  47     -6.249142716421417915e-03   2.116441794607658907e-03   2.116578762601317200e-03
+  48     -2.116863759523144543e-03   6.248077995682114333e-03   2.117411362417213894e-03
+  49     2.117482396803491498e-03   -2.116885663053191119e-03   6.248344510430936527e-03
+  50     6.248463639679818771e-03   -2.116155016923422505e-03   2.117130796129101933e-03
+  51     2.116907175431109213e-03   -6.248867486523916603e-03   2.116769906425139489e-03
+  52     2.117003520138749026e-03   2.117376473148929565e-03   -6.249027973671286706e-03
+  53     6.248053066488911539e-03   2.117085662595385998e-03   -2.116976220175235263e-03
+  54     2.117733576969973650e-03   6.247977856166399974e-03   -2.116758858771082726e-03
+  55     -2.117220384373419764e-03   -2.117252172383228808e-03   -6.247374661732609663e-03
+  56     -6.247704967192653849e-03   -2.117350617034143880e-03   -2.117149031866914083e-03
+  57     -2.116971229331617542e-03   -6.248416538898132408e-03   -2.116728086852345207e-03
+--------------------------------------------------------------------------------------------
+ Maximum absolute force atom id: 42, Force vec: 2.116338173311219269e-03,6.250026647626511986e-03,-2.116647095713167139e-03
+ Sum of absolute value of all force components over all atoms: 3.153347996880545012e-01
+ Sum of all forces in each component: -1.068874009310574053e-05 -4.757917949055508189e-06 -2.205768507177515575e-06
+Ion force computation, wall time: 4.46077s.
+
+Cell stress (Hartree/Bohr^3)
+------------------------------------------------------------------------
+1.942764106295190432e-06  -3.338811753471627929e-09  -4.245931291325204756e-09
+-3.338832725972010609e-09  1.941324207256735881e-06  -6.921654692481018009e-10
+-4.245932686630800543e-09  -6.922741959623893865e-10  1.943244927362208131e-06
+------------------------------------------------------------------------
+Cell stress computation, wall time: 43.3953s.
+
+------------------DFT-FE ground-state solve completed---------------------------
+
+
++---------------------------------------------+------------+------------+
+| Total wallclock time elapsed since start    | 1.039e+02s |            |
+|                                             |            |            |
+| Section                         | no. calls |  wall time | % of total |
++---------------------------------+-----------+------------+------------+
+| Atomic system initialization    |         1 | 3.175e-01s |  3.06e-01% |
+| Cell stress computation         |         1 | 4.340e+01s |  4.18e+01% |
+| Init local PSP                  |         1 | 5.208e+00s |  5.01e+00% |
+| Ion force computation           |         1 | 4.461e+00s |  4.29e+00% |
+| KSDFT problem initialization    |         1 | 1.985e+01s |  1.91e+01% |
+| Nuclear self-potential solve    |         1 | 4.487e+00s |  4.32e+00% |
+| Total scf solve                 |         1 | 2.494e+01s |  2.40e+01% |
+| initialize density              |         1 | 1.886e+00s |  1.82e+00% |
++---------------------------------+-----------+------------+------------+
+
+=============================================================================================
+DFT-FE Program ends. Elapsed wall time since start of the program: 1.048351558550000391e+02 seconds.
+=============================================================================================
