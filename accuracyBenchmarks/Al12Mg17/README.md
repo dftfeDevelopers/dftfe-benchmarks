@@ -13,8 +13,8 @@ Discussion on the input parameters and the results
 ==================================================
 * DFT-FE:
 
-        a) Polynomial Order      = 6
-        b) MESH SIZE AROUND ATOM  = 0.9
+        a) Polynomial Order         = 6
+        b) MESH SIZE AROUND ATOM    = 0.9
         c) ATOM BALL RADIUS         = 5.0
         d) SCF Tolerance            =1E-5
         e) Mixing Method            = ANDERSON_WITH_KERKER
@@ -25,9 +25,34 @@ Discussion on the input parameters and the results
         a) ecutwfc                  = 50 Ha                                    
         
 
+
 Study1---Ground-state calculation results
 --------------------------------
-* GPU v/s CPU Comparison (older benchmarks):
+* Ground State Comparison with QE(100 Ha energy cut off):
+    a) Energy Difference = 1.284E-05 Ha/atom
+    b) Force Difference = 2.767E-04 Ha/bohr (max absolute error among all atoms and force components)
+    c) Stress Difference = 5.827E-06 Ha/bohr**3 (Hydrostatic Stress error)
+
+Study2---Combined ionic and cell relaxation results
+------------------------
+* Relaxed State Comparison with QE(50 Ha and koint rule 4x4x4)and DFT-FE(poly 6 mesh 0.9 and kpoint rule 4x4x4, , scf tolerance 5e-5):  
+    a) Energy Difference = 1.31E-05 Ha/atom  
+    b) Force Difference = 4.05E-04 Ha/bohr (max absolute error among all atoms and force components)  
+    c) Stress Difference = 3.74E-06 Ha/bohr**3 (Hydrostatic Stress error)  
+* Relaxed Vectors:
+    *  Quantum Espresso:  
+                         19.903699232	 0.0000000	  0.0000000   
+                         0.0000000	  19.903699232	0.0000000   
+                         0.0000000	   0.0000000	 19.903699232
+    *  DFT-FE (latest benchmarks):
+                         1.990369923161320642e+01 -1.105948615815581056e-19  1.289979235970946107e-21
+                        -2.581618102749298907e-20  1.990369923161321353e+01 -4.655978766434789362e-20
+                         4.422871699991971504e-21  3.152792601212958235e-20  1.990369923161321353e+01
+
+
+Study1---Ground-state calculation results (previous benchmarks)
+--------------------------------
+* GPU v/s CPU Comparison:
     a) Energy Difference = 3.62E-12 Ha/atom
     b) Force Difference = 1.11E-05 Ha/bohr (max absolute error among all atoms and force components)
     c) Stress Difference = 1.06013E-07 Ha/bohr**3 (Hydrodynamic Stress error)
@@ -37,24 +62,7 @@ Study1---Ground-state calculation results
     a) Energy Difference = 1.84E-05 Ha/atom
     b) Force Difference = 2.95E-04 Ha/bohr (max absolute error among all atoms and force components)
     c) Stress Difference = 7.44199E-06 Ha/bohr**3 (Hydrostatic Stress error)
-    
 
-Study2---Combined ionic and cell relaxation results
-------------------------
-* Relaxed State Comparison with QE(50 Ha and koint rule 4x4x4)and DFT-FE(poly 6 mesh 0.9 and kpoint rule 4x4x4, , scf tolerance 5e-5):  
-    a) Energy Difference = 1.31E-05 Ha/atom  
-    b) Force Difference = 2.55E-04 Ha/bohr (max absolute error among all atoms and force components)  
-    c) Stress Difference = 4.82E-06 Ha/bohr**3 (Hydrostatic Stress error)  
-* Relaxed Vectors:
-    *  Quantum Espresso:  
-                         19.903699232	0.0000000	0.0000000   
-                         0.0000000	19.903699232	0.0000000   
-                         0.0000000	0.0000000	19.903699232
-    *  DFT-FE (latest benchmarks):
-
-                         1.990369923161320642e+01 -1.105948615815581056e-19 1.289979235970946107e-21
-                        -2.581618102749298907e-20 1.990369923161321353e+01 -4.655978766434789362e-20
-                         4.422871699991971504e-21 3.152792601212958235e-20 1.990369923161321353e+01
 
 Study2---Combined ionic and cell relaxation results (previous benchmarks)
 ------------------------
@@ -64,12 +72,10 @@ Study2---Combined ionic and cell relaxation results (previous benchmarks)
     c) Stress Difference = 4.82E-06 Ha/bohr**3 (Hydrostatic Stress error)  
 * Relaxed Vectors:
     *  Quantum Espresso:  
-                         19.903699232	0.0000000	0.0000000   
-                         0.0000000	19.903699232	0.0000000   
-                         0.0000000	0.0000000	19.903699232
+                         19.903699232	 0.0000000	  0.0000000   
+                         0.0000000	  19.903699232	0.0000000   
+                         0.0000000	   0.0000000	 19.903699232
     *  DFT-FE:  
                         1.990369923161319932e+01	0.000000000000000000e+00	0.000000000000000000e+00     
                         0.000000000000000000e+00	1.990369923161319932e+01	0.000000000000000000e+00     
-                        0.000000000000000000e+00	0.000000000000000000e+00	1.990369923161319932e+01               
-                    
-
+                        0.000000000000000000e+00	0.000000000000000000e+00	1.990369923161319932e+01  
