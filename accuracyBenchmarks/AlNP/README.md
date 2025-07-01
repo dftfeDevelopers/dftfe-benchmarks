@@ -15,9 +15,17 @@ Study1 -- Ground-state calculation results
 ------------------------------------------
 * The run successfully converged in 49 SCF iterations.
 * POLYNOMIAL ORDER = 7 and MESH SIZE AROUND ATOM = 2.3 with ATOM BALL RADIUS = 4.0 are found to be sufficient to obtain chemical accuracy as described below. Total degrees of freedom are around 4308881 (29312 DoFs/atom)
-* Total Energy = -3.3821642600751841e+02 (Hartree) (previous benchmark: -3.382371304913907011e+02)
+* Total Energy = -3.382366051125088120e+02 (Hartree) (previous benchmark: -3.382371304913907011e+02)
 * DFT-FE energy per atom comparison with QE reference: 6.25e-06 Ha/atom.
-* DFT-FE Ionic forces comparison with QE reference: 1.5e-04 Ha/Bohr (max absolute error among all atoms and force components)
+* DFT-FE Ionic forces comparison with QE reference: 1.5e-03 Ha/Bohr (max absolute error among all atoms and force components)
+
+Study1 -- Ground-state calculation results (using domain vectors 60x60x60)
+------------------------------------------
+* The run successfully converged in 48 SCF iterations.
+* POLYNOMIAL ORDER = 7 and MESH SIZE AROUND ATOM = 2.3 with ATOM BALL RADIUS = 4.0 are found to be sufficient to obtain chemical accuracy as described below. Total degrees of freedom are around 1348535 (9173 DoFs/atom)
+* Total Energy = -3.382496753162126879e+02 (Hartree) (previous benchmark: -3.382371304913907011e+02)
+* DFT-FE energy per atom comparison with QE reference: 8.26e-05 Ha/atom.
+* DFT-FE Ionic forces comparison with QE reference: 1.0e-03 Ha/Bohr (max absolute error among all atoms and force components)
 
 Study1 -- Ground-state calculation results for previous benchmarks
 ------------------------------------------
@@ -25,4 +33,4 @@ Study1 -- Ground-state calculation results for previous benchmarks
 * POLYNOMIAL ORDER = 7 and MESH SIZE AROUND ATOM = 2.3 with ATOM BALL RADIUS = 4.0 are found to be sufficient to obtain chemical accuracy as described below.
 * Total degrees of freedom are around 1339596 (9112 DoFs/atom)
 * DFT-FE energy per atom comparison with QE reference: 3e-06 Ha/atom. In particular we compared the "Total energy per atom" printed from DFT-FE output and "(Total energy+TS)/totalNumberAtoms" from QE, since QE's Total energy is the free energy.
-* DFT-FE Ionic forces comparison with QE reference: 1.4e-04 Ha/Bohr (max absolute error among all atoms and force components)
+* DFT-FE Ionic forces comparison with QE reference: 1.4e-04 Ha/Bohr (max absolute error among all atoms and force components) (recheck this)
