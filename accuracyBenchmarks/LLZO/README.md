@@ -12,9 +12,9 @@ Studies performed
 Discussion on the input parameters and the results:
 ==================================================
 * DFT-FE:
-        a) POLYNOMIAL ORDER      = 7
-        b) MESH SIZE AROUND ATOM  = 1.2
-        c) ATOM BALL RADIUS         = 4.0
+        a) POLYNOMIAL ORDER      = 5
+        b) MESH SIZE AROUND ATOM  = 0.8
+        c) ATOM BALL RADIUS         = 6.0
         d) TOLERANCE            =1E-5
         e) MIXING METHOD            = Anderson
         f) MIXING PARAMETER          =0.2
