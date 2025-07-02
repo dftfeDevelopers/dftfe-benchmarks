@@ -1,9 +1,9 @@
 #!/bin/sh
 #SBATCH -A mat295
 #SBATCH -J LLZOStudy3
-#SBATCH -t 4:00:00
+#SBATCH -t 6:00:00
 #SBATCH -p extended
-#SBATCH -N 4
+#SBATCH -N 8
 #SBATCH --gpus-per-node 8
 #SBATCH --ntasks-per-gpu 1
 #SBATCH --gpu-bind closest
@@ -22,4 +22,4 @@ export LD_LIBRARY_PATH=$CRAY_LD_LIBRARY_PATH:$LD_LIBRARY_PATH
 
 export BASE=$WD/dftfe_release1.2/build/release/real
 
-srun -n 32 -c 7 --gpu-bind closest $BASE/dftfe parameterFile_GPU.prm > output4NodesRelax2
+srun -n 64 -c 7 --gpu-bind closest $BASE/dftfe parameterFile_GPU.prm > output4NodesRelax1

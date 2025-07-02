@@ -1,6 +1,6 @@
 #!/bin/sh
 #SBATCH -A mat295
-#SBATCH -J LLZOStudy2
+#SBATCH -J LLZOStudy1
 #SBATCH -t 00:30:00
 #SBATCH -p batch
 #SBATCH -N 4
