@@ -1,0 +1,45 @@
+ &control
+    calculation = 'vc-relax',
+	pseudo_dir = '.'
+        restart_mode='from_scratch'
+	verbosity='high'
+    tstress=.true.
+    tprnfor=.true.
+ /
+
+ &system
+    ibrav = 1,
+    celldm(1) = 6.5,
+    nat  = 2,
+    ntyp = 2,
+    ecutwfc = 160,
+    occupations='smearing',
+    smearing='fd',
+    nbnd=30,
+    degauss=0.012667327478916817,
+ /
+
+ &electrons
+   conv_thr = 1e-10,
+   mixing_beta = 0.2,
+   startingwfc = 'random',
+ /
+
+ &ions
+ /
+
+&cell
+/
+
+ATOMIC_SPECIES
+ Ti 48.00d0 Ti.upf
+ Al 27.00d0 Al.upf
+
+ATOMIC_POSITIONS (crystal)
+Al 0.5 0.5 0.5
+Ti 0.0 0.0 0.0
+
+K_POINTS gamma
+
+HUBBARD (atomic)
+U Ti-3d 5.0
