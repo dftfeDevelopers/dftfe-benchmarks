@@ -40,10 +40,11 @@ Study2---Combined ionic and cell relaxation results
     b) Force Difference = 4.05E-04 Ha/bohr (max absolute error among all atoms and force components)  
     c) Stress Difference = 3.74E-06 Ha/bohr**3 (Hydrostatic Stress error)  
 * Relaxed Vectors:
-    *  Quantum Espresso:  
-                         19.903699232	 0.0000000	0.0000000   
-                         0.0000000	 19.903699232	0.0000000   
-                         0.0000000	 0.0000000	19.903699232
+    *  Quantum Espresso:
+    
+      19.903699232	 0.0000000	0.0000000   
+      0.0000000	 19.903699232	0.0000000   
+      0.0000000	 0.0000000	19.903699232
     *  DFT-FE:
 
       1.990369923161320642e+01 -1.105948615815581056e-19  1.289979235970946107e-21
