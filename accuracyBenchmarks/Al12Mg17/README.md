@@ -20,7 +20,6 @@ Discussion on the input parameters and the results
         e) Mixing Method            = ANDERSON_WITH_KERKER
         f) No. of degree of freedom = 2352637
         g) NPKPT for new benchmarks = 8
-        New benchmark uses Polaris GPUs only
 * QE:  
         a) ecutwfc                  = 50 Ha                                    
         

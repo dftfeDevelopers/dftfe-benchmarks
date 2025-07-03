@@ -1,7 +1,7 @@
 #!/bin/bash -l
-#PBS -l select=16:system=polaris
+#PBS -l select=4:system=polaris
 #PBS -l place=scatter
-#PBS -l walltime=00:20:00
+#PBS -l walltime=01:00:00
 #PBS -l filesystems=home:eagle
 #PBS -q prod
 #PBS -A DFTCalculations
@@ -28,4 +28,4 @@ NTOTRANKS=$(( NNODES * NRANKS_PER_NODE ))
 echo "NUM_OF_NODES= ${NNODES} TOTAL_NUM_RANKS= ${NTOTRANKS} RANKS_PER_NODE= ${NRANKS_PER_NODE} THREADS_PER_RANK= ${NTHREADS}"
 exe=/home/phanim/softwares/DFTFEinstallation/dftfe_pgd_test/install/complex/dftfe
 
-mpiexec -n ${NTOTRANKS} --ppn ${NRANKS_PER_NODE} --depth=${NDEPTH} --cpu-bind depth --env OMP_NUM_THREADS=${NTHREADS} -env OMP_PLACES=threads ./set_affinity_gpu_polaris.sh $exe parameterFile_gamma_GPU.prm>outputGPUFEOrder6Mesh0d9Ball5d0_nodes16_gpus64_kPt1x1x1
+mpiexec -n ${NTOTRANKS} --ppn ${NRANKS_PER_NODE} --depth=${NDEPTH} --cpu-bind depth --env OMP_NUM_THREADS=${NTHREADS} -env OMP_PLACES=threads ./set_affinity_gpu_polaris.sh $exe parameterFile_gamma_GPU.prm>outputGPUFEOrder6Mesh0d9Ball5d0_nodes4_gpus16_gammaPt
