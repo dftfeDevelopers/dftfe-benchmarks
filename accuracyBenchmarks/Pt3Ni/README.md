@@ -1,6 +1,6 @@
 Description of the example
 ==========================
-This example demonstrates the inputs required for hubbard correction. This is an example for non-periodic spin polarized calculations where are the atoms have hubbard corrections. 
+This example demonstrates the inputs required for hubbard correction. This is an example for a non-periodic spin polarized calculation where all the atoms have hubbard corrections. 
  
 Studies performed
 =======================
