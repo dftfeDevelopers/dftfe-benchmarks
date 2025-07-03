@@ -29,7 +29,7 @@ Study1---Ground-state calculation results
 --------------------------------
 * Ground State Comparison with QE(100 Ha energy cut off):
     a) Energy Difference = 1.284E-05 Ha/atom
-    b) Force Difference = 2.767E-04 Ha/bohr (max absolute error among all atoms and force components)
+    b) Force Difference  = 2.712E-04 Ha/bohr (max absolute error among all atoms and force components)
     c) Stress Difference = 5.827E-06 Ha/bohr**3 (Hydrostatic Stress error)
 
 Study2---Combined ionic and cell relaxation results
@@ -37,13 +37,13 @@ Study2---Combined ionic and cell relaxation results
 * Relaxed State Comparison with QE(50 Ha and koint rule 4x4x4)and DFT-FE(poly 6 mesh 0.9 and kpoint rule 4x4x4, , scf tolerance 5e-5):  
     a) Energy Difference = 1.31E-05 Ha/atom  
     b) Force Difference = 4.05E-04 Ha/bohr (max absolute error among all atoms and force components)  
-    c) Stress Difference = 3.74E-06 Ha/bohr**3 (Hydrostatic Stress error)  
+    c) Stress Difference = 1.0473E-06 Ha/bohr**3 (maximum error in any component of stress tensor)  
 * Relaxed Vectors:
     *  Quantum Espresso:
     
       19.903699232	 0.0000000	0.0000000   
-      0.0000000	 19.903699232	0.0000000   
-      0.0000000	 0.0000000	19.903699232
+      0.0000000	         19.903699232	0.0000000   
+      0.0000000	         0.0000000	19.903699232
     *  DFT-FE:
 
       1.990369923161320642e+01   -1.105948615815581056e-19  1.289979235970946107e-21
