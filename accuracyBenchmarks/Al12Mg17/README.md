@@ -27,6 +27,8 @@ Discussion on the input parameters and the results
 
 Study1---Ground-state calculation results
 --------------------------------
+* GPU v/s CPU Comparison: a) Energy Difference = 1.578E-9 Ha/atom b) Force Difference = 4.154E-05 Ha/bohr (max absolute error among all atoms and force components) c) Stress Difference = 1.1699E-07 Ha/bohr**3 (max abs error in stress any component) d) No. of scf iterations 11(CPU) & 12(GPU)
+
 * Ground State Comparison with QE(100 Ha energy cut off):
     a) Energy Difference = 1.284E-05 Ha/atom
     b) Force Difference  = 2.712E-04 Ha/bohr (max absolute error among all atoms and force components)
