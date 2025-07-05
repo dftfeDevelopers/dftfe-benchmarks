@@ -19,7 +19,6 @@ Discussion on the input parameters and the results:
         g) High QUAD PSP ON
         Activation Energy       = 241.02 meV      
         Li-ion path length traversed             = 3.572 bohr
-        Total Path Length                       = 4.113 bohr
 
         
 * QE:  
