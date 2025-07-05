@@ -1,16 +1,13 @@
 set SOLVER MODE = GS
-#set RESTART        = true
 set VERBOSITY=4
 set USE GPU   = true
-set MEM OPT MODE                                    = true
+set RESTART FOLDER = ./restartFiles
+set MEM OPT MODE = true
 subsection Geometry
   set NATOMS=4
   set NATOM TYPES=3
   set ATOMIC COORDINATES FILE      = coordinates.inp          
   set DOMAIN VECTORS FILE = domainVectors.inp 
-  subsection Optimization 
-    set ION FORCE                  = true
-  end 
 end
 
 subsection Boundary conditions
@@ -20,57 +17,52 @@ subsection Boundary conditions
 end
 
 subsection Brillouin zone k point sampling options
-  set USE GROUP SYMMETRY         = false
   set USE TIME REVERSAL SYMMETRY = true
   subsection Monkhorst-Pack (MP) grid generation
-    set SAMPLING POINTS 1 = 6
-    set SAMPLING POINTS 2 = 6
-    set SAMPLING POINTS 3 = 7
+    set SAMPLING POINTS 1 = 5
+    set SAMPLING POINTS 2 = 5
+    set SAMPLING POINTS 3 = 6
     set SAMPLING SHIFT 1  = 1
     set SAMPLING SHIFT 2  = 1
     set SAMPLING SHIFT 3  = 1
   end
 end
 
-subsection DFT functional parameters
-  set SPIN POLARIZATION               = 1
-  set START MAGNETIZATION             = -0.2
-end
-
 subsection Parallelization
-  #set NPKPT                    = 8
+  set NPKPT                    = 8
 end
 
 subsection Finite element mesh parameters
-  set POLYNOMIAL ORDER = 6
+  set POLYNOMIAL ORDER = 7
   subsection Auto mesh generation parameters
-    set MESH SIZE AROUND ATOM  = 0.8
-    set ATOM BALL RADIUS = 8
+    set MESH SIZE AROUND ATOM  = 1.2
+    set ATOM BALL RADIUS = 6.0
   end
 end
 
 subsection SCF Checkpointing and Restart
-    set SAVE RHO DATA = true
-    #set LOAD RHO DATA = true
+    set SAVE QUAD DATA = true
 end
 
 subsection DFT functional parameters
   set EXCHANGE CORRELATION TYPE   = GGA-PBE
   set PSEUDOPOTENTIAL CALCULATION = true  
   set PSEUDOPOTENTIAL FILE NAMES LIST = pseudo.inp
+  set SPIN POLARIZATION               = 1
 end
 
 subsection SCF parameters
-  set TOLERANCE                        = 1e-6
-  #set MIXING METHOD                   = ANDERSON_WITH_KERKER
-  #set MIXING PARAMETER                = 0.3
+  set TEMPERATURE                      = 500
+  set TOLERANCE                        = 1e-8
   set SPIN MIXING ENHANCEMENT FACTOR  = 1.0
-  #set KERKER MIXING PARAMETER         = 0.2
-  #set USE ENERGY RESIDUAL METRIC      = true
+  set MIXING PARAMETER                = 0.2
   subsection Eigen-solver parameters
-      #set CHEBYSHEV FILTER TOLERANCE  = 1e-5
-      set USE SINGLE PREC CHEBY       = true
+      set NUMBER OF KOHN-SHAM WAVEFUNCTIONS  = 50
+      set USE SINGLE PREC CHEBY = true
       set USE SINGLE PREC COMMUN CHEBY = false
+      set OVERLAP COMPUTE COMMUN CHEBY                         = true
+      set OVERLAP COMPUTE COMMUN ORTHO RR                      = true
+      set SUBSPACE PROJ SHEP GPU                               = false
   end
 end
 

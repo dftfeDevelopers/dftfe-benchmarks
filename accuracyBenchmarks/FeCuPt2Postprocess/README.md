@@ -16,11 +16,11 @@ Below we provide a step by step procedure, that includes getting the required ou
 
 Steps
 ============================================================================
-1. Perform a ground state calculation on the given cell geometry and coordinates (see "feCuPt2.scf.prm"). In the parameter file, "SAVE RHO DATA" should be set to "true" for to perform subsequent NSCF calculations.
-2. To obtain the bandstructure, perform an NSCF calculation with a specified k-points path. (see "kpointRuleFile.inp", "feCuPt2.nscf_bands.prm") (set "LOAD RHO DATA" and "WRITE BANDS" parameters to be "true") (Refer https://www.materialscloud.org/work/tools/seekpath to generate the kpath) 
-3. For DOS and/or PDOS data, perform an NSCF calculation with a refined k-point mesh. (see "feCuPt2.nscf_pdos.prm") (Set "WRITE DENSITY OF STATES", "WRITE PROJECTED DENSITY OF STATES" and "LOAD RHO DATA" parameters to be "true")
+1. Perform a ground state calculation on the given cell geometry and coordinates (see "feCuPt2.scf.prm"). In the parameter file, "SAVE QUAD DATA" should be set to "true" for to perform subsequent NSCF calculations.
+2. To obtain the bandstructure, perform an BANDS calculation with a specified k-points path. (see "kpointRuleFile.inp", "feCuPt2.nscf_bands.prm") (set "LOAD QUAD DATA" to "true") (Refer https://www.materialscloud.org/work/tools/seekpath to generate the kpath) 
+3. For DOS and/or PDOS data, perform an NSCF calculation with a refined k-point mesh. (see "feCuPt2.nscf_pdos.prm") (Set "WRITE DENSITY OF STATES", "WRITE PROJECTED DENSITY OF STATES" and "LOAD QUAD DATA" parameters to be "true")
 4. For the postprocessing task, follow the below steps,
-   1. For both of the postprocessing tasks, first download the "postprocessModules.py" using "wget" with the url "\<to be replaced by the correct url\>".
+   1. For both of the postprocessing tasks, first download the "postprocessModules.py" using "wget" with the url "https://raw.githubusercontent.com/dftfeDevelopers/dftfe/refs/heads/publicGithubDevelop/postProcessing/postprocessModules.py".
    2. Create a file similar to "postprocessDemo.py", given in this repository, and edit it following the below instructions,
       - For bandstructure,  
             - Create an instance of "Plotters" class for bandstructure with the parameters described in the "postprocessDemo.py"    
