@@ -4,7 +4,7 @@ This example demonstrates a ground-state calculation with fully non-periodic bou
 
 Studies performed
 =======================
-* Ground-state calculation using DFT-FE at a FE discretization commensurate with chemical accuracy(~1e-5 Ha/atom in energy, ~1e-4 Ha/Bohr in ionic forces). The referenace ground-state energy, ionic forces are computed using QUANTUM ESPRESSO (QE) at a high plane-wave cutoff of 50 Ha.
+* Ground-state calculation using DFT-FE at a FE discretization commensurate with chemical accuracy(~1e-5 Ha/atom in energy, ~1e-4 Ha/Bohr in ionic forces). The reference ground-state energy, ionic forces are computed using QUANTUM ESPRESSO (QE) at a high plane-wave cutoff of 50 Ha.
 
 Discussion on the input parameters and the results
 ==================================================
