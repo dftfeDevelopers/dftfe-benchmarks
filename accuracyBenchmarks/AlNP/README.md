@@ -15,5 +15,5 @@ Study1 -- Ground-state calculation results
 * The run successfully converged in 38 SCF iterations (High Quad PsP on).
 * POLYNOMIAL ORDER = 7 and MESH SIZE AROUND ATOM = 2.3 with ATOM BALL RADIUS = 6.0 are found to be sufficient to obtain chemical accuracy as described below. Total degrees of freedom are around 1573887 (10707 DoFs/atom)
 * Total Energy = -3.382316942391812518e+02 Ha
-* DFT-FE energy difference per atom compared to QE reference: 3.966435931e-05 Ha/atom.
-* DFT-FE Ionic forces comparison with QE reference: 6.52232793254028e-05 Ha/Bohr (max absolute error among all atoms and force components)
+* DFT-FE energy difference per atom compared to QE reference: 3.97e-05 Ha/atom.
+* DFT-FE Ionic forces comparison with QE reference: 6.52e-05 Ha/Bohr (max absolute error among all atoms and force components)
