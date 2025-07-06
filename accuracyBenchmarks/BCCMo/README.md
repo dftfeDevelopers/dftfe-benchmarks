@@ -18,8 +18,8 @@ Study1---ground-state calculation results
 
 * POLYNOMIAL ORDER=7 and MESH SIZE AROUND ATOM=2.0 are found to be sufficient to obtain chemical accuracy as shown below. Total degrees of freedom are 614125 (4835 per atom).
 
-* DFT-FE Energy per atom difference compared to QE reference: 2.0605e-5 Ha/atom.
+* DFT-FE Energy per atom difference compared to QE reference: 2.0605e-5 Ha/atom (Free energy is compared between DFT-FE and QE)
 
-* DFT-FE Ionic forces comparison with QE reference: 5.9368e-5 Ha/Bohr (max absolute error among all atoms and force components). 
+* DFT-FE Ionic forces comparison with QE reference: 5.94e-5 Ha/Bohr (max absolute error among all atoms and force components). 
 
-* DFT-FE Cell stress comparison with QE reference: 2.7406e-6 Ha/Bohr^3 (max absolute error among all stress components)
+* DFT-FE Cell stress comparison with QE reference: 2.74e-6 Ha/Bohr^3 (max absolute error among all stress components)
