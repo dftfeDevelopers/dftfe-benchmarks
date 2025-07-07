@@ -28,7 +28,7 @@ end
 
 
 subsection Parallelization
-  set NPKPT=32
+  set NPKPT=8
 end
 
 subsection Brillouin zone k point sampling options
