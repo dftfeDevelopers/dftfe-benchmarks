@@ -31,12 +31,16 @@ Study1 --- Ground-state calculation results (ferromagnetic)
 * Ground State Comparison with QE:
     a) Energy Difference = 2.0e-4  Ha/atom
     b) Force Difference =  7.5e-5 Ha/bohr (max absolute error among all atoms and force components)
+    c) Net magnetization difference = 1.0e-3 Bohr mag/cell
+    d) Absolute magnetization difference = 7.4e-3 Bohr mag/cell
 
 Study1 --- Ground-state calculation results (anti-ferromagnetic)
 -------------------------------------------
 * Ground State Comparison with QE:
     a) Energy Difference = 2.0e-4  Ha/atom
     b) Force Difference =  7.4e-5 Ha/bohr (max absolute error among all atoms and force components)
+    c) Net magnetization difference = 1.8e-6 Bohr mag/cell
+    d) Absolute magnetization difference = 6.1e-3 Bohr mag/cell
 
 Study3 --- Geometry optimization results (ferromagnetic)
 -----------------------------------
@@ -44,6 +48,7 @@ Study3 --- Geometry optimization results (ferromagnetic)
     a) Energy Difference = 1.2e-4  Ha/atom
     b) Lattice difference = 0.031 Bohr (max absolute error among all lattice components)
     c) Atomic coordinates difference = 0.06 Bohr (max absolute error among all atom location components)
+QE converged in 19 geometry updates and DFT-FE converged in 51 geometry updates
 
 Study4 --- Geometry optimization results (anti-ferromagnetic)
 -----------------------------------
@@ -51,6 +56,7 @@ Study4 --- Geometry optimization results (anti-ferromagnetic)
     a) Energy Difference = 1.2e-4  Ha/atom
     b) Lattice difference = 0.031 Bohr (max absolute error among all lattice components)
     c) Atomic coordinates difference = 0.06 Bohr (max absolute error among all atom location components)
+QE converged in 19 geometry updates and DFT-FE converged in 51 geometry updates
 
 Study5 --- Ground-state calculation results (ferromagnetic)
 -------------------------------------------
