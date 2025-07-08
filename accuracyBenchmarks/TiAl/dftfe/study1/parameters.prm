@@ -1,4 +1,5 @@
 set VERBOSITY=1
+set USE GPU = false
 subsection Geometry
   set NATOMS=2
   set NATOM TYPES=2

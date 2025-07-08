@@ -1,11 +1,13 @@
 Description of the example
 ==========================
-This example demonstrates the inputs required for hubbard correction. This is a periodic gamm-point ground state calculation.
+This example demonstrates the inputs required for hubbard correction. This is an example of a periodic gamma-point calculation where some of the atoms have hubbard corrections.
  
 Studies performed
 =======================
 
-Ground-state calculation: convergence study of ground-state energy, ionic forces and cell stresses to reach chemical accuracy with respect to FE discretization, and validation against QUANTUM ESPRESSO (QE). 
+Ground-state calculation: convergence study of ground-state energy, ionic forces and cell stresses to reach chemical accuracy with respect to FE discretization, and validation against QUANTUM ESPRESSO (QE). (Study1)
+
+ION CELL relaxation: relaxation of the atomic positions and cell parameters while maintaining the cell shape is performed and compared against QUANTUM ESPRESSO (QE). (Study2) 
 
 Discussion on the input parameters and the results
 ==================================================
@@ -27,10 +29,23 @@ Discussion on the input parameters and the results
         a) ecutwfc                  = 80 Ha 
         b) U Ti-3d 5.0              = Hubbard correction applied to 3 d orbitals of Ti with U = 5.0 eV
 
-Ground-state calculation results
+Ground-state calculation results (Study1)
 --------------------------------
 
 * Ground State Comparison with QE(80 Ha energy cut off):
     a) Energy Difference = 2.134E-05 Ha/atom
-    b) Force Difference = 1.7601E-06 Ha/bohr (max absolute error among all atoms and force components)
-    c) Stress Difference = 2.359E-07 Ha/bohr**3 (Hydrodynamic Stress error)
+    b) Force Difference = 1.88E-06 Ha/bohr (max absolute error among all atoms and force components)
+    c) Stress Difference = 2.30707E-07 Ha/bohr**3 (Hydrodynamic Stress error)
+
+
+Ion and Cell relaxation results (Study 2)
+--------------------------------
+
+Comparison with QE (80 Ha energy cut off):
+
+* Atomic positions differed by 1E-03 in fractional coordinates. 
+
+* Lattice parameter differed by 4.5E-04 Bohrs. 
+
+* The energy of the relaxaed structure differed by 1.84 E-05 Ha/atom. 
+ 

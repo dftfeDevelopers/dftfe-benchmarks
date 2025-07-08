@@ -1,0 +1,43 @@
+set VERBOSITY=1
+set USE GPU        = true
+set SOLVER MODE=GEOOPT
+subsection Geometry
+  set NATOMS=4
+  set NATOM TYPES=2
+  set ATOMIC COORDINATES FILE      = coordinates.inp 
+  set DOMAIN VECTORS FILE = domainVectors.inp
+  subsection Optimization
+    set OPTIMIZATION MODE         = ION
+    set ION FORCE = true
+    set FORCE TOL=2e-4
+  end
+end
+
+subsection Finite element mesh parameters
+  set POLYNOMIAL ORDER = 6
+  subsection Auto mesh generation parameters
+    set MESH SIZE AROUND ATOM = 0.8
+  end
+end
+
+subsection DFT functional parameters
+  set EXCHANGE CORRELATION TYPE   = GGA-PBE+U
+  set PSEUDOPOTENTIAL CALCULATION = true
+  set PSEUDOPOTENTIAL FILE NAMES LIST = pseudo.inp
+  set SPIN POLARIZATION               = 1
+  subsection Hubbard Parameters
+    set HUBBARD PARAMETERS FILE = hubbard.inp
+  end
+end
+
+subsection SCF parameters
+  set MIXING PARAMETER =0.1
+  set MIXING METHOD= ANDERSON
+  set STARTING WFC             = RANDOM
+  set TEMPERATURE              = 2000
+  set TOLERANCE                = 1e-5
+  subsection Eigen-solver parameters
+    set NUMBER OF KOHN-SHAM WAVEFUNCTIONS                    = 80
+    set CHEBYSHEV FILTER TOLERANCE                           = 1e-4
+  end
+end
