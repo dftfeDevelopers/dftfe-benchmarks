@@ -17,7 +17,7 @@ Discussion on the input parameters and the results:
         e) Mixing Method            = Anderson
         f) MIXING PARAMETER          =0.2
         g) High QUAD PSP ON
-        Activation Energy       = 241.02 meV      
+        Activation Energy       = 241.03 meV      
         Li-ion path length traversed             = 3.572 bohr
 
         
@@ -30,7 +30,7 @@ Discussion on the input parameters and the results:
 Study -- Nudged Elastic Band results (Spin-unpolarized)
 ------------------------------------------------------------
 * Activation Barrier comparison:
-    a) Energy Difference = 4 meV
+    a) Energy Difference = 3.89 meV
     b) Path Length error% = 0.97 %
 
 
