@@ -1,11 +1,13 @@
 Description of the example
 ==========================
-This example demonstrates the inputs required for hubbard correction. This is a non-periodic spin polarized ground state calculation.
+This example demonstrates the inputs required for hubbard correction. This is an example for a non-periodic spin polarized calculation where all the atoms have hubbard corrections. 
  
 Studies performed
 =======================
 
-Ground-state calculation: convergence study of ground-state energy and ionic forces to reach chemical accuracy with respect to FE discretization, and validation against QUANTUM ESPRESSO (QE). 
+Ground-state calculation: convergence study of ground-state energy and ionic forces to reach chemical accuracy with respect to FE discretization, and validation against QUANTUM ESPRESSO (QE).  (Study1)
+
+Ionic relaxation: Relaxation of the atomic positions with spin polarization. (Study2)
 
 Discussion on the input parameters and the results
 ==================================================
@@ -29,12 +31,18 @@ corrections are applied on 1 set of orbitals. 9.0 is the initial occupancy on th
    78 2 - Atomic number (78) and hubbard species id (2).
    
 * QE:  
-        a) ecutwfc                  = 90 Ha 
-        b) U Pt-5d 3.0              = Hubbard correction applied to 5 d orbitals of Pt with U = 3.0 eV
-        c) U Ni-3d 1.0              = Hubbard correction applied to 3 d orbitals of Ni with U = 1.0 eV                                   
-Ground-state calculation results
+        a) U Pt-5d 3.0              = Hubbard correction applied to 5 d orbitals of Pt with U = 3.0 eV
+        b) U Ni-3d 1.0              = Hubbard correction applied to 3 d orbitals of Ni with U = 1.0 eV                                   
+Ground-state calculation results (Study 1)
 --------------------------------
 
 * Ground State Comparison with QE(90 Ha energy cut off):
-    a) Energy Difference = 1.863E-05 Ha/atom
-    b) Force Difference = 1.74E-05 Ha/bohr (max absolute error among all atoms and force components)
+    a) Energy Difference =  1.76E-05 Ha/atom
+    b) Force Difference =  3.89E-05 Ha/bohr (max absolute error among all atoms and force components)
+
+Ionic relaxation results (Study 2)
+--------------------------------
+
+* Ionic relaxation converged in 6 iterations. 
+
+* Comparison in with QE (60 Ha energy cut off) : The atomic positions differ by 1.74E-04 Bohrs. The energy of the final relaxed structure differed by 4.02E-06 Ha/atom.
