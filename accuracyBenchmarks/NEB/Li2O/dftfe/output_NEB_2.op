@@ -1,0 +1,299 @@
+==========================================================================================================
+==========================================================================================================
+			Welcome to the Open Source program DFT-FE version	1.1.0-pre		        
+This is a C++ code for materials modeling from first principles using Kohn-Sham density functional theory.
+This is a real-space code for periodic, semi-periodic and non-periodic pseudopotential
+and all-electron calculations, and is based on adaptive finite-element discretization.
+For further details, and citing, please refer to our website: https://sites.google.com/umich.edu/dftfe
+==========================================================================================================
+ DFT-FE Mentors and Development leads (alphabetically) :									
+														
+ Sambit Das               - University of Michigan, USA
+ Vikram Gavini            - University of Michigan, USA
+ Phani Motamarri          - Indian Institute of Science, India
+ (A complete list of the many authors that have contributed to DFT-FE can be found in the authors file)
+==========================================================================================================
+ 	     Copyright (c) 2017-2025 The Regents of the University of Michigan and DFT-FE authors         
+ 			DFT-FE is published under [LGPL v2.1 or newer] 				
+==========================================================================================================
+==========================================================================================================
+ DFT-FE branch: NEB_outputCleanup, commit: eb35b88013df9aef327608d6825fb227688c69cd
+ compiled with GPU support, using HIP, with OpenMP support, with 64 bit integers, and with HIGHERQUAD_PSP
+==========================================================================================================
+set RESTART        = true
+set RESTART FOLDER = restartFolder
+set SOLVER MODE    = NEB
+set USE GPU        = true
+set VERBOSITY      = 1
+subsection NEB
+  set ALLOW IMAGE FREEZING             = false
+  set BFGS STEP METHOD                 = QN
+  set ION RELAX FLAGS FILE             = ion_force_flag.inp
+  set LBFGS HISTORY                    = 5
+  set MAXIMUM ION UPDATE STEP          = 0.5
+  set MAXIMUM NUMBER OF NEB ITERATIONS = 200
+  set MAXIMUM SPRING CONSTANT          = 0.1
+  set MAX LINE SEARCH ITER             = 5
+  set MINIMUM SPRING CONSTANT          = 0.1
+  set NEB COORDINATES FILE             = coordinates.inp
+  set NEB DOMAIN VECTORS FILE          = domainVectors.inp
+  set NEB OPT SOLVER                   = LBFGS
+  set NUMBER OF IMAGES                 = 7
+  set PATH THRESHOLD                   = 0.0004
+end
+Solver update: NEB is in Restart mode
+Checking for files in Step: 14
+Looking for files of Step 14 at: restartFolder/Step14
+1 restartFolder/Step14/Image0atomsFracCoordCurrent.chk
+1 restartFolder/Step14/Image0domainBoundingVectorsCurrent.chk
+Image no: 0 1
+1 restartFolder/Step14/Image1atomsFracCoordCurrent.chk
+1 restartFolder/Step14/Image1domainBoundingVectorsCurrent.chk
+Image no: 1 1
+1 restartFolder/Step14/Image2atomsFracCoordCurrent.chk
+1 restartFolder/Step14/Image2domainBoundingVectorsCurrent.chk
+Image no: 2 1
+1 restartFolder/Step14/Image3atomsFracCoordCurrent.chk
+1 restartFolder/Step14/Image3domainBoundingVectorsCurrent.chk
+Image no: 3 1
+1 restartFolder/Step14/Image4atomsFracCoordCurrent.chk
+1 restartFolder/Step14/Image4domainBoundingVectorsCurrent.chk
+Image no: 4 1
+1 restartFolder/Step14/Image5atomsFracCoordCurrent.chk
+1 restartFolder/Step14/Image5domainBoundingVectorsCurrent.chk
+Image no: 5 1
+1 restartFolder/Step14/Image6atomsFracCoordCurrent.chk
+1 restartFolder/Step14/Image6domainBoundingVectorsCurrent.chk
+Image no: 6 1
+ Restart files are found in: restartFolder/Step14
+Solver update: NEB is in Restart mode
+Checking for files in Step: 14
+ --------------Ion force relaxation flags----------------
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+1  1  1
+ --------------------------------------------------
+ Total No. of relaxation flags: 285
+-------------------------------------------------------------------------------
+ --------------------Initial NEB Data ---------------------------------------
+    Image No         Free Energy(Ha)  Error(Ha/bohr) 
+       0    -9.86889497259367e+02      5.1935e-05
+       1    -9.86887371631629e+02      1.0682e-03
+       2    -9.86882831764306e+02      3.9924e-04
+       3    -9.86880592774445e+02      5.5134e-04
+       4    -9.86882710799374e+02      7.8279e-04
+       5    -9.86887325698774e+02      6.2211e-04
+       6    -9.86889495839704e+02      5.2782e-05
+
+--Max Path Length: 3.6048e+00 Bohr
+Time taken for initial dft solve of all images: 6.5698e+02
+-------------------------------------------------------------------------------
+   ---Non-linear LBFGS Parameters----------  
+      stopping tol: 4.0000e-04
+      maxIter: 200
+      preconditioner: false
+      lbfgs history: 5
+      maxiumum step length: 5.0000e-01
+   -----------------------------------------  
+ Re starting Ion force relaxation using nonlinear LBFGS solver... 
+Loading LBFGS data from restartFolder/Step14/ionRelax.chk
+LBFGS Step no. 15
+Computed LBFGS Step, max norm of step: 4.4437e-02
+Trying step size (scaling factor): 1.0000e+00
+-----------------------------------------------------------------------
+                            NEB STEP: 15
+-----------------------------------------------------------------------
+    Image No         Free Energy(Ha)  Error(Ha/bohr) 
+       0(T)    -9.86889497259367e+02      5.1935e-05
+       1(F)    -9.86887563810326e+02      4.7932e-04
+       2(F)    -9.86883077120150e+02      6.7123e-04
+       3(F)    -9.86880588083325e+02      9.0153e-04
+       4(F)    -9.86882751372955e+02      5.6657e-04
+       5(F)    -9.86887350672951e+02      4.9674e-04
+       6(T)    -9.86889495839704e+02      5.2782e-05
+--> Activation Energy (meV): 2.42431030e+02
+<-- Activation Energy (meV): 2.42392399e+02
+
+--Max Path Length: 3.58514226e+00 Bohr
+----------------------------------------------
+
+Maximum Force 4.74236455e-03in Ha/bohr
+Curvature condition satisfied.
+LBFGS Step no. 16
+Computed LBFGS Step, max norm of step: 4.23902818e-02
+Trying step size (scaling factor): 1.00000000e+00
+-----------------------------------------------------------------------
+                            NEB STEP: 16
+-----------------------------------------------------------------------
+    Image No         Free Energy(Ha)  Error(Ha/bohr) 
+       0(T)    -9.86889497259367e+02      5.1935e-05
+       1(F)    -9.86887574766817e+02      2.9196e-04
+       2(F)    -9.86882994149468e+02      6.1565e-04
+       3(F)    -9.86880590377450e+02      6.1301e-04
+       4(F)    -9.86882475104868e+02      4.0495e-04
+       5(F)    -9.86887394451886e+02      3.6068e-04
+       6(T)    -9.86889495839704e+02      5.2782e-05
+--> Activation Energy (meV): 2.42368604e+02
+<-- Activation Energy (meV): 2.42329973e+02
+
+--Max Path Length: 3.57474981e+00 Bohr
+----------------------------------------------
+
+Maximum Force 7.51459916e-03in Ha/bohr
+Curvature condition satisfied.
+LBFGS Step no. 17
+Computed LBFGS Step, max norm of step: 2.02945769e-02
+Trying step size (scaling factor): 1.00000000e+00
+-----------------------------------------------------------------------
+                            NEB STEP: 17
+-----------------------------------------------------------------------
+    Image No         Free Energy(Ha)  Error(Ha/bohr) 
+       0(T)    -9.86889497259367e+02      5.1935e-05
+       1(F)    -9.86887545008091e+02      2.8840e-04
+       2(F)    -9.86882903207758e+02      3.6510e-04
+       3(F)    -9.86880622520834e+02      4.1897e-04
+       4(F)    -9.86882610292408e+02      3.0529e-04
+       5(F)    -9.86887384952770e+02      2.8031e-04
+       6(T)    -9.86889495839704e+02      5.2782e-05
+--> Activation Energy (meV): 2.41493938e+02
+<-- Activation Energy (meV): 2.41455307e+02
+
+--Max Path Length: 3.57296404e+00 Bohr
+----------------------------------------------
+
+Maximum Force 4.49812594e-04in Ha/bohr
+Curvature condition satisfied.
+LBFGS Step no. 18
+Computed LBFGS Step, max norm of step: 1.06728950e-02
+Trying step size (scaling factor): 1.00000000e+00
+-----------------------------------------------------------------------
+                            NEB STEP: 18
+-----------------------------------------------------------------------
+    Image No         Free Energy(Ha)  Error(Ha/bohr) 
+       0(T)    -9.86889497259367e+02      5.1935e-05
+       1(F)    -9.86887522968237e+02      2.1815e-04
+       2(F)    -9.86882861760962e+02      2.3657e-04
+       3(F)    -9.86880639600605e+02      2.2411e-04
+       4(F)    -9.86882617543841e+02      2.6450e-04
+       5(F)    -9.86887386272639e+02      2.4421e-04
+       6(T)    -9.86889495839704e+02      5.2782e-05
+--> Activation Energy (meV): 2.41029174e+02
+<-- Activation Energy (meV): 2.40990543e+02
+
+--Max Path Length: 3.57214091e+00 Bohr
+----------------------------------------------
+Optimization Criteria Met!!
+
+Maximum Force 2.64504791e-04in Ha/bohr
+Curvature condition satisfied.
+LBFGS solver converged after 18 iterations.
+ ...Ion force relaxation completed as maximum force magnitude is less than FORCE TOL: 4.00000000e-04, total number of ion position updates: 18
+--------------Final Results-------------
+    Image No         Free Energy(Ha)  Error(Ha/bohr) 
+       0(T)    -9.86889497259367e+02      5.1935e-05
+       1(F)    -9.86887522968237e+02      2.1815e-04
+       2(F)    -9.86882861760962e+02      2.3657e-04
+       3(F)    -9.86880639600605e+02      2.2411e-04
+       4(F)    -9.86882617543841e+02      2.6450e-04
+       5(F)    -9.86887386272639e+02      2.4421e-04
+       6(T)    -9.86889495839704e+02      5.2782e-05
+--> Activation Energy (meV): 2.41029174e+02
+<-- Activation Energy (meV): 2.40990543e+02
+
+--Max Path Length: 3.57214091e+00 Bohr
+----------------------------------------------
+=============================================================================================
+DFT-FE Program ends. Elapsed wall time since start of the program: 2.71840063e+03 seconds.
+=============================================================================================
