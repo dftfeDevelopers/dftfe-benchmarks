@@ -13,11 +13,11 @@ Discussion on the input parameters and the results
 
 DFT-FE
 ==================================================
-    a) Polynomial Order      = 5
+    a) POLYNOMIAL ORDER      = 5
     b) MESH SIZE AROUND ATOM  = 0.4
-    c) SCF Tolerance            = 1e-5
-    d) Mixing Method            = Anderson
-    e) Anderson MIXING PARAMETER  = 0.2 (default)
+    c) TOLERANCE            = 1e-5
+    d) MIXING METHOD           = ANDERSON
+    e) MIXING PARAMETER  = 0.2 (default)
 
 NWChem
 ==================================================
@@ -31,4 +31,4 @@ Study1---Ground-state calculation results
 
 2. In NWChem, to obtain convergence with respect to discretization (i.e. a basis with a chemical accuracy of ~1meV/atom), ground state calculations are performed using pc-2, pc-3, and pc-4 basis. We attain the convergence at pc-3 basis.
 
-3. At convergence, the DFT-FE energy is -25.040833498463442 Ha/atom, and the NWChem energy is -25.040754748382188 Ha/atom. Thus, the difference in groundstate energy between DFT-FE and NWChem is 7.9e-05 Ha/atom. 
+3. The DFT-FE energy for 0.2 mesh size is -25.040814585500026 Ha/atom, and the NWChem energy is -25.040754748382188 Ha/atom. Thus, the difference in groundstate energy between DFT-FE and NWChem is 5.98e-05 Ha/atom. 
