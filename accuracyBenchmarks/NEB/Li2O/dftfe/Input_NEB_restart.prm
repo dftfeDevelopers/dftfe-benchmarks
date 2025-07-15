@@ -1,5 +1,5 @@
 set SOLVER MODE              = NEB
-set RESTART = false
+set RESTART = true
 #set VERBOSITY = 4
 set USE GPU = true
 subsection Geometry
