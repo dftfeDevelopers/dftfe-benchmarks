@@ -44,32 +44,16 @@ Steps
         automatically from "GS" calculation in DFT-FE.
 
 <p align="center">
-    <img src="./output/bands_up.png" width="450" height="300" alt="Bandstructure of FeCuPt2 (spin up)">
-    <img src="./output/bands_down.png" width="450" height="300" alt="Bandstructure of FeCuPt2 (spin down)">
+    <img src="./output/bandsplot.png" width="450" height="300" alt="Bandstructure of FeCuPt2">
 </p>
 <p align="center">
-    <span>Figure 1: Bandstructure of FeCuPt<sub>2</sub> (spin up) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-    <span>&nbsp;&nbsp;&nbsp;&nbsp;Figure 2: Bandstructure of FeCuPt<sub>2</sub> (spin down)</span>
+    <span>Figure 1: Bandstructure of FeCuPt<sub>2</sub></span>
 </p>
 
 <p align="center">
-    <img src="./output/totalDos.png" width="450" height="300" alt="Total DOS of FeCuPt2 (spin up)">
-    <img src="./output/dos_items.png" width="450" height="300" alt="PDOS of Cu(s), Pt(s) (spin up)">
+    <img src="./output/dosplot.png" width="450" height="300" alt="DOS of FeCuPt2">
 </p>
 
 <p align="center">
-    <span>Figure 3: Total DOS of FeCuPt<sub>2</sub> (spin up)
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-    <span>&nbsp;&nbsp;&nbsp;&nbsp;Figure 4: PDOS of Cu(s), Pt(s) (spin up)</span>
-</p>
-
-<p align="center">
-    <img src="./output/dos_stackOrbitals.png" width="450" height="300" alt="PDOS of Pt(s, p, d) (spin up)">
-    <img src="./output/dos_stackSpecies.png" width="450" height="300" alt="PDOS of Fe(s), Cu(s), Pt(s) (spin up)">
-</p>
-
-<p align="center">
-    <span>Figure 5: PDOS of Pt(s, p, d) (spin up)
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-    <span>&nbsp;&nbsp;&nbsp;&nbsp;Figure 6: PDOS of Fe(s), Cu(s), Pt(s) (spin up)</span>
+    <span>Figure 2: DOS of FeCuPt<sub>2</sub></span>
 </p>
