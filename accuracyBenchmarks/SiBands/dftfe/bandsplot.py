@@ -1,6 +1,6 @@
 from postprocessModules import Plotters
 
-plotter_bands = Plotters(filesPath = "/home/srinibasn/dftfe-benchmarks/accuracyBenchmarks/SiBands/convergence_study/dftfe/outputs/",
+plotter_bands = Plotters(filesPath = "/home/srinibasn/dftfe_benchmarks_5thAug/accuracyBenchmarks/SiBands_new/dftfe",
                         bandsDatFile = "bands.out",
                         kptsFile= "kpointRuleFile.inp",
                         coordinatesFile = "coordinates.inp",
