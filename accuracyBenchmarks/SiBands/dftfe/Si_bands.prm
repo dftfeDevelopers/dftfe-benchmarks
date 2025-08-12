@@ -1,0 +1,47 @@
+set VERBOSITY = 1
+set SOLVER MODE = BANDS
+set USE GPU = true
+set RESTART FOLDER = ./restartFolder
+#set MEM OPT MODE = true
+subsection Geometry
+  set NATOMS=16
+  set NATOM TYPES=1
+  set ATOMIC COORDINATES FILE      = coordinates.inp          
+  set DOMAIN VECTORS FILE = domainVectors.inp 
+end
+
+subsection Boundary conditions
+  set PERIODIC1                       = true
+  set PERIODIC2                       = true
+  set PERIODIC3                       = true
+end
+
+subsection Brillouin zone k point sampling options
+  set kPOINT RULE FILE = kpointRuleFile.inp
+end
+
+subsection Finite element mesh parameters
+  set POLYNOMIAL ORDER = 5
+  set DENSITY QUADRATURE RULE = 8
+  subsection Auto mesh generation parameters
+    set MESH SIZE AROUND ATOM = 1.4
+    set ATOM BALL RADIUS = 6
+  end
+end
+
+subsection DFT functional parameters
+  set EXCHANGE CORRELATION TYPE   = MGGA-R2SCAN
+  set PSEUDOPOTENTIAL CALCULATION = true  
+  set PSEUDOPOTENTIAL FILE NAMES LIST = pseudo.inp
+end
+
+subsection SCF Checkpointing and Restart
+  set LOAD QUAD DATA   = true
+end
+
+subsection SCF parameters
+  subsection Eigen-solver parameters
+    set USE SINGLE PREC CHEBY = true
+    set NUMBER OF KOHN-SHAM WAVEFUNCTIONS = 45
+  end
+end

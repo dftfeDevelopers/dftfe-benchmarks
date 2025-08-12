@@ -1,0 +1,5 @@
+&BANDS
+  prefix = 'Si'
+  outdir = './outdir_kpt_888_ecutWfc_40_ecutrho_160_scf'
+  filband = 'si_bands.dat'
+/

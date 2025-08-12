@@ -42,6 +42,10 @@ This example demonstrates a ground-state calculation bilayer of CrI3 employing s
 
 This example demonstrates a spin-polarized and spin-unpolarized ground-state calculations with fully periodic boundary conditions along with combined ionic-cell and stress relaxation on LLZO (Lithium-Lanthanum-Zirconium-Oxide) unit-cell. Gamma point for sampling the Brillouin zone, norm-conserving pseudopotential, and PBE exchange correlation are used.
 
+* **Li2O_fcc**
+
+This example demonstrates the ion relaxation with periodic boundary conditions for a supercell of Li2O (FCC) (with an Oxygen atom vacancy) that consists of 95 atoms. ONCV pseudopotentials from SG15 database along with r2SCAN exchange-correlation functional are used for the calculations.
+
 * **NEB/Li2O**
 
 This example demonstrates a Nudged Elastic Band Lithium Oxide 2x2x2 supercell with 1 Li vacancy employing periodic boundary conditions in all directions
@@ -54,6 +58,10 @@ This example demonstrates the postprocessing tools, bandstructure, density of st
 * **Pt3Ni**
 
 This example demonstrates a hubbard calculation when all the atoms in the simulation have Hubbard correction. This is a non-periodic calculation with spin polarization.
+
+* **SiBands**
+
+This example illustrates the bandstructure calculation of a Si supercell with periodic boundary conditions. The computations employ ONCV pseudopotentials obtained from SG15 database and r2SCAN as the exchange-correlation functional.
 
 * **TiAl** 
 
