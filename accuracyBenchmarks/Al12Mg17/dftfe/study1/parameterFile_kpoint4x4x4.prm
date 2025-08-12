@@ -1,5 +1,5 @@
 set SOLVER MODE=GS
-
+set USE GPU=true
 subsection Geometry
   set NATOMS=58
   set NATOM TYPES=2
@@ -28,7 +28,7 @@ end
 
 
 subsection Parallelization
-  set NPKPT=32
+  set NPKPT=8
 end
 
 subsection Brillouin zone k point sampling options

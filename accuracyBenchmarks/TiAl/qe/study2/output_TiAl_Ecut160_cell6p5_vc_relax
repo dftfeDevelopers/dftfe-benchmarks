@@ -1,0 +1,4922 @@
+
+     Program PWSCF v.7.3.1 starts on  2Jul2025 at  9:24:56 
+        Git branch: HEAD
+        Last git commit: 7fd60c9bc9fe7a7d1fe6f1049f4afba0eab9aeef-dirty
+        Last git commit date: Thu Feb 29 10:18:05 2024 +0000
+        Last git commit subject: Merge branch 'master_qe_7.3.1' into 'master'
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI & OpenMP), running on     512 processor cores
+     Number of MPI processes:                 2
+     Threads/MPI process:                   256
+
+     MPI processes distributed on     2 nodes
+     489295 MiB available memory on the printing compute node when the environment starts
+
+     Reading input from qe_TiAl.in
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  4
+
+     gamma-point specific algorithms are used
+
+     R & G space division:  proc/nbgrp/npool/nimage =       2
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     a serial algorithm will be used
+
+
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min        1071    1071    272                37443    37443    4716
+     Max        1074    1074    273                37450    37450    4719
+     Sum        2145    2145    545                74893    74893    9435
+
+     Using Slab Decomposition
+
+
+
+     bravais-lattice index     =            1
+     lattice parameter (alat)  =       6.5000  a.u.
+     unit-cell volume          =     274.6250 (a.u.)^3
+     number of atoms/cell      =            2
+     number of atomic types    =            2
+     number of electrons       =        15.00
+     number of Kohn-Sham states=           30
+     kinetic-energy cutoff     =     160.0000  Ry
+     charge density cutoff     =     640.0000  Ry
+     scf convergence threshold =      1.0E-10
+     mixing beta               =       0.2000
+     number of iterations used =            8  plain     mixing
+     energy convergence thresh.=      1.0E-04
+     force convergence thresh. =      1.0E-03
+     press convergence thresh. =      5.0E-01
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     nstep                     =           50
+
+     Hubbard projectors: atomic
+     Hubbard parameters of DFT+U (Dudarev formulation) in eV:
+     U(Ti-3d) =  5.0000
+
+     Internal variables: lda_plus_u =T, lda_plus_u_kind = 0
+
+     celldm(1)=   6.500000  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   1.000000   0.000000   0.000000 )  
+               a(2) = (   0.000000   1.000000   0.000000 )  
+               a(3) = (   0.000000   0.000000   1.000000 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.000000  0.000000  0.000000 )  
+               b(2) = (  0.000000  1.000000  0.000000 )  
+               b(3) = (  0.000000  0.000000  1.000000 )  
+
+
+     PseudoPot. # 1 for Ti read from file:
+     ./Ti.upf
+     MD5 check sum: 0b3868d933a8ea9356727c02a1b807de
+     Pseudo is Norm-conserving + core correction, Zval = 12.0
+     Generated using ONCVPSP code by D. R. Hamann
+     Using radial grid of 1586 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+
+     PseudoPot. # 2 for Al read from file:
+     ./Al.upf
+     MD5 check sum: a92309766db89a6b54a5f8790cc4d69e
+     Pseudo is Norm-conserving + core correction, Zval =  3.0
+     Generated using ONCVPSP code by D. R. Hamann
+     Using radial grid of 1876 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+
+     atomic species   valence    mass     pseudopotential
+     Ti               12.00    48.00000     Ti( 1.00)
+     Al                3.00    27.00000     Al( 1.00)
+
+     48 Sym. Ops., with inversion, found
+
+
+                                    s                        frac. trans.
+
+      isym =  1     identity                                     
+
+ cryst.   s( 1) = (     1          0          0      )
+                  (     0          1          0      )
+                  (     0          0          1      )
+
+ cart.    s( 1) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  2     180 deg rotation - cart. axis [0,0,1]        
+
+ cryst.   s( 2) = (    -1          0          0      )
+                  (     0         -1          0      )
+                  (     0          0          1      )
+
+ cart.    s( 2) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  3     180 deg rotation - cart. axis [0,1,0]        
+
+ cryst.   s( 3) = (    -1          0          0      )
+                  (     0          1          0      )
+                  (     0          0         -1      )
+
+ cart.    s( 3) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym =  4     180 deg rotation - cart. axis [1,0,0]        
+
+ cryst.   s( 4) = (     1          0          0      )
+                  (     0         -1          0      )
+                  (     0          0         -1      )
+
+ cart.    s( 4) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym =  5     180 deg rotation - cart. axis [1,1,0]        
+
+ cryst.   s( 5) = (     0          1          0      )
+                  (     1          0          0      )
+                  (     0          0         -1      )
+
+ cart.    s( 5) = (  0.0000000  1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym =  6     180 deg rotation - cart. axis [1,-1,0]       
+
+ cryst.   s( 6) = (     0         -1          0      )
+                  (    -1          0          0      )
+                  (     0          0         -1      )
+
+ cart.    s( 6) = (  0.0000000 -1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym =  7      90 deg rotation - cart. axis [0,0,-1]       
+
+ cryst.   s( 7) = (     0         -1          0      )
+                  (     1          0          0      )
+                  (     0          0          1      )
+
+ cart.    s( 7) = (  0.0000000  1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  8      90 deg rotation - cart. axis [0,0,1]        
+
+ cryst.   s( 8) = (     0          1          0      )
+                  (    -1          0          0      )
+                  (     0          0          1      )
+
+ cart.    s( 8) = (  0.0000000 -1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  9     180 deg rotation - cart. axis [1,0,1]        
+
+ cryst.   s( 9) = (     0          0          1      )
+                  (     0         -1          0      )
+                  (     1          0          0      )
+
+ cart.    s( 9) = (  0.0000000  0.0000000  1.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 10     180 deg rotation - cart. axis [-1,0,1]       
+
+ cryst.   s(10) = (     0          0         -1      )
+                  (     0         -1          0      )
+                  (    -1          0          0      )
+
+ cart.    s(10) = (  0.0000000  0.0000000 -1.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 11      90 deg rotation - cart. axis [0,1,0]        
+
+ cryst.   s(11) = (     0          0         -1      )
+                  (     0          1          0      )
+                  (     1          0          0      )
+
+ cart.    s(11) = (  0.0000000  0.0000000  1.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 12      90 deg rotation - cart. axis [0,-1,0]       
+
+ cryst.   s(12) = (     0          0          1      )
+                  (     0          1          0      )
+                  (    -1          0          0      )
+
+ cart.    s(12) = (  0.0000000  0.0000000 -1.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 13     180 deg rotation - cart. axis [0,1,1]        
+
+ cryst.   s(13) = (    -1          0          0      )
+                  (     0          0          1      )
+                  (     0          1          0      )
+
+ cart.    s(13) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+
+
+      isym = 14     180 deg rotation - cart. axis [0,1,-1]       
+
+ cryst.   s(14) = (    -1          0          0      )
+                  (     0          0         -1      )
+                  (     0         -1          0      )
+
+ cart.    s(14) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+
+
+      isym = 15      90 deg rotation - cart. axis [-1,0,0]       
+
+ cryst.   s(15) = (     1          0          0      )
+                  (     0          0         -1      )
+                  (     0          1          0      )
+
+ cart.    s(15) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+
+
+      isym = 16      90 deg rotation - cart. axis [1,0,0]        
+
+ cryst.   s(16) = (     1          0          0      )
+                  (     0          0          1      )
+                  (     0         -1          0      )
+
+ cart.    s(16) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+
+
+      isym = 17     120 deg rotation - cart. axis [-1,-1,-1]     
+
+ cryst.   s(17) = (     0          0          1      )
+                  (     1          0          0      )
+                  (     0          1          0      )
+
+ cart.    s(17) = (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 18     120 deg rotation - cart. axis [-1,1,1]       
+
+ cryst.   s(18) = (     0          0         -1      )
+                  (    -1          0          0      )
+                  (     0          1          0      )
+
+ cart.    s(18) = (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 19     120 deg rotation - cart. axis [1,1,-1]       
+
+ cryst.   s(19) = (     0          0         -1      )
+                  (     1          0          0      )
+                  (     0         -1          0      )
+
+ cart.    s(19) = (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 20     120 deg rotation - cart. axis [1,-1,1]       
+
+ cryst.   s(20) = (     0          0          1      )
+                  (    -1          0          0      )
+                  (     0         -1          0      )
+
+ cart.    s(20) = (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 21     120 deg rotation - cart. axis [1,1,1]        
+
+ cryst.   s(21) = (     0          1          0      )
+                  (     0          0          1      )
+                  (     1          0          0      )
+
+ cart.    s(21) = (  0.0000000  0.0000000  1.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+
+
+      isym = 22     120 deg rotation - cart. axis [-1,1,-1]      
+
+ cryst.   s(22) = (     0         -1          0      )
+                  (     0          0         -1      )
+                  (     1          0          0      )
+
+ cart.    s(22) = (  0.0000000  0.0000000  1.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+
+
+      isym = 23     120 deg rotation - cart. axis [1,-1,-1]      
+
+ cryst.   s(23) = (     0         -1          0      )
+                  (     0          0          1      )
+                  (    -1          0          0      )
+
+ cart.    s(23) = (  0.0000000  0.0000000 -1.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+
+
+      isym = 24     120 deg rotation - cart. axis [-1,-1,1]      
+
+ cryst.   s(24) = (     0          1          0      )
+                  (     0          0         -1      )
+                  (    -1          0          0      )
+
+ cart.    s(24) = (  0.0000000  0.0000000 -1.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+
+
+      isym = 25     inversion                                    
+
+ cryst.   s(25) = (    -1          0          0      )
+                  (     0         -1          0      )
+                  (     0          0         -1      )
+
+ cart.    s(25) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym = 26     inv. 180 deg rotation - cart. axis [0,0,1]   
+
+ cryst.   s(26) = (     1          0          0      )
+                  (     0          1          0      )
+                  (     0          0         -1      )
+
+ cart.    s(26) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym = 27     inv. 180 deg rotation - cart. axis [0,1,0]   
+
+ cryst.   s(27) = (     1          0          0      )
+                  (     0         -1          0      )
+                  (     0          0          1      )
+
+ cart.    s(27) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym = 28     inv. 180 deg rotation - cart. axis [1,0,0]   
+
+ cryst.   s(28) = (    -1          0          0      )
+                  (     0          1          0      )
+                  (     0          0          1      )
+
+ cart.    s(28) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym = 29     inv. 180 deg rotation - cart. axis [1,1,0]   
+
+ cryst.   s(29) = (     0         -1          0      )
+                  (    -1          0          0      )
+                  (     0          0          1      )
+
+ cart.    s(29) = (  0.0000000 -1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym = 30     inv. 180 deg rotation - cart. axis [1,-1,0]  
+
+ cryst.   s(30) = (     0          1          0      )
+                  (     1          0          0      )
+                  (     0          0          1      )
+
+ cart.    s(30) = (  0.0000000  1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym = 31     inv.  90 deg rotation - cart. axis [0,0,-1]  
+
+ cryst.   s(31) = (     0          1          0      )
+                  (    -1          0          0      )
+                  (     0          0         -1      )
+
+ cart.    s(31) = (  0.0000000 -1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym = 32     inv.  90 deg rotation - cart. axis [0,0,1]   
+
+ cryst.   s(32) = (     0         -1          0      )
+                  (     1          0          0      )
+                  (     0          0         -1      )
+
+ cart.    s(32) = (  0.0000000  1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym = 33     inv. 180 deg rotation - cart. axis [1,0,1]   
+
+ cryst.   s(33) = (     0          0         -1      )
+                  (     0          1          0      )
+                  (    -1          0          0      )
+
+ cart.    s(33) = (  0.0000000  0.0000000 -1.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 34     inv. 180 deg rotation - cart. axis [-1,0,1]  
+
+ cryst.   s(34) = (     0          0          1      )
+                  (     0          1          0      )
+                  (     1          0          0      )
+
+ cart.    s(34) = (  0.0000000  0.0000000  1.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 35     inv.  90 deg rotation - cart. axis [0,1,0]   
+
+ cryst.   s(35) = (     0          0          1      )
+                  (     0         -1          0      )
+                  (    -1          0          0      )
+
+ cart.    s(35) = (  0.0000000  0.0000000 -1.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 36     inv.  90 deg rotation - cart. axis [0,-1,0]  
+
+ cryst.   s(36) = (     0          0         -1      )
+                  (     0         -1          0      )
+                  (     1          0          0      )
+
+ cart.    s(36) = (  0.0000000  0.0000000  1.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 37     inv. 180 deg rotation - cart. axis [0,1,1]   
+
+ cryst.   s(37) = (     1          0          0      )
+                  (     0          0         -1      )
+                  (     0         -1          0      )
+
+ cart.    s(37) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+
+
+      isym = 38     inv. 180 deg rotation - cart. axis [0,1,-1]  
+
+ cryst.   s(38) = (     1          0          0      )
+                  (     0          0          1      )
+                  (     0          1          0      )
+
+ cart.    s(38) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+
+
+      isym = 39     inv.  90 deg rotation - cart. axis [-1,0,0]  
+
+ cryst.   s(39) = (    -1          0          0      )
+                  (     0          0          1      )
+                  (     0         -1          0      )
+
+ cart.    s(39) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+
+
+      isym = 40     inv.  90 deg rotation - cart. axis [1,0,0]   
+
+ cryst.   s(40) = (    -1          0          0      )
+                  (     0          0         -1      )
+                  (     0          1          0      )
+
+ cart.    s(40) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+
+
+      isym = 41     inv. 120 deg rotation - cart. axis [-1,-1,-1]
+
+ cryst.   s(41) = (     0          0         -1      )
+                  (    -1          0          0      )
+                  (     0         -1          0      )
+
+ cart.    s(41) = (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 42     inv. 120 deg rotation - cart. axis [-1,1,1]  
+
+ cryst.   s(42) = (     0          0          1      )
+                  (     1          0          0      )
+                  (     0         -1          0      )
+
+ cart.    s(42) = (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 43     inv. 120 deg rotation - cart. axis [1,1,-1]  
+
+ cryst.   s(43) = (     0          0          1      )
+                  (    -1          0          0      )
+                  (     0          1          0      )
+
+ cart.    s(43) = (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 44     inv. 120 deg rotation - cart. axis [1,-1,1]  
+
+ cryst.   s(44) = (     0          0         -1      )
+                  (     1          0          0      )
+                  (     0          1          0      )
+
+ cart.    s(44) = (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 45     inv. 120 deg rotation - cart. axis [1,1,1]   
+
+ cryst.   s(45) = (     0         -1          0      )
+                  (     0          0         -1      )
+                  (    -1          0          0      )
+
+ cart.    s(45) = (  0.0000000  0.0000000 -1.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+
+
+      isym = 46     inv. 120 deg rotation - cart. axis [-1,1,-1] 
+
+ cryst.   s(46) = (     0          1          0      )
+                  (     0          0          1      )
+                  (    -1          0          0      )
+
+ cart.    s(46) = (  0.0000000  0.0000000 -1.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+
+
+      isym = 47     inv. 120 deg rotation - cart. axis [1,-1,-1] 
+
+ cryst.   s(47) = (     0          1          0      )
+                  (     0          0         -1      )
+                  (     1          0          0      )
+
+ cart.    s(47) = (  0.0000000  0.0000000  1.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+
+
+      isym = 48     inv. 120 deg rotation - cart. axis [-1,-1,1] 
+
+ cryst.   s(48) = (     0         -1          0      )
+                  (     0          0          1      )
+                  (     1          0          0      )
+
+ cart.    s(48) = (  0.0000000  0.0000000  1.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+
+
+     point group O_h (m-3m) 
+     there are 10 classes
+     the character table:
+
+       E     8C3   3C2   6C4   6C2'  i     8S6   3s_h  6S4   6s_d 
+A_1g   1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00
+A_2g   1.00  1.00  1.00 -1.00 -1.00  1.00  1.00  1.00 -1.00 -1.00
+E_g    2.00 -1.00  2.00  0.00  0.00  2.00 -1.00  2.00  0.00  0.00
+T_1g   3.00  0.00 -1.00  1.00 -1.00  3.00  0.00 -1.00  1.00 -1.00
+T_2g   3.00  0.00 -1.00 -1.00  1.00  3.00  0.00 -1.00 -1.00  1.00
+A_1u   1.00  1.00  1.00  1.00  1.00 -1.00 -1.00 -1.00 -1.00 -1.00
+A_2u   1.00  1.00  1.00 -1.00 -1.00 -1.00 -1.00 -1.00  1.00  1.00
+E_u    2.00 -1.00  2.00  0.00  0.00 -2.00  1.00 -2.00  0.00  0.00
+T_1u   3.00  0.00 -1.00  1.00 -1.00 -3.00  0.00  1.00 -1.00  1.00
+T_2u   3.00  0.00 -1.00 -1.00  1.00 -3.00  0.00  1.00  1.00 -1.00
+
+     the symmetry operations in each class and the name of the first element:
+
+     E        1
+          identity                                               
+     8C3     17   19   20   18   24   21   22   23
+          120 deg rotation - cart. axis [-1,-1,-1]               
+     3C2      2    4    3
+          180 deg rotation - cart. axis [0,0,1]                  
+     6C4      7    8   15   16   12   11
+           90 deg rotation - cart. axis [0,0,-1]                 
+     6C2'     5    6   14   13   10    9
+          180 deg rotation - cart. axis [1,1,0]                  
+     i       25
+          inversion                                              
+     8S6     41   43   44   42   48   45   46   47
+          inv. 120 deg rotation - cart. axis [-1,-1,-1]          
+     3s_h    26   28   27
+          inv. 180 deg rotation - cart. axis [0,0,1]             
+     6S4     31   32   39   40   36   35
+          inv.  90 deg rotation - cart. axis [0,0,-1]            
+     6s_d    29   30   38   37   34   33
+          inv. 180 deg rotation - cart. axis [1,1,0]             
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1        Al     tau(   1) = (   0.5000000   0.5000000   0.5000000  )
+         2        Ti     tau(   2) = (   0.0000000   0.0000000   0.0000000  )
+
+   Crystallographic axes
+
+     site n.     atom                  positions (cryst. coord.)
+         1        Al     tau(   1) = (  0.5000000  0.5000000  0.5000000  )
+         2        Ti     tau(   2) = (  0.0000000  0.0000000  0.0000000  )
+
+     number of k points=     1  Fermi-Dirac smearing, width (Ry)=  0.0127
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   2.0000000
+
+                       cryst. coord.
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   2.0000000
+
+     Dense  grid:    37447 G-vectors     FFT dimensions: (  54,  54,  54)
+
+     Dynamical RAM for                 wfc:       1.07 MB
+
+     Dynamical RAM for     wfc (w. buffer):       1.07 MB
+
+     Dynamical RAM for             U proj.:       0.18 MB
+
+     Dynamical RAM for  U proj. (w. buff.):       0.18 MB
+
+     Dynamical RAM for           str. fact:       0.57 MB
+
+     Dynamical RAM for           local pot:       0.00 MB
+
+     Dynamical RAM for          nlocal pot:       1.29 MB
+
+     Dynamical RAM for                qrad:       8.12 MB
+
+     Dynamical RAM for          rho,v,vnew:       2.66 MB
+
+     Dynamical RAM for               rhoin:       0.89 MB
+
+     Dynamical RAM for            rho*nmix:       4.57 MB
+
+     Dynamical RAM for           G-vectors:       1.21 MB
+
+     Dynamical RAM for          h,s,v(r/c):       0.08 MB
+
+     Dynamical RAM for          <psi|beta>:       0.01 MB
+
+     Dynamical RAM for                 psi:       2.15 MB
+
+     Dynamical RAM for                hpsi:       2.15 MB
+
+     Dynamical RAM for      wfcinit/wfcrot:       2.17 MB
+
+     Estimated static dynamical RAM per process >      19.85 MB
+
+     Estimated max dynamical RAM per process >      28.81 MB
+
+     Estimated total dynamical RAM >      57.62 MB
+
+     Initial potential from superposition of free atoms
+
+     starting charge      14.9960, renormalised to      15.0000
+
+     HUBBARD ENERGY =    0.2940  (Ry)
+
+     STARTING HUBBARD OCCUPATIONS:
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   2.00000
+     eigenvalues:
+       0.200  0.200  0.200  0.200  0.200
+     eigenvectors (columns):
+       1.000  0.000  0.000  0.000  0.000
+       0.000  1.000  0.000  0.000  0.000
+       0.000  0.000  1.000  0.000  0.000
+       0.000  0.000  0.000  1.000  0.000
+       0.000  0.000  0.000  0.000  1.000
+     occupation matrix ns (before diag.):
+       0.200  0.000  0.000  0.000  0.000
+       0.000  0.200  0.000  0.000  0.000
+       0.000  0.000  0.200  0.000  0.000
+       0.000  0.000  0.000  0.200  0.000
+       0.000  0.000  0.000  0.000  0.200
+
+     Number of occupied Hubbard levels =    2.0000
+
+     Atomic wfc used for Hubbard projectors are NOT orthogonalized
+
+     Starting wfcs are random
+
+     total cpu time spent up to now is        1.2 secs
+
+     per-process dynamical memory:   186.0 Mb
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           243 MiB given to the printing process from OS
+           181 MiB allocation reported by mallinfo(arena+hblkhd)
+        489187 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.00E-02,  avg # of iterations =  8.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.92898
+     eigenvalues:
+       0.135  0.135  0.135  1.030  1.030
+     eigenvectors (columns):
+      -0.000 -0.000  0.000 -0.248 -0.969
+      -0.259  0.774  0.578  0.000  0.000
+      -0.371  0.473 -0.799  0.000 -0.000
+       0.000  0.000 -0.000  0.969 -0.248
+       0.891  0.422 -0.165 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.030 -0.000 -0.000  0.000  0.000
+      -0.000  0.135 -0.000  0.000  0.000
+      -0.000 -0.000  0.135  0.000  0.000
+       0.000  0.000  0.000  1.030 -0.000
+       0.000  0.000  0.000 -0.000  0.135
+
+     Number of occupied Hubbard levels =    4.9290
+
+     HUBBARD ENERGY =    0.1057  (Ry)
+
+     total cpu time spent up to now is        1.4 secs
+
+     total energy              =    -123.08801130 Ry
+     estimated scf accuracy    <       0.50732162 Ry
+
+     iteration #  2     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           248 MiB given to the printing process from OS
+           182 MiB allocation reported by mallinfo(arena+hblkhd)
+        489185 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  3.38E-03,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.22373
+     eigenvalues:
+       0.000  0.000  0.000  1.056  1.056
+     eigenvectors (columns):
+       0.000 -0.000 -0.000 -0.368 -0.930
+       0.521  0.000  0.853 -0.000 -0.000
+       0.853  0.001 -0.521  0.000  0.000
+      -0.000  0.000  0.000  0.930 -0.368
+      -0.001  1.000 -0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.056  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.056 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.2237
+
+     HUBBARD ENERGY =    0.0776  (Ry)
+
+     total cpu time spent up to now is        1.5 secs
+
+     total energy              =    -123.20035049 Ry
+     estimated scf accuracy    <       0.09906336 Ry
+
+     iteration #  3     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           248 MiB given to the printing process from OS
+           183 MiB allocation reported by mallinfo(arena+hblkhd)
+        489175 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  6.60E-04,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.21374
+     eigenvalues:
+       0.000  0.000  0.000  1.053  1.053
+     eigenvectors (columns):
+       0.000  0.000 -0.000 -0.514  0.858
+      -0.000 -0.851 -0.524 -0.000  0.000
+      -0.000  0.524 -0.851  0.000  0.000
+      -0.000 -0.000  0.000  0.858  0.514
+      -1.000  0.000  0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.053  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.053 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.2137
+
+     HUBBARD ENERGY =   -0.0249  (Ry)
+
+     total cpu time spent up to now is        1.6 secs
+
+     total energy              =    -123.20602534 Ry
+     estimated scf accuracy    <       0.05766455 Ry
+
+     iteration #  4     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           248 MiB given to the printing process from OS
+           183 MiB allocation reported by mallinfo(arena+hblkhd)
+        489174 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  3.84E-04,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.19050
+     eigenvalues:
+       0.000  0.000  0.000  1.048  1.048
+     eigenvectors (columns):
+       0.000  0.000  0.000 -0.444 -0.896
+       0.000  0.690 -0.723 -0.000 -0.000
+       0.000  0.723  0.690  0.000  0.000
+      -0.000 -0.000 -0.000  0.896 -0.444
+      -1.000  0.000 -0.000 -0.000  0.000
+     occupation matrix ns (before diag.):
+       1.048  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.048 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.1905
+
+     HUBBARD ENERGY =   -0.0277  (Ry)
+
+     total cpu time spent up to now is        1.7 secs
+
+     total energy              =    -123.20926106 Ry
+     estimated scf accuracy    <       0.00150870 Ry
+
+     iteration #  5     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           248 MiB given to the printing process from OS
+           184 MiB allocation reported by mallinfo(arena+hblkhd)
+        489173 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.01E-05,  avg # of iterations =  3.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.19597
+     eigenvalues:
+       0.000  0.000  0.000  1.049  1.049
+     eigenvectors (columns):
+      -0.000 -0.000 -0.000 -0.253 -0.967
+       0.881 -0.472  0.000 -0.000 -0.000
+      -0.472 -0.881  0.000  0.000  0.000
+       0.000  0.000  0.000  0.967 -0.253
+      -0.000  0.000  1.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.049  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.049 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.1960
+
+     HUBBARD ENERGY =   -0.0395  (Ry)
+
+     total cpu time spent up to now is        1.8 secs
+
+     total energy              =    -123.20932754 Ry
+     estimated scf accuracy    <       0.00076847 Ry
+
+     iteration #  6     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           248 MiB given to the printing process from OS
+           184 MiB allocation reported by mallinfo(arena+hblkhd)
+        489199 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  5.12E-06,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.20055
+     eigenvalues:
+       0.000  0.000  0.000  1.050  1.050
+     eigenvectors (columns):
+       0.000 -0.000 -0.000 -0.383 -0.924
+       0.534  0.846 -0.000 -0.000  0.000
+       0.846 -0.534 -0.000  0.000 -0.000
+      -0.000  0.000  0.000  0.924 -0.383
+       0.000 -0.000  1.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.050  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.050 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.2006
+
+     HUBBARD ENERGY =   -0.0388  (Ry)
+
+     total cpu time spent up to now is        1.9 secs
+
+     total energy              =    -123.20934494 Ry
+     estimated scf accuracy    <       0.00002808 Ry
+
+     iteration #  7     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           250 MiB given to the printing process from OS
+           185 MiB allocation reported by mallinfo(arena+hblkhd)
+        489193 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.87E-07,  avg # of iterations =  2.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.20095
+     eigenvalues:
+       0.000  0.000  0.000  1.050  1.050
+     eigenvectors (columns):
+       0.000 -0.000  0.000 -0.569  0.822
+       0.000 -0.542 -0.840 -0.000  0.000
+       0.000 -0.840  0.542  0.000  0.000
+      -0.000  0.000 -0.000  0.822  0.569
+      -1.000 -0.000  0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.050  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.050 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.2009
+
+     HUBBARD ENERGY =   -0.0386  (Ry)
+
+     total cpu time spent up to now is        2.0 secs
+
+     total energy              =    -123.20934934 Ry
+     estimated scf accuracy    <       0.00000106 Ry
+
+     iteration #  8     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           252 MiB given to the printing process from OS
+           185 MiB allocation reported by mallinfo(arena+hblkhd)
+        489193 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  7.04E-09,  avg # of iterations =  2.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.20076
+     eigenvalues:
+       0.000  0.000  0.000  1.050  1.050
+     eigenvectors (columns):
+       0.000 -0.000 -0.000 -0.283 -0.959
+      -0.853 -0.523  0.000 -0.000 -0.000
+       0.523 -0.853  0.000  0.000 -0.000
+      -0.000  0.000  0.000  0.959 -0.283
+       0.000  0.000  1.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.050  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.050 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.2008
+
+     HUBBARD ENERGY =   -0.0387  (Ry)
+
+     total cpu time spent up to now is        2.1 secs
+
+     total energy              =    -123.20934951 Ry
+     estimated scf accuracy    <       0.00000008 Ry
+
+     iteration #  9     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           253 MiB given to the printing process from OS
+           186 MiB allocation reported by mallinfo(arena+hblkhd)
+        489192 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  5.25E-10,  avg # of iterations =  2.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.20074
+     eigenvalues:
+       0.000  0.000  0.000  1.050  1.050
+     eigenvectors (columns):
+      -0.000 -0.000 -0.000 -0.337 -0.942
+       0.855  0.000 -0.518 -0.000 -0.000
+      -0.518  0.000 -0.855  0.000  0.000
+       0.000  0.000  0.000  0.942 -0.337
+      -0.000  1.000  0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.050  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.050 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.2007
+
+     HUBBARD ENERGY =   -0.0387  (Ry)
+
+     total cpu time spent up to now is        2.2 secs
+
+     total energy              =    -123.20934952 Ry
+     estimated scf accuracy    <          2.7E-09 Ry
+
+     iteration # 10     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           254 MiB given to the printing process from OS
+           187 MiB allocation reported by mallinfo(arena+hblkhd)
+        489192 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.81E-11,  avg # of iterations =  2.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.20073
+     eigenvalues:
+       0.000  0.000  0.000  1.050  1.050
+     eigenvectors (columns):
+       0.000 -0.000  0.000 -0.324 -0.946
+       0.521  0.000 -0.853 -0.000 -0.000
+       0.853  0.000  0.521  0.000  0.000
+      -0.000  0.000 -0.000  0.946 -0.324
+      -0.000  1.000  0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.050  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.050 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.2007
+
+     HUBBARD ENERGY =   -0.0387  (Ry)
+
+     total cpu time spent up to now is        2.3 secs
+
+     total energy              =    -123.20934952 Ry
+     estimated scf accuracy    <          7.4E-10 Ry
+
+     iteration # 11     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           256 MiB given to the printing process from OS
+           187 MiB allocation reported by mallinfo(arena+hblkhd)
+        489191 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  4.92E-12,  avg # of iterations =  2.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.20073
+     eigenvalues:
+       0.000  0.000  0.000  1.050  1.050
+     eigenvectors (columns):
+      -0.000 -0.000  0.000 -0.610  0.793
+      -0.521  0.000 -0.854 -0.000  0.000
+      -0.854  0.000  0.521  0.000  0.000
+       0.000  0.000 -0.000  0.793  0.610
+       0.000  1.000 -0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.050  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.050 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.2007
+
+     HUBBARD ENERGY =   -0.0387  (Ry)
+
+     total cpu time spent up to now is        2.4 secs
+
+     total energy              =    -123.20934952 Ry
+     estimated scf accuracy    <          1.1E-10 Ry
+
+     iteration # 12     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           256 MiB given to the printing process from OS
+           187 MiB allocation reported by mallinfo(arena+hblkhd)
+        489191 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  7.64E-13,  avg # of iterations =  2.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.20073
+     eigenvalues:
+       0.000  0.000  0.000  1.050  1.050
+     eigenvectors (columns):
+      -0.000  0.000 -0.000 -0.444  0.896
+       0.853  0.521  0.000 -0.000 -0.000
+      -0.521  0.853  0.000  0.000  0.000
+       0.000 -0.000  0.000  0.896  0.444
+      -0.000 -0.000  1.000 -0.000  0.000
+     occupation matrix ns (before diag.):
+       1.050  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.050 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.2007
+
+     HUBBARD ENERGY =   -0.0387  (Ry)
+
+     total cpu time spent up to now is        2.4 secs
+
+     End of self-consistent calculation
+
+          k = 0.0000 0.0000 0.0000 (  4718 PWs)   bands (ev):
+
+   -45.9167 -22.2374 -22.2374 -22.2374   0.0923   6.0758   6.0758  11.6939
+    11.6939  11.6939  14.2502  14.2502  14.2502  16.4439  16.4439  16.8744
+    23.9505  23.9505  23.9505  25.0161  25.0161  25.0161  26.1284  26.1284
+    26.1284  28.1251  28.1251  34.8448  36.4324  39.5611
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   0.1667
+     0.1667   0.1667   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+
+     the Fermi energy is    11.4166 ev
+
+!    total energy              =    -123.20934952 Ry
+     estimated scf accuracy    <          2.4E-11 Ry
+     smearing contrib. (-TS)   =      -0.03424453 Ry
+     internal energy E=F+TS    =    -123.17510500 Ry
+
+     The total energy is F=E-TS. E is the sum of the following terms:
+     one-electron contribution =     -64.27689257 Ry
+     hartree contribution      =      36.46764914 Ry
+     xc contribution           =     -19.65852705 Ry
+     ewald contribution        =     -75.66860065 Ry
+     Hubbard energy            =      -0.03873387 Ry
+
+     convergence has been achieved in  12 iterations
+
+     Forces acting on atoms (cartesian axes, Ry/au):
+
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
+     The non-local contrib.  to forces
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
+     The ionic contribution  to forces
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =    -0.00000000   -0.00000000   -0.00000000
+     The local contribution  to forces
+     atom    1 type  2   force =     0.00000005   -0.00000015   -0.00000003
+     atom    2 type  1   force =    -0.00000075    0.00000405    0.00000202
+     The core correction contribution to forces
+     atom    1 type  2   force =     0.00000000   -0.00000001    0.00000000
+     atom    2 type  1   force =    -0.00000001    0.00000005    0.00000002
+     The Hubbard contrib.    to forces
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
+     The SCF correction term to forces
+     atom    1 type  2   force =    -0.00000003    0.00000008    0.00000003
+     atom    2 type  1   force =     0.00000075   -0.00000356   -0.00000182
+
+     Total force =     0.000000     Total SCF correction =     0.000004
+
+
+     Computing stress (Cartesian axis) and pressure
+
+          total   stress  (Ry/bohr**3)                   (kbar)     P=     -235.28
+  -0.00159938   0.00000000   0.00000000         -235.28        0.00        0.00
+   0.00000000  -0.00159938   0.00000000            0.00     -235.28        0.00
+   0.00000000   0.00000000  -0.00159938            0.00        0.00     -235.28
+
+     kinetic stress (kbar)  17800.29      0.00      0.00
+                                0.00  17800.29      0.00
+                                0.00      0.00  17800.29
+
+     local   stress (kbar)  -9409.70     -0.00     -0.00
+                               -0.00  -9409.70     -0.00
+                               -0.00     -0.00  -9409.70
+
+     nonloc. stress (kbar)   1623.87      0.00      0.00
+                                0.00   1623.87      0.00
+                                0.00      0.00   1623.87
+
+     hartree stress (kbar)   6511.40      0.00      0.00
+                                0.00   6511.40      0.00
+                                0.00      0.00   6511.40
+
+     exc-cor stress (kbar)  -1225.36      0.00      0.00
+                                0.00  -1225.36      0.00
+                                0.00      0.00  -1225.36
+
+     corecor stress (kbar)  -1938.49     -0.00     -0.00
+                               -0.00  -1938.49     -0.00
+                               -0.00     -0.00  -1938.49
+
+     ewald   stress (kbar) -13510.83      0.00      0.00
+                                0.00 -13510.83     -0.00
+                                0.00     -0.00 -13510.83
+
+     hubbard stress (kbar)    -86.45      0.00      0.00
+                                0.00    -86.45      0.00
+                                0.00      0.00    -86.45
+
+     DFT-D   stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     XDM     stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     dft-nl  stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     TS-vdW  stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     MDB     stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     3D-RISM stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+
+     BFGS Geometry Optimization
+     Energy error            =      0.0E+00 Ry
+     Gradient error          =      0.0E+00 Ry/Bohr
+     Cell gradient error     =      2.4E+02 kbar
+
+     number of scf cycles    =   1
+     number of bfgs steps    =   0
+
+     enthalpy           new  =    -123.2093495213 Ry
+
+     new trust radius        =       0.1325234974 bohr
+     new conv_thr            =            1.0E-10 Ry
+
+     new unit-cell volume =    242.98231 a.u.^3 (    36.00626 Ang^3 )
+     density =      3.45885 g/cm^3
+
+CELL_PARAMETERS (alat=  6.50000000)
+   0.960015391   0.000000000   0.000000000
+   0.000000000   0.960015391   0.000000000
+   0.000000000   0.000000000   0.960015391
+
+ATOMIC_POSITIONS (crystal)
+Al               0.5000000000        0.5000000000        0.5000000000
+Ti               0.0000000000        0.0000000000        0.0000000000
+
+
+
+     Writing config-only to output data dir ./pwscf.save/ :
+     XML data file
+     NEW-OLD atomic charge density approx. for the potential
+
+     HUBBARD ENERGY =   -0.0387  (Ry)
+
+     Atomic wfc used for Hubbard projectors are NOT orthogonalized
+
+
+     total cpu time spent up to now is        2.6 secs
+
+     per-process dynamical memory:   192.9 Mb
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           188 MiB allocation reported by mallinfo(arena+hblkhd)
+        489190 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.00E-06,  avg # of iterations =  6.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.21868
+     eigenvalues:
+       0.000  0.000  0.000  1.055  1.055
+     eigenvectors (columns):
+      -0.000 -0.000 -0.000 -0.296 -0.955
+      -0.000  0.853 -0.522 -0.000 -0.000
+      -0.000 -0.522 -0.853  0.000  0.000
+       0.000  0.000  0.000  0.955 -0.296
+       1.000 -0.000 -0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.055  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.055 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.2187
+
+     HUBBARD ENERGY =   -0.0424  (Ry)
+
+     total cpu time spent up to now is        2.8 secs
+
+     total energy              =    -123.25614822 Ry
+     estimated scf accuracy    <       0.00393747 Ry
+
+     iteration #  2     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           189 MiB allocation reported by mallinfo(arena+hblkhd)
+        489190 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  2.62E-05,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.23678
+     eigenvalues:
+       0.000  0.000  0.000  1.059  1.059
+     eigenvectors (columns):
+       0.000  0.000 -0.000 -0.358 -0.934
+       0.522 -0.853  0.000 -0.000 -0.000
+       0.853  0.522  0.000  0.000  0.000
+      -0.000 -0.000  0.000  0.934 -0.358
+      -0.000 -0.000  1.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.059  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.059 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.2368
+
+     HUBBARD ENERGY =   -0.0436  (Ry)
+
+     total cpu time spent up to now is        2.9 secs
+
+     total energy              =    -123.25616445 Ry
+     estimated scf accuracy    <       0.00076803 Ry
+
+     iteration #  3     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           190 MiB allocation reported by mallinfo(arena+hblkhd)
+        489190 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  5.12E-06,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.24833
+     eigenvalues:
+       0.000  0.000  0.000  1.062  1.062
+     eigenvectors (columns):
+       0.000  0.000 -0.000  0.444 -0.896
+       0.000 -0.853 -0.522  0.000 -0.000
+       0.000  0.522 -0.853 -0.000  0.000
+      -0.000 -0.000  0.000 -0.896 -0.444
+      -1.000 -0.000 -0.000  0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.062  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.062 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.2483
+
+     HUBBARD ENERGY =   -0.0483  (Ry)
+
+     total cpu time spent up to now is        2.9 secs
+
+     total energy              =    -123.25632823 Ry
+     estimated scf accuracy    <       0.00009025 Ry
+
+     iteration #  4     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           191 MiB allocation reported by mallinfo(arena+hblkhd)
+        489190 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  6.02E-07,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.25099
+     eigenvalues:
+       0.000  0.000  0.000  1.063  1.063
+     eigenvectors (columns):
+      -0.000 -0.000  0.000  0.444  0.896
+      -0.522  0.000 -0.853  0.000  0.000
+      -0.853  0.000  0.522 -0.000 -0.000
+       0.000  0.000 -0.000 -0.896  0.444
+       0.000  1.000  0.000  0.000  0.000
+     occupation matrix ns (before diag.):
+       1.063  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.063 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.2510
+
+     HUBBARD ENERGY =   -0.0485  (Ry)
+
+     total cpu time spent up to now is        3.0 secs
+
+     total energy              =    -123.25633209 Ry
+     estimated scf accuracy    <       0.00000985 Ry
+
+     iteration #  5     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           191 MiB allocation reported by mallinfo(arena+hblkhd)
+        489190 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  6.57E-08,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.25039
+     eigenvalues:
+       0.000  0.000  0.000  1.063  1.063
+     eigenvectors (columns):
+      -0.000  0.000  0.000  0.444 -0.896
+       0.853  0.000  0.522  0.000 -0.000
+      -0.522  0.000  0.853 -0.000 -0.000
+       0.000 -0.000 -0.000 -0.896 -0.444
+       0.000 -1.000  0.000  0.000  0.000
+     occupation matrix ns (before diag.):
+       1.063  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.063 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.2504
+
+     HUBBARD ENERGY =   -0.0486  (Ry)
+
+     total cpu time spent up to now is        3.1 secs
+
+     total energy              =    -123.25633155 Ry
+     estimated scf accuracy    <       0.00000337 Ry
+
+     iteration #  6     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           192 MiB allocation reported by mallinfo(arena+hblkhd)
+        489190 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  2.25E-08,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.25000
+     eigenvalues:
+       0.000  0.000  0.000  1.062  1.062
+     eigenvectors (columns):
+      -0.000 -0.000 -0.000 -0.304 -0.953
+       0.853 -0.000 -0.522 -0.000 -0.000
+      -0.522 -0.000 -0.853  0.000  0.000
+       0.000  0.000  0.000  0.953 -0.304
+      -0.000  1.000 -0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.062  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.062 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.2500
+
+     HUBBARD ENERGY =   -0.0487  (Ry)
+
+     total cpu time spent up to now is        3.2 secs
+
+     total energy              =    -123.25633140 Ry
+     estimated scf accuracy    <       0.00000073 Ry
+
+     iteration #  7     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           192 MiB allocation reported by mallinfo(arena+hblkhd)
+        489190 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  4.84E-09,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.24967
+     eigenvalues:
+       0.000  0.000  0.000  1.062  1.062
+     eigenvectors (columns):
+       0.000  0.000  0.000 -0.251 -0.968
+       0.000 -0.853  0.522 -0.000 -0.000
+       0.000  0.522  0.853  0.000  0.000
+      -0.000 -0.000 -0.000  0.968 -0.251
+      -1.000 -0.000  0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.062  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.062 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.2497
+
+     HUBBARD ENERGY =   -0.0487  (Ry)
+
+     total cpu time spent up to now is        3.3 secs
+
+     total energy              =    -123.25633151 Ry
+     estimated scf accuracy    <       0.00000001 Ry
+
+     iteration #  8     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           193 MiB allocation reported by mallinfo(arena+hblkhd)
+        489190 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  8.65E-11,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.24961
+     eigenvalues:
+       0.000  0.000  0.000  1.062  1.062
+     eigenvectors (columns):
+       0.000  0.000  0.000 -0.225 -0.974
+       0.000  0.522 -0.853 -0.000 -0.000
+       0.000  0.853  0.522  0.000  0.000
+      -0.000 -0.000 -0.000  0.974 -0.225
+      -1.000  0.000  0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.062  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.062 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.2496
+
+     HUBBARD ENERGY =   -0.0487  (Ry)
+
+     total cpu time spent up to now is        3.3 secs
+
+     total energy              =    -123.25633151 Ry
+     estimated scf accuracy    <          2.4E-09 Ry
+
+     iteration #  9     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           193 MiB allocation reported by mallinfo(arena+hblkhd)
+        489190 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.61E-11,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.24963
+     eigenvalues:
+       0.000  0.000  0.000  1.062  1.062
+     eigenvectors (columns):
+       0.000 -0.000  0.000 -0.246 -0.969
+       0.522  0.000 -0.853 -0.000 -0.000
+       0.853  0.000  0.522  0.000 -0.000
+      -0.000  0.000 -0.000  0.969 -0.246
+      -0.000  1.000  0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.062  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.062 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.2496
+
+     HUBBARD ENERGY =   -0.0487  (Ry)
+
+     total cpu time spent up to now is        3.4 secs
+
+     End of self-consistent calculation
+
+          k = 0.0000 0.0000 0.0000 (  4718 PWs)   bands (ev):
+
+   -44.5170 -20.8308 -20.8308 -20.8308   0.9983   7.0391   7.0391  13.5978
+    13.5978  13.5978  15.6783  15.6783  15.6783  18.4110  18.4110  20.0001
+    26.5473  26.5473  26.5473  27.3815  27.3815  27.3815  29.6283  29.6283
+    29.6283  31.0690  31.0690  38.0247  40.9625  43.6923
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   0.1667
+     0.1667   0.1667   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+
+     the Fermi energy is    13.3204 ev
+
+!    total energy              =    -123.25633151 Ry
+     estimated scf accuracy    <          1.1E-11 Ry
+     smearing contrib. (-TS)   =      -0.03424558 Ry
+     internal energy E=F+TS    =    -123.22208594 Ry
+
+     The total energy is F=E-TS. E is the sum of the following terms:
+     one-electron contribution =     -59.38094450 Ry
+     hartree contribution      =      34.80142060 Ry
+     xc contribution           =     -19.77363721 Ry
+     ewald contribution        =     -78.82019537 Ry
+     Hubbard energy            =      -0.04872945 Ry
+
+     convergence has been achieved in   9 iterations
+
+     Forces acting on atoms (cartesian axes, Ry/au):
+
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
+     The non-local contrib.  to forces
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
+     The ionic contribution  to forces
+     atom    1 type  2   force =    -0.00000000    0.00000000   -0.00000000
+     atom    2 type  1   force =    -0.00000000   -0.00000000   -0.00000000
+     The local contribution  to forces
+     atom    1 type  2   force =    -0.00000001   -0.00000004    0.00000001
+     atom    2 type  1   force =     0.00000006    0.00000096   -0.00000074
+     The core correction contribution to forces
+     atom    1 type  2   force =     0.00000000   -0.00000000   -0.00000000
+     atom    2 type  1   force =     0.00000000    0.00000002   -0.00000002
+     The Hubbard contrib.    to forces
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
+     The SCF correction term to forces
+     atom    1 type  2   force =     0.00000000    0.00000002   -0.00000001
+     atom    2 type  1   force =    -0.00000012   -0.00000088    0.00000048
+
+     Total force =     0.000000     Total SCF correction =     0.000001
+
+
+     Computing stress (Cartesian axis) and pressure
+
+          total   stress  (Ry/bohr**3)                   (kbar)     P=     -194.44
+  -0.00132174   0.00000000   0.00000000         -194.44        0.00        0.00
+   0.00000000  -0.00132174   0.00000000            0.00     -194.44        0.00
+   0.00000000   0.00000000  -0.00132174            0.00        0.00     -194.44
+
+     kinetic stress (kbar)  20170.12      0.00      0.00
+                                0.00  20170.12      0.00
+                                0.00      0.00  20170.12
+
+     local   stress (kbar)  -9684.63      0.00      0.00
+                                0.00  -9684.63     -0.00
+                                0.00     -0.00  -9684.63
+
+     nonloc. stress (kbar)   1903.35      0.00      0.00
+                                0.00   1903.35      0.00
+                                0.00      0.00   1903.35
+
+     hartree stress (kbar)   7023.10     -0.00     -0.00
+                               -0.00   7023.10      0.00
+                               -0.00      0.00   7023.10
+
+     exc-cor stress (kbar)  -1403.68     -0.00     -0.00
+                               -0.00  -1403.68      0.00
+                               -0.00      0.00  -1403.68
+
+     corecor stress (kbar)  -2194.67      0.00      0.00
+                                0.00  -2194.67     -0.00
+                                0.00     -0.00  -2194.67
+
+     ewald   stress (kbar) -15906.30      0.00      0.00
+                                0.00 -15906.30     -0.00
+                                0.00     -0.00 -15906.30
+
+     hubbard stress (kbar)   -101.72      0.00      0.00
+                                0.00   -101.72      0.00
+                                0.00      0.00   -101.72
+
+     DFT-D   stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     XDM     stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     dft-nl  stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     TS-vdW  stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     MDB     stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     3D-RISM stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     Energy error            =      4.7E-02 Ry
+     Gradient error          =      0.0E+00 Ry/Bohr
+     Cell gradient error     =      1.9E+02 kbar
+
+     number of scf cycles    =   2
+     number of bfgs steps    =   1
+
+     enthalpy           old  =    -123.2093495213 Ry
+     enthalpy           new  =    -123.2563315102 Ry
+
+     CASE: enthalpy          _new < enthalpy          _old
+
+     new trust radius        =       0.1947705298 bohr
+     new conv_thr            =            1.0E-12 Ry
+
+     new unit-cell volume =    200.22730 a.u.^3 (    29.67063 Ang^3 )
+     density =      4.19743 g/cm^3
+
+CELL_PARAMETERS (alat=  6.50000000)
+   0.900038476   0.000000000   0.000000000
+   0.000000000   0.900038476   0.000000000
+   0.000000000   0.000000000   0.900038476
+
+ATOMIC_POSITIONS (crystal)
+Al               0.5000000000        0.5000000000        0.5000000000
+Ti               0.0000000000        0.0000000000        0.0000000000
+
+
+
+     Writing config-only to output data dir ./pwscf.save/ :
+     XML data file
+     NEW-OLD atomic charge density approx. for the potential
+
+     HUBBARD ENERGY =   -0.0487  (Ry)
+
+     Atomic wfc used for Hubbard projectors are NOT orthogonalized
+
+
+     total cpu time spent up to now is        3.6 secs
+
+     per-process dynamical memory:   192.9 Mb
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           188 MiB allocation reported by mallinfo(arena+hblkhd)
+        489200 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.00E-06,  avg # of iterations =  6.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.28986
+     eigenvalues:
+       0.000  0.000  0.000  1.072  1.072
+     eigenvectors (columns):
+      -0.000 -0.000 -0.000 -0.314 -0.949
+      -0.000  0.853 -0.521 -0.000 -0.000
+      -0.000 -0.521 -0.853  0.000  0.000
+       0.000  0.000  0.000  0.949 -0.314
+       1.000  0.000 -0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.072  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.072 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.2899
+
+     HUBBARD ENERGY =   -0.0571  (Ry)
+
+     total cpu time spent up to now is        3.8 secs
+
+     total energy              =    -123.29281776 Ry
+     estimated scf accuracy    <       0.00918020 Ry
+
+     iteration #  2     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           189 MiB allocation reported by mallinfo(arena+hblkhd)
+        489200 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  6.12E-05,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.31478
+     eigenvalues:
+       0.000  0.000  0.000  1.079  1.079
+     eigenvectors (columns):
+      -0.000  0.000  0.000 -0.329 -0.944
+      -0.001 -0.854  0.521 -0.000  0.000
+      -0.001  0.521  0.854  0.000 -0.000
+       0.000 -0.000 -0.000  0.944 -0.329
+       1.000 -0.000  0.001 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.079  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.079 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3148
+
+     HUBBARD ENERGY =   -0.0589  (Ry)
+
+     total cpu time spent up to now is        3.9 secs
+
+     total energy              =    -123.29263110 Ry
+     estimated scf accuracy    <       0.00205038 Ry
+
+     iteration #  3     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           190 MiB allocation reported by mallinfo(arena+hblkhd)
+        489200 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.37E-05,  avg # of iterations =  2.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.33285
+     eigenvalues:
+       0.000  0.000  0.000  1.083  1.083
+     eigenvectors (columns):
+      -0.000 -0.000 -0.000 -0.275 -0.961
+      -0.003  0.975  0.223 -0.000 -0.000
+      -0.004  0.223 -0.975  0.000  0.000
+       0.000 -0.000  0.000  0.961 -0.275
+       1.000  0.003 -0.003 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.083  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.083 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3329
+
+     HUBBARD ENERGY =   -0.0654  (Ry)
+
+     total cpu time spent up to now is        3.9 secs
+
+     total energy              =    -123.29304086 Ry
+     estimated scf accuracy    <       0.00019727 Ry
+
+     iteration #  4     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           191 MiB allocation reported by mallinfo(arena+hblkhd)
+        489200 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.32E-06,  avg # of iterations =  9.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.33749
+     eigenvalues:
+       0.000  0.000  0.000  1.084  1.084
+     eigenvectors (columns):
+       0.000 -0.000  0.000 -0.206 -0.979
+       0.526  0.003 -0.850 -0.000 -0.000
+       0.850  0.004  0.526  0.000  0.000
+      -0.000  0.000 -0.000  0.979 -0.206
+      -0.005  1.000  0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.084  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.084 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3375
+
+     HUBBARD ENERGY =   -0.0656  (Ry)
+
+     total cpu time spent up to now is        4.0 secs
+
+     total energy              =    -123.29305359 Ry
+     estimated scf accuracy    <       0.00003552 Ry
+
+     iteration #  5     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           191 MiB allocation reported by mallinfo(arena+hblkhd)
+        489200 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  2.37E-07,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.33647
+     eigenvalues:
+       0.000  0.000  0.000  1.084  1.084
+     eigenvectors (columns):
+      -0.000 -0.000 -0.000 -0.227 -0.974
+       0.853 -0.521  0.002 -0.000 -0.000
+      -0.521 -0.853  0.003  0.000  0.000
+       0.000  0.000  0.000  0.974 -0.227
+       0.000  0.004  1.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.084  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.084 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3365
+
+     HUBBARD ENERGY =   -0.0660  (Ry)
+
+     total cpu time spent up to now is        4.1 secs
+
+     total energy              =    -123.29305165 Ry
+     estimated scf accuracy    <       0.00001352 Ry
+
+     iteration #  6     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           192 MiB allocation reported by mallinfo(arena+hblkhd)
+        489200 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  9.01E-08,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.33581
+     eigenvalues:
+       0.000  0.000  0.000  1.084  1.084
+     eigenvectors (columns):
+       0.000  0.000 -0.000 -0.184 -0.983
+      -0.975 -0.221  0.004 -0.000  0.000
+      -0.221  0.975  0.007  0.000 -0.000
+       0.000 -0.000  0.000  0.983 -0.184
+       0.005 -0.005  1.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.084  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.084 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3358
+
+     HUBBARD ENERGY =   -0.0662  (Ry)
+
+     total cpu time spent up to now is        4.2 secs
+
+     total energy              =    -123.29305055 Ry
+     estimated scf accuracy    <       0.00000370 Ry
+
+     iteration #  7     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           192 MiB allocation reported by mallinfo(arena+hblkhd)
+        489200 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  2.46E-08,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.33510
+     eigenvalues:
+       0.000  0.000  0.000  1.083  1.083
+     eigenvectors (columns):
+       0.000 -0.000  0.000 -0.353 -0.936
+      -0.853 -0.004  0.522 -0.000 -0.000
+       0.522 -0.006  0.853  0.000  0.000
+      -0.000  0.000 -0.000  0.936 -0.353
+      -0.000  1.000  0.008 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.083  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.083 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3351
+
+     HUBBARD ENERGY =   -0.0662  (Ry)
+
+     total cpu time spent up to now is        4.3 secs
+
+     total energy              =    -123.29305108 Ry
+     estimated scf accuracy    <       0.00000006 Ry
+
+     iteration #  8     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           193 MiB allocation reported by mallinfo(arena+hblkhd)
+        489200 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  4.15E-10,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.33510
+     eigenvalues:
+       0.000  0.000  0.000  1.083  1.083
+     eigenvectors (columns):
+      -0.000 -0.000  0.000 -0.363 -0.932
+      -0.512  0.002 -0.859 -0.000 -0.000
+      -0.859  0.004  0.512  0.000 -0.000
+       0.000  0.000 -0.000  0.932 -0.363
+       0.005  1.000 -0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.083  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.083 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3351
+
+     HUBBARD ENERGY =   -0.0662  (Ry)
+
+     total cpu time spent up to now is        4.4 secs
+
+     total energy              =    -123.29305106 Ry
+     estimated scf accuracy    <       0.00000005 Ry
+
+     iteration #  9     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           193 MiB allocation reported by mallinfo(arena+hblkhd)
+        489200 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  3.43E-10,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.33501
+     eigenvalues:
+       0.000  0.000  0.000  1.083  1.083
+     eigenvectors (columns):
+      -0.000  0.000 -0.000 -0.403 -0.915
+       0.854  0.008 -0.521 -0.000 -0.000
+      -0.521  0.013 -0.853  0.000  0.000
+       0.000 -0.000  0.000  0.915 -0.403
+      -0.000 -1.000 -0.015 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.083  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.083 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3350
+
+     HUBBARD ENERGY =   -0.0662  (Ry)
+
+     total cpu time spent up to now is        4.5 secs
+
+     total energy              =    -123.29305107 Ry
+     estimated scf accuracy    <          9.1E-11 Ry
+
+     iteration # 10     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           194 MiB allocation reported by mallinfo(arena+hblkhd)
+        489208 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  6.05E-13,  avg # of iterations =  2.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.33501
+     eigenvalues:
+       0.000  0.000  0.000  1.083  1.083
+     eigenvectors (columns):
+      -0.000  0.000 -0.000 -0.530  0.848
+       0.969 -0.244  0.029 -0.000  0.000
+       0.242  0.969  0.054  0.000 -0.000
+      -0.000 -0.000  0.000  0.848  0.530
+      -0.041 -0.045  0.998 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.083  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.083 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3350
+
+     HUBBARD ENERGY =   -0.0662  (Ry)
+
+     total cpu time spent up to now is        4.6 secs
+
+     total energy              =    -123.29305107 Ry
+     estimated scf accuracy    <          1.0E-11 Ry
+
+     iteration # 11     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           194 MiB allocation reported by mallinfo(arena+hblkhd)
+        489208 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.00E-13,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.33501
+     eigenvalues:
+       0.000  0.000  0.000  1.083  1.083
+     eigenvectors (columns):
+      -0.000  0.000 -0.000 -0.183 -0.983
+      -0.003  0.989  0.148 -0.000 -0.000
+      -0.005  0.148 -0.989  0.000  0.000
+       0.000  0.000  0.000  0.983 -0.183
+       1.000  0.004 -0.005 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.083  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.083 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3350
+
+     HUBBARD ENERGY =   -0.0662  (Ry)
+
+     total cpu time spent up to now is        4.6 secs
+
+     End of self-consistent calculation
+
+          k = 0.0000 0.0000 0.0000 (  4718 PWs)   bands (ev):
+
+   -42.0122 -18.3032 -18.3032 -18.3032   2.7282   8.7527   8.7527  17.0911
+    17.0911  17.0911  18.2477  18.2477  18.2477  21.9458  21.9458  25.7454
+    31.1843  31.1843  31.1843  31.5477  31.5477  31.5477  35.9827  35.9827
+    35.9827  36.3290  36.3290  43.6238  49.0173  50.7894
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   0.1664
+     0.1664   0.1664   0.0002   0.0002   0.0002   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+
+     the Fermi energy is    16.8135 ev
+
+!    total energy              =    -123.29305107 Ry
+     estimated scf accuracy    <          8.1E-13 Ry
+     smearing contrib. (-TS)   =      -0.03438692 Ry
+     internal energy E=F+TS    =    -123.25866414 Ry
+
+     The total energy is F=E-TS. E is the sum of the following terms:
+     one-electron contribution =     -51.31430104 Ry
+     hartree contribution      =      32.18462848 Ry
+     xc contribution           =     -19.99012352 Ry
+     ewald contribution        =     -84.07262870 Ry
+     Hubbard energy            =      -0.06623936 Ry
+
+     convergence has been achieved in  11 iterations
+
+     Forces acting on atoms (cartesian axes, Ry/au):
+
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
+     The non-local contrib.  to forces
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
+     The ionic contribution  to forces
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =    -0.00000000   -0.00000000   -0.00000000
+     The local contribution  to forces
+     atom    1 type  2   force =    -0.00000000    0.00000001    0.00000001
+     atom    2 type  1   force =    -0.00000004   -0.00000021   -0.00000019
+     The core correction contribution to forces
+     atom    1 type  2   force =    -0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000000   -0.00000000   -0.00000000
+     The Hubbard contrib.    to forces
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
+     The SCF correction term to forces
+     atom    1 type  2   force =    -0.00000000   -0.00000000   -0.00000000
+     atom    2 type  1   force =     0.00000004    0.00000017    0.00000016
+
+     Total force =     0.000000     Total SCF correction =     0.000000
+
+
+     Computing stress (Cartesian axis) and pressure
+
+          total   stress  (Ry/bohr**3)                   (kbar)     P=      -26.69
+  -0.00018142   0.00000000   0.00000000          -26.69        0.00        0.00
+   0.00000000  -0.00018142   0.00000000            0.00      -26.69        0.00
+   0.00000000   0.00000000  -0.00018142            0.00        0.00      -26.69
+
+     kinetic stress (kbar)  24646.69      0.00      0.00
+                                0.00  24646.69      0.00
+                                0.00      0.00  24646.69
+
+     local   stress (kbar)  -9876.34     -0.00     -0.00
+                               -0.00  -9876.34     -0.00
+                               -0.00     -0.00  -9876.34
+
+     nonloc. stress (kbar)   2457.95      0.00      0.00
+                                0.00   2457.95      0.00
+                                0.00      0.00   2457.95
+
+     hartree stress (kbar)   7881.91      0.00      0.00
+                                0.00   7881.91      0.00
+                                0.00      0.00   7881.91
+
+     exc-cor stress (kbar)  -1745.64      0.00      0.00
+                                0.00  -1745.64      0.00
+                                0.00      0.00  -1745.64
+
+     corecor stress (kbar)  -2673.44     -0.00     -0.00
+                               -0.00  -2673.44     -0.00
+                               -0.00     -0.00  -2673.44
+
+     ewald   stress (kbar) -20589.12     -0.00      0.00
+                               -0.00 -20589.12     -0.00
+                                0.00     -0.00 -20589.12
+
+     hubbard stress (kbar)   -128.70      0.00      0.00
+                                0.00   -128.70      0.00
+                                0.00      0.00   -128.70
+
+     DFT-D   stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     XDM     stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     dft-nl  stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     TS-vdW  stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     MDB     stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     3D-RISM stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     Energy error            =      3.7E-02 Ry
+     Gradient error          =      0.0E+00 Ry/Bohr
+     Cell gradient error     =      2.7E+01 kbar
+
+     number of scf cycles    =   3
+     number of bfgs steps    =   2
+
+     enthalpy           old  =    -123.2563315102 Ry
+     enthalpy           new  =    -123.2930510652 Ry
+
+     CASE: enthalpy          _new < enthalpy          _old
+
+     new trust radius        =       0.0258728131 bohr
+     new conv_thr            =            1.0E-12 Ry
+
+     new unit-cell volume =    194.78578 a.u.^3 (    28.86428 Ang^3 )
+     density =      4.31469 g/cm^3
+
+CELL_PARAMETERS (alat=  6.50000000)
+   0.891810120   0.000000000   0.000000000
+   0.000000000   0.891810120   0.000000000
+   0.000000000   0.000000000   0.891810120
+
+ATOMIC_POSITIONS (crystal)
+Al               0.5000000000        0.5000000000        0.5000000000
+Ti               0.0000000000        0.0000000000        0.0000000000
+
+
+
+     Writing config-only to output data dir ./pwscf.save/ :
+     XML data file
+     NEW-OLD atomic charge density approx. for the potential
+
+     HUBBARD ENERGY =   -0.0662  (Ry)
+
+     Atomic wfc used for Hubbard projectors are NOT orthogonalized
+
+
+     total cpu time spent up to now is        4.9 secs
+
+     per-process dynamical memory:   192.9 Mb
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           188 MiB allocation reported by mallinfo(arena+hblkhd)
+        489202 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.00E-06,  avg # of iterations =  4.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34242
+     eigenvalues:
+       0.000  0.000  0.000  1.085  1.085
+     eigenvectors (columns):
+      -0.000 -0.000  0.000 -0.221 -0.975
+      -0.004 -0.024 -1.000 -0.000 -0.000
+      -0.007 -1.000  0.024  0.000  0.000
+       0.000  0.000 -0.000  0.975 -0.221
+       1.000 -0.007 -0.004 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.085  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.085 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3424
+
+     HUBBARD ENERGY =   -0.0675  (Ry)
+
+     total cpu time spent up to now is        5.1 secs
+
+     total energy              =    -123.29334386 Ry
+     estimated scf accuracy    <       0.00016664 Ry
+
+     iteration #  2     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           189 MiB allocation reported by mallinfo(arena+hblkhd)
+        489201 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.11E-06,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34592
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+       0.000  0.000  0.000 -0.393 -0.920
+      -0.849  0.003  0.528 -0.000 -0.000
+       0.528  0.005  0.849  0.000  0.000
+      -0.000 -0.000 -0.000  0.920 -0.393
+      -0.000 -1.000  0.006 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3459
+
+     HUBBARD ENERGY =   -0.0677  (Ry)
+
+     total cpu time spent up to now is        5.1 secs
+
+     total energy              =    -123.29334141 Ry
+     estimated scf accuracy    <       0.00003667 Ry
+
+     iteration #  3     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           190 MiB allocation reported by mallinfo(arena+hblkhd)
+        489200 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  2.44E-07,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34841
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+      -0.000 -0.000  0.000 -0.334 -0.943
+      -0.518  0.008 -0.855 -0.000 -0.000
+      -0.855  0.012  0.518  0.000  0.000
+       0.000  0.000 -0.000  0.943 -0.334
+       0.015  1.000 -0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3484
+
+     HUBBARD ENERGY =   -0.0685  (Ry)
+
+     total cpu time spent up to now is        5.2 secs
+
+     total energy              =    -123.29334818 Ry
+     estimated scf accuracy    <       0.00000381 Ry
+
+     iteration #  4     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           191 MiB allocation reported by mallinfo(arena+hblkhd)
+        489199 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  2.54E-08,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34912
+     eigenvalues:
+       0.000  0.000  0.000  1.087  1.087
+     eigenvectors (columns):
+       0.000 -0.000 -0.000 -0.389 -0.921
+      -0.852 -0.005 -0.524 -0.000 -0.000
+       0.524 -0.007 -0.852  0.000  0.000
+      -0.000  0.000  0.000  0.921 -0.389
+      -0.000  1.000 -0.009 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.087  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.087 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3491
+
+     HUBBARD ENERGY =   -0.0685  (Ry)
+
+     total cpu time spent up to now is        5.3 secs
+
+     total energy              =    -123.29334845 Ry
+     estimated scf accuracy    <       0.00000081 Ry
+
+     iteration #  5     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           191 MiB allocation reported by mallinfo(arena+hblkhd)
+        489199 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  5.41E-09,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34895
+     eigenvalues:
+       0.000  0.000  0.000  1.087  1.087
+     eigenvectors (columns):
+      -0.000 -0.000  0.000  0.445  0.896
+      -0.002  0.241 -0.971  0.000  0.000
+      -0.003 -0.971 -0.241 -0.000  0.000
+       0.000  0.000  0.000 -0.896  0.445
+       1.000 -0.002 -0.002  0.000  0.000
+     occupation matrix ns (before diag.):
+       1.087  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.087 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3490
+
+     HUBBARD ENERGY =   -0.0685  (Ry)
+
+     total cpu time spent up to now is        5.4 secs
+
+     total energy              =    -123.29334839 Ry
+     estimated scf accuracy    <       0.00000030 Ry
+
+     iteration #  6     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           192 MiB allocation reported by mallinfo(arena+hblkhd)
+        489198 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  2.01E-09,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34883
+     eigenvalues:
+       0.000  0.000  0.000  1.087  1.087
+     eigenvectors (columns):
+      -0.000 -0.000  0.000  0.445 -0.896
+       0.852 -0.006  0.524  0.000 -0.000
+      -0.524 -0.009  0.852 -0.000  0.000
+       0.000  0.000 -0.000 -0.896 -0.445
+       0.000  1.000  0.011  0.000  0.000
+     occupation matrix ns (before diag.):
+       1.087  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.087 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3488
+
+     HUBBARD ENERGY =   -0.0685  (Ry)
+
+     total cpu time spent up to now is        5.5 secs
+
+     total energy              =    -123.29334838 Ry
+     estimated scf accuracy    <       0.00000007 Ry
+
+     iteration #  7     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           192 MiB allocation reported by mallinfo(arena+hblkhd)
+        489197 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  4.49E-10,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34874
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+       0.000  0.000  0.000 -0.316 -0.949
+       0.005 -0.852  0.523 -0.000 -0.000
+       0.008  0.523  0.852  0.000  0.000
+      -0.000 -0.000 -0.000  0.949 -0.316
+      -1.000  0.000  0.010 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3487
+
+     HUBBARD ENERGY =   -0.0685  (Ry)
+
+     total cpu time spent up to now is        5.6 secs
+
+     total energy              =    -123.29334838 Ry
+     estimated scf accuracy    <          3.0E-09 Ry
+
+     iteration #  8     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           193 MiB allocation reported by mallinfo(arena+hblkhd)
+        489197 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.99E-11,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34872
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+       0.000  0.000  0.000 -0.328 -0.945
+       0.020 -0.853  0.522 -0.000 -0.000
+       0.033  0.522  0.852  0.000  0.000
+      -0.000 -0.000 -0.000  0.945 -0.328
+      -0.999 -0.000  0.039 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3487
+
+     HUBBARD ENERGY =   -0.0685  (Ry)
+
+     total cpu time spent up to now is        5.6 secs
+
+     total energy              =    -123.29334838 Ry
+     estimated scf accuracy    <          1.6E-10 Ry
+
+     iteration #  9     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           193 MiB allocation reported by mallinfo(arena+hblkhd)
+        489196 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.07E-12,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34871
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+      -0.000 -0.000 -0.000 -0.533  0.846
+      -0.524  0.005  0.851 -0.000  0.000
+      -0.851  0.008 -0.524  0.000 -0.000
+       0.000  0.000  0.000  0.846  0.533
+       0.009  1.000 -0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3487
+
+     HUBBARD ENERGY =   -0.0685  (Ry)
+
+     total cpu time spent up to now is        5.7 secs
+
+     End of self-consistent calculation
+
+          k = 0.0000 0.0000 0.0000 (  4718 PWs)   bands (ev):
+
+   -41.6204 -17.9064 -17.9064 -17.9064   3.0093   9.0201   9.0201  17.6416
+    17.6416  17.6416  18.6496  18.6496  18.6496  22.4951  22.4951  26.6503
+    31.9008  31.9008  31.9008  32.1864  32.1864  32.1864  36.9757  36.9757
+    36.9757  37.1450  37.1450  44.4825  50.2588  51.8968
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   0.1661
+     0.1661   0.1661   0.0006   0.0006   0.0006   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+
+     the Fermi energy is    17.3635 ev
+
+!    total energy              =    -123.29334838 Ry
+     estimated scf accuracy    <          4.4E-13 Ry
+     smearing contrib. (-TS)   =      -0.03454331 Ry
+     internal energy E=F+TS    =    -123.25880507 Ry
+
+     The total energy is F=E-TS. E is the sum of the following terms:
+     one-electron contribution =     -50.13487319 Ry
+     hartree contribution      =      31.81780750 Ry
+     xc contribution           =     -20.02485992 Ry
+     ewald contribution        =     -84.84833142 Ry
+     Hubbard energy            =      -0.06854804 Ry
+
+     convergence has been achieved in   9 iterations
+
+     Forces acting on atoms (cartesian axes, Ry/au):
+
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
+     The non-local contrib.  to forces
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
+     The ionic contribution  to forces
+     atom    1 type  2   force =     0.00000000    0.00000000   -0.00000000
+     atom    2 type  1   force =    -0.00000000   -0.00000000   -0.00000000
+     The local contribution  to forces
+     atom    1 type  2   force =    -0.00000000   -0.00000000   -0.00000000
+     atom    2 type  1   force =    -0.00000002   -0.00000003   -0.00000001
+     The core correction contribution to forces
+     atom    1 type  2   force =    -0.00000000   -0.00000000   -0.00000000
+     atom    2 type  1   force =    -0.00000000   -0.00000000   -0.00000000
+     The Hubbard contrib.    to forces
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
+     The SCF correction term to forces
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000001    0.00000001    0.00000001
+
+     Total force =     0.000000     Total SCF correction =     0.000000
+
+
+     Computing stress (Cartesian axis) and pressure
+
+          total   stress  (Ry/bohr**3)                   (kbar)     P=       11.45
+   0.00007786   0.00000000   0.00000000           11.45        0.00        0.00
+   0.00000000   0.00007786   0.00000000            0.00       11.45        0.00
+   0.00000000   0.00000000   0.00007786            0.00        0.00       11.45
+
+     kinetic stress (kbar)  25369.41      0.00      0.00
+                                0.00  25369.41      0.00
+                                0.00      0.00  25369.41
+
+     local   stress (kbar)  -9873.07     -0.00     -0.00
+                               -0.00  -9873.07      0.00
+                               -0.00      0.00  -9873.07
+
+     nonloc. stress (kbar)   2548.89      0.00      0.00
+                                0.00   2548.89      0.00
+                                0.00      0.00   2548.89
+
+     hartree stress (kbar)   8009.76      0.00      0.00
+                                0.00   8009.76     -0.00
+                                0.00     -0.00   8009.76
+
+     exc-cor stress (kbar)  -1801.34      0.00      0.00
+                                0.00  -1801.34     -0.00
+                                0.00     -0.00  -1801.34
+
+     corecor stress (kbar)  -2749.91      0.00      0.00
+                                0.00  -2749.91     -0.00
+                                0.00     -0.00  -2749.91
+
+     ewald   stress (kbar) -21359.57     -0.00     -0.00
+                               -0.00 -21359.57      0.00
+                               -0.00      0.00 -21359.57
+
+     hubbard stress (kbar)   -132.72      0.00      0.00
+                                0.00   -132.72      0.00
+                                0.00      0.00   -132.72
+
+     DFT-D   stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     XDM     stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     dft-nl  stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     TS-vdW  stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     MDB     stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     3D-RISM stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     Energy error            =      3.0E-04 Ry
+     Gradient error          =      0.0E+00 Ry/Bohr
+     Cell gradient error     =      1.1E+01 kbar
+
+     number of scf cycles    =   4
+     number of bfgs steps    =   3
+
+     enthalpy           old  =    -123.2930510652 Ry
+     enthalpy           new  =    -123.2933483842 Ry
+
+     CASE: enthalpy          _new < enthalpy          _old
+
+     new trust radius        =       0.0076350668 bohr
+     new conv_thr            =            1.0E-12 Ry
+
+     new unit-cell volume =    196.38855 a.u.^3 (    29.10178 Ang^3 )
+     density =      4.27948 g/cm^3
+
+CELL_PARAMETERS (alat=  6.50000000)
+   0.894249484   0.000000000   0.000000000
+   0.000000000   0.894249484   0.000000000
+   0.000000000   0.000000000   0.894249484
+
+ATOMIC_POSITIONS (crystal)
+Al               0.5000000000        0.5000000000        0.5000000000
+Ti               0.0000000000        0.0000000000        0.0000000000
+
+
+
+     Writing config-only to output data dir ./pwscf.save/ :
+     XML data file
+     NEW-OLD atomic charge density approx. for the potential
+
+     HUBBARD ENERGY =   -0.0685  (Ry)
+
+     Atomic wfc used for Hubbard projectors are NOT orthogonalized
+
+
+     total cpu time spent up to now is        5.9 secs
+
+     per-process dynamical memory:   192.9 Mb
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           188 MiB allocation reported by mallinfo(arena+hblkhd)
+        489211 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.00E-06,  avg # of iterations =  3.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34632
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+      -0.000 -0.000 -0.000 -0.509  0.861
+      -0.524  0.008  0.852 -0.000  0.000
+      -0.852  0.013 -0.524  0.000 -0.000
+       0.000  0.000  0.000  0.861  0.509
+       0.015  1.000 -0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3463
+
+     Threshold (ethr) on eigenvalues was too large:
+     Diagonalizing with lowered threshold
+
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           188 MiB allocation reported by mallinfo(arena+hblkhd)
+        489211 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  9.39E-08,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34632
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+       0.000 -0.000 -0.000 -0.281 -0.960
+       0.538  0.002  0.843  0.000 -0.000
+       0.843  0.004 -0.538  0.000  0.000
+      -0.000  0.000  0.000  0.960 -0.281
+      -0.004  1.000 -0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3463
+
+     HUBBARD ENERGY =   -0.0682  (Ry)
+
+     total cpu time spent up to now is        6.1 secs
+
+     total energy              =    -123.29340829 Ry
+     estimated scf accuracy    <       0.00001401 Ry
+
+     iteration #  2     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           189 MiB allocation reported by mallinfo(arena+hblkhd)
+        489211 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  9.34E-08,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34531
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+       0.000 -0.000 -0.000 -0.245 -0.970
+       0.014 -0.518  0.855 -0.000 -0.000
+       0.023 -0.855 -0.518  0.000  0.000
+      -0.000  0.000  0.000  0.970 -0.245
+      -1.000 -0.027  0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3453
+
+     HUBBARD ENERGY =   -0.0681  (Ry)
+
+     total cpu time spent up to now is        6.2 secs
+
+     total energy              =    -123.29340814 Ry
+     estimated scf accuracy    <       0.00000306 Ry
+
+     iteration #  3     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           190 MiB allocation reported by mallinfo(arena+hblkhd)
+        489211 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  2.04E-08,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34461
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+      -0.000  0.000 -0.000 -0.667  0.745
+       0.966 -0.258  0.004 -0.000  0.000
+       0.258  0.966  0.006  0.000  0.000
+      -0.000 -0.000  0.000  0.745  0.667
+      -0.005 -0.005  1.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3446
+
+     HUBBARD ENERGY =   -0.0679  (Ry)
+
+     total cpu time spent up to now is        6.3 secs
+
+     total energy              =    -123.29340868 Ry
+     estimated scf accuracy    <       0.00000034 Ry
+
+     iteration #  4     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           191 MiB allocation reported by mallinfo(arena+hblkhd)
+        489211 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  2.25E-09,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34438
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+      -0.000 -0.000 -0.000 -0.360 -0.933
+       0.851 -0.003 -0.525 -0.000  0.000
+      -0.525 -0.005 -0.851  0.000 -0.000
+       0.000  0.000  0.000  0.933 -0.360
+       0.000  1.000 -0.006 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3444
+
+     HUBBARD ENERGY =   -0.0679  (Ry)
+
+     total cpu time spent up to now is        6.4 secs
+
+     total energy              =    -123.29340871 Ry
+     estimated scf accuracy    <       0.00000009 Ry
+
+     iteration #  5     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           191 MiB allocation reported by mallinfo(arena+hblkhd)
+        489211 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  6.16E-10,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34442
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+      -0.000 -0.000  0.000 -0.250 -0.968
+      -0.520  0.025 -0.854  0.000 -0.000
+      -0.853  0.041  0.521  0.000  0.000
+       0.000  0.000 -0.000  0.968 -0.250
+       0.048  0.999 -0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3444
+
+     HUBBARD ENERGY =   -0.0679  (Ry)
+
+     total cpu time spent up to now is        6.4 secs
+
+     total energy              =    -123.29340870 Ry
+     estimated scf accuracy    <       0.00000005 Ry
+
+     iteration #  6     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           192 MiB allocation reported by mallinfo(arena+hblkhd)
+        489211 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  3.39E-10,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34446
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+      -0.000  0.000 -0.000  0.445 -0.896
+      -0.003 -0.853 -0.521  0.000 -0.000
+      -0.005  0.521 -0.853 -0.000  0.000
+       0.000 -0.000  0.000 -0.896 -0.445
+       1.000 -0.000 -0.005  0.000  0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3445
+
+     HUBBARD ENERGY =   -0.0679  (Ry)
+
+     total cpu time spent up to now is        6.5 secs
+
+     total energy              =    -123.29340870 Ry
+     estimated scf accuracy    <       0.00000002 Ry
+
+     iteration #  7     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           192 MiB allocation reported by mallinfo(arena+hblkhd)
+        489211 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.33E-10,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34451
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+      -0.000 -0.000  0.000 -0.262 -0.965
+      -0.003  0.237 -0.972 -0.000 -0.000
+      -0.005 -0.972 -0.237  0.000  0.000
+       0.000  0.000  0.000  0.965 -0.262
+       1.000 -0.004 -0.004 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3445
+
+     HUBBARD ENERGY =   -0.0679  (Ry)
+
+     total cpu time spent up to now is        6.6 secs
+
+     total energy              =    -123.29340870 Ry
+     estimated scf accuracy    <          2.5E-10 Ry
+
+     iteration #  8     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           193 MiB allocation reported by mallinfo(arena+hblkhd)
+        489211 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.64E-12,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34452
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+      -0.000 -0.000  0.000 -0.352 -0.936
+      -0.504  0.009 -0.864 -0.000 -0.000
+      -0.863  0.017  0.504  0.000  0.000
+       0.000  0.000 -0.000  0.936 -0.352
+       0.019  1.000 -0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3445
+
+     HUBBARD ENERGY =   -0.0679  (Ry)
+
+     total cpu time spent up to now is        6.7 secs
+
+     total energy              =    -123.29340870 Ry
+     estimated scf accuracy    <          2.8E-12 Ry
+
+     iteration #  9     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           193 MiB allocation reported by mallinfo(arena+hblkhd)
+        489211 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.00E-13,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34452
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+       0.000 -0.000  0.000 -0.227 -0.974
+       0.523  0.002 -0.853  0.000 -0.000
+       0.853  0.003  0.523  0.000  0.000
+      -0.000  0.000 -0.000  0.974 -0.227
+      -0.003  1.000  0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3445
+
+     HUBBARD ENERGY =   -0.0679  (Ry)
+
+     total cpu time spent up to now is        6.8 secs
+
+     End of self-consistent calculation
+
+          k = 0.0000 0.0000 0.0000 (  4718 PWs)   bands (ev):
+
+   -41.7383 -18.0258 -18.0258 -18.0258   2.9247   8.9397   8.9397  17.4764
+    17.4764  17.4764  18.5289  18.5289  18.5289  22.3304  22.3304  26.3788
+    31.6862  31.6862  31.6862  31.9952  31.9952  31.9952  36.6780  36.6780
+    36.6780  36.9003  36.9003  44.2254  49.8870  51.5649
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   0.1662
+     0.1662   0.1662   0.0004   0.0004   0.0004   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+
+     the Fermi energy is    17.1985 ev
+
+!    total energy              =    -123.29340870 Ry
+     estimated scf accuracy    <          8.9E-13 Ry
+     smearing contrib. (-TS)   =      -0.03448434 Ry
+     internal energy E=F+TS    =    -123.25892436 Ry
+
+     The total energy is F=E-TS. E is the sum of the following terms:
+     one-electron contribution =     -50.48621627 Ry
+     hartree contribution      =      31.92646614 Ry
+     xc contribution           =     -20.01440039 Ry
+     ewald contribution        =     -84.61687927 Ry
+     Hubbard energy            =      -0.06789457 Ry
+
+     convergence has been achieved in   9 iterations
+
+     Forces acting on atoms (cartesian axes, Ry/au):
+
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
+     The non-local contrib.  to forces
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
+     The ionic contribution  to forces
+     atom    1 type  2   force =     0.00000000    0.00000000   -0.00000000
+     atom    2 type  1   force =    -0.00000000   -0.00000000   -0.00000000
+     The local contribution  to forces
+     atom    1 type  2   force =    -0.00000000   -0.00000000   -0.00000000
+     atom    2 type  1   force =    -0.00000006   -0.00000006   -0.00000002
+     The core correction contribution to forces
+     atom    1 type  2   force =    -0.00000000   -0.00000000   -0.00000000
+     atom    2 type  1   force =    -0.00000000   -0.00000000   -0.00000000
+     The Hubbard contrib.    to forces
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
+     The SCF correction term to forces
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000003    0.00000003    0.00000001
+
+     Total force =     0.000000     Total SCF correction =     0.000000
+
+
+     Computing stress (Cartesian axis) and pressure
+
+          total   stress  (Ry/bohr**3)                   (kbar)     P=       -0.30
+  -0.00000207   0.00000000   0.00000000           -0.30        0.00        0.00
+   0.00000000  -0.00000207   0.00000000            0.00       -0.30        0.00
+   0.00000000   0.00000000  -0.00000207            0.00        0.00       -0.30
+
+     kinetic stress (kbar)  25151.91      0.00      0.00
+                                0.00  25151.91      0.00
+                                0.00      0.00  25151.91
+
+     local   stress (kbar)  -9874.89     -0.00     -0.00
+                               -0.00  -9874.89      0.00
+                               -0.00      0.00  -9874.89
+
+     nonloc. stress (kbar)   2521.63      0.00      0.00
+                                0.00   2521.63      0.00
+                                0.00      0.00   2521.63
+
+     hartree stress (kbar)   7971.52      0.00      0.00
+                                0.00   7971.52     -0.00
+                                0.00     -0.00   7971.52
+
+     exc-cor stress (kbar)  -1784.57      0.00      0.00
+                                0.00  -1784.57     -0.00
+                                0.00     -0.00  -1784.57
+
+     corecor stress (kbar)  -2726.94     -0.00     -0.00
+                               -0.00  -2726.94      0.00
+                               -0.00      0.00  -2726.94
+
+     ewald   stress (kbar) -21127.46      0.00     -0.00
+                                0.00 -21127.46     -0.00
+                               -0.00     -0.00 -21127.46
+
+     hubbard stress (kbar)   -131.52      0.00      0.00
+                                0.00   -131.52      0.00
+                                0.00      0.00   -131.52
+
+     DFT-D   stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     XDM     stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     dft-nl  stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     TS-vdW  stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     MDB     stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     3D-RISM stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     Energy error            =      6.0E-05 Ry
+     Gradient error          =      0.0E+00 Ry/Bohr
+     Cell gradient error     =      3.0E-01 kbar
+
+     bfgs converged in   5 scf cycles and   4 bfgs steps
+     (criteria: energy <  1.0E-04 Ry, force <  1.0E-03 Ry/Bohr, cell <  5.0E-01 kbar)
+
+     End of BFGS Geometry Optimization
+
+     Final enthalpy           =    -123.2934086993 Ry
+
+     File ./pwscf.bfgs deleted, as requested
+Begin final coordinates
+     new unit-cell volume =    196.38855 a.u.^3 (    29.10178 Ang^3 )
+     density =      4.27948 g/cm^3
+
+CELL_PARAMETERS (alat=  6.50000000)
+   0.894249484   0.000000000   0.000000000
+   0.000000000   0.894249484   0.000000000
+   0.000000000   0.000000000   0.894249484
+
+ATOMIC_POSITIONS (crystal)
+Al               0.5000000000        0.5000000000        0.5000000000
+Ti               0.0000000000        0.0000000000        0.0000000000
+End final coordinates
+
+
+
+     Writing config-only to output data dir ./pwscf.save/ :
+     XML data file
+
+     Final scf calculation at the relaxed structure.
+     The G-vectors are recalculated for the final unit cell
+     Results may differ from those at the preceding step.
+
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min         861     861    211                26855    26855    3333
+     Max         864     864    218                26860    26860    3334
+     Sum        1725    1725    429                53715    53715    6667
+
+     Using Slab Decomposition
+
+
+
+     bravais-lattice index     =            1
+     lattice parameter (alat)  =       6.5000  a.u.
+     unit-cell volume          =     196.3886 (a.u.)^3
+     number of atoms/cell      =            2
+     number of atomic types    =            2
+     number of electrons       =        15.00
+     number of Kohn-Sham states=           30
+     kinetic-energy cutoff     =     160.0000  Ry
+     charge density cutoff     =     640.0000  Ry
+     scf convergence threshold =      1.0E-12
+     mixing beta               =       0.2000
+     number of iterations used =            8  plain     mixing
+     press convergence thresh. =      5.0E-01
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Hubbard projectors: atomic
+     Hubbard parameters of DFT+U (Dudarev formulation) in eV:
+     U(Ti-3d) =  5.0000
+
+     Internal variables: lda_plus_u =T, lda_plus_u_kind = 0
+
+     celldm(1)=   6.500000  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   0.894249   0.000000   0.000000 )  
+               a(2) = (   0.000000   0.894249   0.000000 )  
+               a(3) = (   0.000000   0.000000   0.894249 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.118256  0.000000  0.000000 )  
+               b(2) = (  0.000000  1.118256  0.000000 )  
+               b(3) = (  0.000000  0.000000  1.118256 )  
+
+
+     PseudoPot. # 1 for Ti read from file:
+     ./Ti.upf
+     MD5 check sum: 0b3868d933a8ea9356727c02a1b807de
+     Pseudo is Norm-conserving + core correction, Zval = 12.0
+     Generated using ONCVPSP code by D. R. Hamann
+     Using radial grid of 1586 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+
+     PseudoPot. # 2 for Al read from file:
+     ./Al.upf
+     MD5 check sum: a92309766db89a6b54a5f8790cc4d69e
+     Pseudo is Norm-conserving + core correction, Zval =  3.0
+     Generated using ONCVPSP code by D. R. Hamann
+     Using radial grid of 1876 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+
+     atomic species   valence    mass     pseudopotential
+     Ti               12.00    48.00000     Ti( 1.00)
+     Al                3.00    27.00000     Al( 1.00)
+
+     48 Sym. Ops., with inversion, found
+
+
+                                    s                        frac. trans.
+
+      isym =  1     identity                                     
+
+ cryst.   s( 1) = (     1          0          0      )
+                  (     0          1          0      )
+                  (     0          0          1      )
+
+ cart.    s( 1) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  2     180 deg rotation - cart. axis [0,0,1]        
+
+ cryst.   s( 2) = (    -1          0          0      )
+                  (     0         -1          0      )
+                  (     0          0          1      )
+
+ cart.    s( 2) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  3     180 deg rotation - cart. axis [0,1,0]        
+
+ cryst.   s( 3) = (    -1          0          0      )
+                  (     0          1          0      )
+                  (     0          0         -1      )
+
+ cart.    s( 3) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym =  4     180 deg rotation - cart. axis [1,0,0]        
+
+ cryst.   s( 4) = (     1          0          0      )
+                  (     0         -1          0      )
+                  (     0          0         -1      )
+
+ cart.    s( 4) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym =  5     180 deg rotation - cart. axis [1,1,0]        
+
+ cryst.   s( 5) = (     0          1          0      )
+                  (     1          0          0      )
+                  (     0          0         -1      )
+
+ cart.    s( 5) = (  0.0000000  1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym =  6     180 deg rotation - cart. axis [1,-1,0]       
+
+ cryst.   s( 6) = (     0         -1          0      )
+                  (    -1          0          0      )
+                  (     0          0         -1      )
+
+ cart.    s( 6) = (  0.0000000 -1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym =  7      90 deg rotation - cart. axis [0,0,-1]       
+
+ cryst.   s( 7) = (     0         -1          0      )
+                  (     1          0          0      )
+                  (     0          0          1      )
+
+ cart.    s( 7) = (  0.0000000  1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  8      90 deg rotation - cart. axis [0,0,1]        
+
+ cryst.   s( 8) = (     0          1          0      )
+                  (    -1          0          0      )
+                  (     0          0          1      )
+
+ cart.    s( 8) = (  0.0000000 -1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  9     180 deg rotation - cart. axis [1,0,1]        
+
+ cryst.   s( 9) = (     0          0          1      )
+                  (     0         -1          0      )
+                  (     1          0          0      )
+
+ cart.    s( 9) = (  0.0000000  0.0000000  1.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 10     180 deg rotation - cart. axis [-1,0,1]       
+
+ cryst.   s(10) = (     0          0         -1      )
+                  (     0         -1          0      )
+                  (    -1          0          0      )
+
+ cart.    s(10) = (  0.0000000  0.0000000 -1.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 11      90 deg rotation - cart. axis [0,1,0]        
+
+ cryst.   s(11) = (     0          0         -1      )
+                  (     0          1          0      )
+                  (     1          0          0      )
+
+ cart.    s(11) = (  0.0000000  0.0000000  1.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 12      90 deg rotation - cart. axis [0,-1,0]       
+
+ cryst.   s(12) = (     0          0          1      )
+                  (     0          1          0      )
+                  (    -1          0          0      )
+
+ cart.    s(12) = (  0.0000000  0.0000000 -1.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 13     180 deg rotation - cart. axis [0,1,1]        
+
+ cryst.   s(13) = (    -1          0          0      )
+                  (     0          0          1      )
+                  (     0          1          0      )
+
+ cart.    s(13) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+
+
+      isym = 14     180 deg rotation - cart. axis [0,1,-1]       
+
+ cryst.   s(14) = (    -1          0          0      )
+                  (     0          0         -1      )
+                  (     0         -1          0      )
+
+ cart.    s(14) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+
+
+      isym = 15      90 deg rotation - cart. axis [-1,0,0]       
+
+ cryst.   s(15) = (     1          0          0      )
+                  (     0          0         -1      )
+                  (     0          1          0      )
+
+ cart.    s(15) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+
+
+      isym = 16      90 deg rotation - cart. axis [1,0,0]        
+
+ cryst.   s(16) = (     1          0          0      )
+                  (     0          0          1      )
+                  (     0         -1          0      )
+
+ cart.    s(16) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+
+
+      isym = 17     120 deg rotation - cart. axis [-1,-1,-1]     
+
+ cryst.   s(17) = (     0          0          1      )
+                  (     1          0          0      )
+                  (     0          1          0      )
+
+ cart.    s(17) = (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 18     120 deg rotation - cart. axis [-1,1,1]       
+
+ cryst.   s(18) = (     0          0         -1      )
+                  (    -1          0          0      )
+                  (     0          1          0      )
+
+ cart.    s(18) = (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 19     120 deg rotation - cart. axis [1,1,-1]       
+
+ cryst.   s(19) = (     0          0         -1      )
+                  (     1          0          0      )
+                  (     0         -1          0      )
+
+ cart.    s(19) = (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 20     120 deg rotation - cart. axis [1,-1,1]       
+
+ cryst.   s(20) = (     0          0          1      )
+                  (    -1          0          0      )
+                  (     0         -1          0      )
+
+ cart.    s(20) = (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 21     120 deg rotation - cart. axis [1,1,1]        
+
+ cryst.   s(21) = (     0          1          0      )
+                  (     0          0          1      )
+                  (     1          0          0      )
+
+ cart.    s(21) = (  0.0000000  0.0000000  1.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+
+
+      isym = 22     120 deg rotation - cart. axis [-1,1,-1]      
+
+ cryst.   s(22) = (     0         -1          0      )
+                  (     0          0         -1      )
+                  (     1          0          0      )
+
+ cart.    s(22) = (  0.0000000  0.0000000  1.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+
+
+      isym = 23     120 deg rotation - cart. axis [1,-1,-1]      
+
+ cryst.   s(23) = (     0         -1          0      )
+                  (     0          0          1      )
+                  (    -1          0          0      )
+
+ cart.    s(23) = (  0.0000000  0.0000000 -1.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+
+
+      isym = 24     120 deg rotation - cart. axis [-1,-1,1]      
+
+ cryst.   s(24) = (     0          1          0      )
+                  (     0          0         -1      )
+                  (    -1          0          0      )
+
+ cart.    s(24) = (  0.0000000  0.0000000 -1.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+
+
+      isym = 25     inversion                                    
+
+ cryst.   s(25) = (    -1          0          0      )
+                  (     0         -1          0      )
+                  (     0          0         -1      )
+
+ cart.    s(25) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym = 26     inv. 180 deg rotation - cart. axis [0,0,1]   
+
+ cryst.   s(26) = (     1          0          0      )
+                  (     0          1          0      )
+                  (     0          0         -1      )
+
+ cart.    s(26) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym = 27     inv. 180 deg rotation - cart. axis [0,1,0]   
+
+ cryst.   s(27) = (     1          0          0      )
+                  (     0         -1          0      )
+                  (     0          0          1      )
+
+ cart.    s(27) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym = 28     inv. 180 deg rotation - cart. axis [1,0,0]   
+
+ cryst.   s(28) = (    -1          0          0      )
+                  (     0          1          0      )
+                  (     0          0          1      )
+
+ cart.    s(28) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym = 29     inv. 180 deg rotation - cart. axis [1,1,0]   
+
+ cryst.   s(29) = (     0         -1          0      )
+                  (    -1          0          0      )
+                  (     0          0          1      )
+
+ cart.    s(29) = (  0.0000000 -1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym = 30     inv. 180 deg rotation - cart. axis [1,-1,0]  
+
+ cryst.   s(30) = (     0          1          0      )
+                  (     1          0          0      )
+                  (     0          0          1      )
+
+ cart.    s(30) = (  0.0000000  1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym = 31     inv.  90 deg rotation - cart. axis [0,0,-1]  
+
+ cryst.   s(31) = (     0          1          0      )
+                  (    -1          0          0      )
+                  (     0          0         -1      )
+
+ cart.    s(31) = (  0.0000000 -1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym = 32     inv.  90 deg rotation - cart. axis [0,0,1]   
+
+ cryst.   s(32) = (     0         -1          0      )
+                  (     1          0          0      )
+                  (     0          0         -1      )
+
+ cart.    s(32) = (  0.0000000  1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym = 33     inv. 180 deg rotation - cart. axis [1,0,1]   
+
+ cryst.   s(33) = (     0          0         -1      )
+                  (     0          1          0      )
+                  (    -1          0          0      )
+
+ cart.    s(33) = (  0.0000000  0.0000000 -1.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 34     inv. 180 deg rotation - cart. axis [-1,0,1]  
+
+ cryst.   s(34) = (     0          0          1      )
+                  (     0          1          0      )
+                  (     1          0          0      )
+
+ cart.    s(34) = (  0.0000000  0.0000000  1.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 35     inv.  90 deg rotation - cart. axis [0,1,0]   
+
+ cryst.   s(35) = (     0          0          1      )
+                  (     0         -1          0      )
+                  (    -1          0          0      )
+
+ cart.    s(35) = (  0.0000000  0.0000000 -1.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 36     inv.  90 deg rotation - cart. axis [0,-1,0]  
+
+ cryst.   s(36) = (     0          0         -1      )
+                  (     0         -1          0      )
+                  (     1          0          0      )
+
+ cart.    s(36) = (  0.0000000  0.0000000  1.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 37     inv. 180 deg rotation - cart. axis [0,1,1]   
+
+ cryst.   s(37) = (     1          0          0      )
+                  (     0          0         -1      )
+                  (     0         -1          0      )
+
+ cart.    s(37) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+
+
+      isym = 38     inv. 180 deg rotation - cart. axis [0,1,-1]  
+
+ cryst.   s(38) = (     1          0          0      )
+                  (     0          0          1      )
+                  (     0          1          0      )
+
+ cart.    s(38) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+
+
+      isym = 39     inv.  90 deg rotation - cart. axis [-1,0,0]  
+
+ cryst.   s(39) = (    -1          0          0      )
+                  (     0          0          1      )
+                  (     0         -1          0      )
+
+ cart.    s(39) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+
+
+      isym = 40     inv.  90 deg rotation - cart. axis [1,0,0]   
+
+ cryst.   s(40) = (    -1          0          0      )
+                  (     0          0         -1      )
+                  (     0          1          0      )
+
+ cart.    s(40) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+
+
+      isym = 41     inv. 120 deg rotation - cart. axis [-1,-1,-1]
+
+ cryst.   s(41) = (     0          0         -1      )
+                  (    -1          0          0      )
+                  (     0         -1          0      )
+
+ cart.    s(41) = (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 42     inv. 120 deg rotation - cart. axis [-1,1,1]  
+
+ cryst.   s(42) = (     0          0          1      )
+                  (     1          0          0      )
+                  (     0         -1          0      )
+
+ cart.    s(42) = (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 43     inv. 120 deg rotation - cart. axis [1,1,-1]  
+
+ cryst.   s(43) = (     0          0          1      )
+                  (    -1          0          0      )
+                  (     0          1          0      )
+
+ cart.    s(43) = (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 44     inv. 120 deg rotation - cart. axis [1,-1,1]  
+
+ cryst.   s(44) = (     0          0         -1      )
+                  (     1          0          0      )
+                  (     0          1          0      )
+
+ cart.    s(44) = (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 45     inv. 120 deg rotation - cart. axis [1,1,1]   
+
+ cryst.   s(45) = (     0         -1          0      )
+                  (     0          0         -1      )
+                  (    -1          0          0      )
+
+ cart.    s(45) = (  0.0000000  0.0000000 -1.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+
+
+      isym = 46     inv. 120 deg rotation - cart. axis [-1,1,-1] 
+
+ cryst.   s(46) = (     0          1          0      )
+                  (     0          0          1      )
+                  (    -1          0          0      )
+
+ cart.    s(46) = (  0.0000000  0.0000000 -1.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+
+
+      isym = 47     inv. 120 deg rotation - cart. axis [1,-1,-1] 
+
+ cryst.   s(47) = (     0          1          0      )
+                  (     0          0         -1      )
+                  (     1          0          0      )
+
+ cart.    s(47) = (  0.0000000  0.0000000  1.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+
+
+      isym = 48     inv. 120 deg rotation - cart. axis [-1,-1,1] 
+
+ cryst.   s(48) = (     0         -1          0      )
+                  (     0          0          1      )
+                  (     1          0          0      )
+
+ cart.    s(48) = (  0.0000000  0.0000000  1.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+
+
+     point group O_h (m-3m) 
+     there are 10 classes
+     the character table:
+
+       E     8C3   3C2   6C4   6C2'  i     8S6   3s_h  6S4   6s_d 
+A_1g   1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00  1.00
+A_2g   1.00  1.00  1.00 -1.00 -1.00  1.00  1.00  1.00 -1.00 -1.00
+E_g    2.00 -1.00  2.00  0.00  0.00  2.00 -1.00  2.00  0.00  0.00
+T_1g   3.00  0.00 -1.00  1.00 -1.00  3.00  0.00 -1.00  1.00 -1.00
+T_2g   3.00  0.00 -1.00 -1.00  1.00  3.00  0.00 -1.00 -1.00  1.00
+A_1u   1.00  1.00  1.00  1.00  1.00 -1.00 -1.00 -1.00 -1.00 -1.00
+A_2u   1.00  1.00  1.00 -1.00 -1.00 -1.00 -1.00 -1.00  1.00  1.00
+E_u    2.00 -1.00  2.00  0.00  0.00 -2.00  1.00 -2.00  0.00  0.00
+T_1u   3.00  0.00 -1.00  1.00 -1.00 -3.00  0.00  1.00 -1.00  1.00
+T_2u   3.00  0.00 -1.00 -1.00  1.00 -3.00  0.00  1.00  1.00 -1.00
+
+     the symmetry operations in each class and the name of the first element:
+
+     E        1
+          identity                                               
+     8C3     17   19   20   18   24   21   22   23
+          120 deg rotation - cart. axis [-1,-1,-1]               
+     3C2      2    4    3
+          180 deg rotation - cart. axis [0,0,1]                  
+     6C4      7    8   15   16   12   11
+           90 deg rotation - cart. axis [0,0,-1]                 
+     6C2'     5    6   14   13   10    9
+          180 deg rotation - cart. axis [1,1,0]                  
+     i       25
+          inversion                                              
+     8S6     41   43   44   42   48   45   46   47
+          inv. 120 deg rotation - cart. axis [-1,-1,-1]          
+     3s_h    26   28   27
+          inv. 180 deg rotation - cart. axis [0,0,1]             
+     6S4     31   32   39   40   36   35
+          inv.  90 deg rotation - cart. axis [0,0,-1]            
+     6s_d    29   30   38   37   34   33
+          inv. 180 deg rotation - cart. axis [1,1,0]             
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1        Al     tau(   1) = (   0.4471247   0.4471247   0.4471247  )
+         2        Ti     tau(   2) = (   0.0000000   0.0000000   0.0000000  )
+
+   Crystallographic axes
+
+     site n.     atom                  positions (cryst. coord.)
+         1        Al     tau(   1) = (  0.5000000  0.5000000  0.5000000  )
+         2        Ti     tau(   2) = (  0.0000000  0.0000000  0.0000000  )
+
+     number of k points=     1  Fermi-Dirac smearing, width (Ry)=  0.0127
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   2.0000000
+
+                       cryst. coord.
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   2.0000000
+
+     Dense  grid:    26858 G-vectors     FFT dimensions: (  48,  48,  48)
+
+     Dynamical RAM for                 wfc:       0.77 MB
+
+     Dynamical RAM for     wfc (w. buffer):       0.77 MB
+
+     Dynamical RAM for             U proj.:       0.13 MB
+
+     Dynamical RAM for  U proj. (w. buff.):       0.13 MB
+
+     Dynamical RAM for           str. fact:       0.41 MB
+
+     Dynamical RAM for           local pot:       0.29 MB
+
+     Dynamical RAM for          nlocal pot:       0.92 MB
+
+     Dynamical RAM for                qrad:       8.12 MB
+
+     Dynamical RAM for          rho,v,vnew:       1.88 MB
+
+     Dynamical RAM for               rhoin:       0.63 MB
+
+     Dynamical RAM for            rho*nmix:       3.28 MB
+
+     Dynamical RAM for           G-vectors:       0.87 MB
+
+     Dynamical RAM for          h,s,v(r/c):       0.08 MB
+
+     Dynamical RAM for          <psi|beta>:       0.01 MB
+
+     Dynamical RAM for                 psi:       1.54 MB
+
+     Dynamical RAM for                hpsi:       1.54 MB
+
+     Dynamical RAM for      wfcinit/wfcrot:       1.56 MB
+
+     Estimated static dynamical RAM per process >      16.73 MB
+
+     Estimated max dynamical RAM per process >      23.17 MB
+
+     Estimated total dynamical RAM >      46.35 MB
+
+     Initial potential from superposition of free atoms
+
+     starting charge      14.9960, renormalised to      15.0000
+
+     HUBBARD ENERGY =    0.2940  (Ry)
+
+     STARTING HUBBARD OCCUPATIONS:
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   2.00000
+     eigenvalues:
+       0.200  0.200  0.200  0.200  0.200
+     eigenvectors (columns):
+       1.000  0.000  0.000  0.000  0.000
+       0.000  1.000  0.000  0.000  0.000
+       0.000  0.000  1.000  0.000  0.000
+       0.000  0.000  0.000  1.000  0.000
+       0.000  0.000  0.000  0.000  1.000
+     occupation matrix ns (before diag.):
+       0.200  0.000  0.000  0.000  0.000
+       0.000  0.200  0.000  0.000  0.000
+       0.000  0.000  0.200  0.000  0.000
+       0.000  0.000  0.000  0.200  0.000
+       0.000  0.000  0.000  0.000  0.200
+
+     Number of occupied Hubbard levels =    2.0000
+
+     Atomic wfc used for Hubbard projectors are NOT orthogonalized
+
+     Starting wfcs are random
+
+     HUBBARD ENERGY =   -0.0679  (Ry)
+
+     total cpu time spent up to now is        8.5 secs
+
+     per-process dynamical memory:   193.1 Mb
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           188 MiB allocation reported by mallinfo(arena+hblkhd)
+        489242 MiB available memory on the node where the printing process lives
+------------------
+     c_bands:  2 eigenvalues not converged
+     ethr =  1.00E-06,  avg # of iterations = 20.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   5.20270
+     eigenvalues:
+       0.127  0.127  0.127  1.111  1.111
+     eigenvectors (columns):
+      -0.000  0.000 -0.000 -0.125 -0.992
+      -0.307 -0.651 -0.694  0.000  0.000
+      -0.446 -0.546  0.709  0.000 -0.000
+       0.000 -0.000  0.000  0.992 -0.125
+       0.840 -0.528  0.123 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.111 -0.000 -0.000  0.000  0.000
+      -0.000  0.127 -0.000  0.000  0.000
+      -0.000 -0.000  0.127  0.000  0.000
+       0.000  0.000  0.000  1.111 -0.000
+       0.000  0.000  0.000 -0.000  0.127
+
+     Number of occupied Hubbard levels =    5.2027
+
+     HUBBARD ENERGY =    0.0313  (Ry)
+
+     total cpu time spent up to now is        8.8 secs
+
+     total energy              =    -123.21728648 Ry
+     estimated scf accuracy    <       0.62375118 Ry
+
+     iteration #  2     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           193 MiB allocation reported by mallinfo(arena+hblkhd)
+        489239 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  4.16E-03,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.32392
+     eigenvalues:
+       0.002  0.002  0.002  1.078  1.078
+     eigenvectors (columns):
+       0.000 -0.000  0.000 -0.211 -0.977
+      -0.857 -0.027  0.515 -0.000  0.000
+       0.516 -0.045  0.855  0.000 -0.000
+      -0.000  0.000 -0.000  0.977 -0.211
+       0.000  0.999  0.053 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.078  0.000 -0.000  0.000  0.000
+       0.000  0.002 -0.000 -0.000  0.000
+      -0.000 -0.000  0.002  0.000  0.000
+       0.000 -0.000  0.000  1.078 -0.000
+       0.000  0.000  0.000 -0.000  0.002
+
+     Number of occupied Hubbard levels =    4.3239
+
+     HUBBARD ENERGY =    0.0178  (Ry)
+
+     total cpu time spent up to now is        8.9 secs
+
+     total energy              =    -123.28839187 Ry
+     estimated scf accuracy    <       0.10009889 Ry
+
+     iteration #  3     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           194 MiB allocation reported by mallinfo(arena+hblkhd)
+        489241 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  6.67E-04,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34606
+     eigenvalues:
+       0.003  0.003  0.003  1.082  1.082
+     eigenvectors (columns):
+       0.000  0.000 -0.000 -0.359 -0.933
+      -0.852  0.104  0.514 -0.000 -0.000
+       0.524  0.170  0.835  0.000  0.000
+      -0.000 -0.000 -0.000  0.933 -0.359
+      -0.000 -0.980  0.199 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.082  0.000 -0.000  0.000  0.000
+       0.000  0.003 -0.000 -0.000  0.000
+      -0.000 -0.000  0.003  0.000  0.000
+       0.000 -0.000  0.000  1.082 -0.000
+       0.000  0.000  0.000 -0.000  0.003
+
+     Number of occupied Hubbard levels =    4.3461
+
+     HUBBARD ENERGY =   -0.0503  (Ry)
+
+     total cpu time spent up to now is        8.9 secs
+
+     total energy              =    -123.28854086 Ry
+     estimated scf accuracy    <       0.06085710 Ry
+
+     iteration #  4     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           194 MiB allocation reported by mallinfo(arena+hblkhd)
+        489241 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  4.06E-04,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.37344
+     eigenvalues:
+       0.002  0.002  0.002  1.091  1.091
+     eigenvectors (columns):
+      -0.000 -0.000  0.000 -0.516  0.857
+      -0.926  0.373 -0.067 -0.000 -0.000
+      -0.364 -0.925 -0.111  0.000  0.000
+       0.000  0.000 -0.000  0.857  0.516
+       0.103  0.078 -0.992 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.091  0.000 -0.000  0.000  0.000
+       0.000  0.002 -0.000 -0.000  0.000
+      -0.000 -0.000  0.002  0.000  0.000
+       0.000 -0.000  0.000  1.091 -0.000
+       0.000  0.000  0.000 -0.000  0.002
+
+     Number of occupied Hubbard levels =    4.3734
+
+     HUBBARD ENERGY =   -0.0611  (Ry)
+
+     total cpu time spent up to now is        9.0 secs
+
+     total energy              =    -123.29144541 Ry
+     estimated scf accuracy    <       0.00534190 Ry
+
+     iteration #  5     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           194 MiB allocation reported by mallinfo(arena+hblkhd)
+        489240 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  3.56E-05,  avg # of iterations =  2.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.32488
+     eigenvalues:
+       0.000  0.000  0.000  1.081  1.081
+     eigenvectors (columns):
+       0.000 -0.000 -0.000 -0.361 -0.933
+       0.853 -0.002 -0.522 -0.000 -0.000
+      -0.522 -0.003 -0.853  0.000  0.000
+       0.000  0.000  0.000  0.933 -0.361
+       0.000  1.000 -0.003 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.081  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.081 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3249
+
+     HUBBARD ENERGY =   -0.0647  (Ry)
+
+     total cpu time spent up to now is        9.1 secs
+
+     total energy              =    -123.29321233 Ry
+     estimated scf accuracy    <       0.00220829 Ry
+
+     iteration #  6     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           195 MiB allocation reported by mallinfo(arena+hblkhd)
+        489240 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.47E-05,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.33863
+     eigenvalues:
+       0.000  0.000  0.000  1.084  1.084
+     eigenvectors (columns):
+      -0.000 -0.000  0.000 -0.216 -0.976
+      -0.521  0.004 -0.853 -0.000 -0.000
+      -0.853  0.006  0.521  0.000  0.000
+       0.000  0.000 -0.000  0.976 -0.216
+       0.007  1.000 -0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.084  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.084 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3386
+
+     HUBBARD ENERGY =   -0.0671  (Ry)
+
+     total cpu time spent up to now is        9.2 secs
+
+     total energy              =    -123.29336637 Ry
+     estimated scf accuracy    <       0.00021287 Ry
+
+     iteration #  7     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           195 MiB allocation reported by mallinfo(arena+hblkhd)
+        489240 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.42E-06,  avg # of iterations =  8.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34363
+     eigenvalues:
+       0.000  0.000  0.000  1.085  1.085
+     eigenvectors (columns):
+      -0.000 -0.000 -0.000 -0.346 -0.938
+       0.853 -0.020 -0.521 -0.000 -0.000
+      -0.521 -0.032 -0.853  0.000  0.000
+       0.000  0.000  0.000  0.938 -0.346
+      -0.000  0.999 -0.038 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.085  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.085 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3436
+
+     HUBBARD ENERGY =   -0.0674  (Ry)
+
+     total cpu time spent up to now is        9.2 secs
+
+     total energy              =    -123.29339000 Ry
+     estimated scf accuracy    <       0.00000482 Ry
+
+     iteration #  8     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           196 MiB allocation reported by mallinfo(arena+hblkhd)
+        489239 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  3.21E-08,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34389
+     eigenvalues:
+       0.000  0.000  0.000  1.085  1.085
+     eigenvectors (columns):
+      -0.000 -0.000 -0.000 -0.261 -0.965
+      -0.040  0.984  0.176  0.000 -0.000
+      -0.064  0.173 -0.983  0.000  0.000
+       0.000 -0.000  0.000  0.965 -0.261
+       0.997  0.051 -0.056 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.085  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.085 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3439
+
+     HUBBARD ENERGY =   -0.0679  (Ry)
+
+     total cpu time spent up to now is        9.3 secs
+
+     total energy              =    -123.29338944 Ry
+     estimated scf accuracy    <       0.00000184 Ry
+
+     iteration #  9     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           196 MiB allocation reported by mallinfo(arena+hblkhd)
+        489238 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.23E-08,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34450
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+      -0.000  0.000 -0.000 -0.567  0.824
+      -0.080 -0.515  0.853 -0.000  0.000
+      -0.131 -0.843 -0.522  0.000  0.000
+       0.000  0.000  0.000  0.824  0.567
+       0.988 -0.154 -0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3445
+
+     HUBBARD ENERGY =   -0.0679  (Ry)
+
+     total cpu time spent up to now is        9.4 secs
+
+     total energy              =    -123.29338981 Ry
+     estimated scf accuracy    <          8.5E-09 Ry
+
+     iteration # 10     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           196 MiB allocation reported by mallinfo(arena+hblkhd)
+        489238 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  5.66E-11,  avg # of iterations =  2.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34456
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+       0.000 -0.000  0.000 -0.317 -0.948
+      -0.855 -0.002  0.519 -0.000 -0.000
+       0.519 -0.004  0.855  0.000  0.000
+      -0.000  0.000 -0.000  0.948 -0.317
+       0.000  1.000  0.005 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3446
+
+     HUBBARD ENERGY =   -0.0679  (Ry)
+
+     total cpu time spent up to now is        9.5 secs
+
+     total energy              =    -123.29338981 Ry
+     estimated scf accuracy    <       0.00000001 Ry
+
+     iteration # 11     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           196 MiB allocation reported by mallinfo(arena+hblkhd)
+        489238 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  5.66E-11,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34452
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+      -0.000 -0.000 -0.000  0.445  0.896
+       0.853 -0.521  0.006  0.000  0.000
+      -0.521 -0.853  0.009 -0.000  0.000
+       0.000  0.000  0.000 -0.896  0.445
+      -0.000  0.011  1.000  0.000  0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3445
+
+     HUBBARD ENERGY =   -0.0679  (Ry)
+
+     total cpu time spent up to now is        9.5 secs
+
+     total energy              =    -123.29338981 Ry
+     estimated scf accuracy    <          3.4E-10 Ry
+
+     iteration # 12     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           196 MiB allocation reported by mallinfo(arena+hblkhd)
+        489238 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  2.27E-12,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34452
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+      -0.000 -0.000 -0.000 -0.578  0.816
+       0.854 -0.520  0.012 -0.000  0.000
+      -0.520 -0.854  0.020  0.000  0.000
+       0.000  0.000  0.000  0.816  0.578
+      -0.000  0.023  1.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3445
+
+     HUBBARD ENERGY =   -0.0679  (Ry)
+
+     total cpu time spent up to now is        9.6 secs
+
+     total energy              =    -123.29338981 Ry
+     estimated scf accuracy    <          4.6E-11 Ry
+
+     iteration # 13     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           196 MiB allocation reported by mallinfo(arena+hblkhd)
+        489239 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  3.07E-13,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34452
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+       0.000 -0.000 -0.000 -0.341 -0.940
+       0.006 -0.520  0.854 -0.000 -0.000
+       0.010 -0.854 -0.520  0.000  0.000
+      -0.000  0.000  0.000  0.940 -0.341
+      -1.000 -0.012  0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3445
+
+     HUBBARD ENERGY =   -0.0679  (Ry)
+
+     total cpu time spent up to now is        9.7 secs
+
+     total energy              =    -123.29338981 Ry
+     estimated scf accuracy    <          2.8E-12 Ry
+
+     iteration # 14     ecut=   160.00 Ry     beta= 0.20
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+           258 MiB given to the printing process from OS
+           196 MiB allocation reported by mallinfo(arena+hblkhd)
+        489239 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.00E-13,  avg # of iterations =  1.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] =   4.34452
+     eigenvalues:
+       0.000  0.000  0.000  1.086  1.086
+     eigenvectors (columns):
+       0.000 -0.000  0.000 -0.711  0.703
+       0.519  0.005 -0.855 -0.000  0.000
+       0.855  0.008  0.519  0.000 -0.000
+      -0.000  0.000 -0.000  0.703  0.711
+      -0.009  1.000 -0.000 -0.000 -0.000
+     occupation matrix ns (before diag.):
+       1.086  0.000 -0.000  0.000  0.000
+       0.000  0.000 -0.000 -0.000  0.000
+      -0.000 -0.000  0.000  0.000  0.000
+       0.000 -0.000  0.000  1.086 -0.000
+       0.000  0.000  0.000 -0.000  0.000
+
+     Number of occupied Hubbard levels =    4.3445
+
+     HUBBARD ENERGY =   -0.0679  (Ry)
+
+     total cpu time spent up to now is        9.7 secs
+
+     End of self-consistent calculation
+
+          k = 0.0000 0.0000 0.0000 (  3334 PWs)   bands (ev):
+
+   -41.7382 -18.0258 -18.0258 -18.0258   2.9248   8.9398   8.9398  17.4764
+    17.4764  17.4764  18.5289  18.5289  18.5289  22.3305  22.3305  26.3788
+    31.6862  31.6862  31.6862  31.9952  31.9952  31.9952  36.6788  36.6788
+    36.6788  36.9003  36.9003  44.2254  49.8871  51.5649
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   0.1662
+     0.1662   0.1662   0.0004   0.0004   0.0004   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+
+     the Fermi energy is    17.1985 ev
+
+!    total energy              =    -123.29338981 Ry
+     estimated scf accuracy    <          4.4E-13 Ry
+     smearing contrib. (-TS)   =      -0.03448431 Ry
+     internal energy E=F+TS    =    -123.25890550 Ry
+
+     The total energy is F=E-TS. E is the sum of the following terms:
+     one-electron contribution =     -50.48618113 Ry
+     hartree contribution      =      31.92645543 Ry
+     xc contribution           =     -20.01440621 Ry
+     ewald contribution        =     -84.61687927 Ry
+     Hubbard energy            =      -0.06789432 Ry
+
+     convergence has been achieved in  14 iterations
+
+     Forces acting on atoms (cartesian axes, Ry/au):
+
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
+     The non-local contrib.  to forces
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
+     The ionic contribution  to forces
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =    -0.00000000   -0.00000000   -0.00000000
+     The local contribution  to forces
+     atom    1 type  2   force =     0.00000002    0.00000000    0.00000003
+     atom    2 type  1   force =    -0.00000046    0.00000013   -0.00000027
+     The core correction contribution to forces
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =    -0.00000001    0.00000000   -0.00000000
+     The Hubbard contrib.    to forces
+     atom    1 type  2   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
+     The SCF correction term to forces
+     atom    1 type  2   force =    -0.00000001    0.00000000   -0.00000001
+     atom    2 type  1   force =     0.00000037   -0.00000009    0.00000025
+
+     Total force =     0.000000     Total SCF correction =     0.000000
+
+
+     Computing stress (Cartesian axis) and pressure
+
+          total   stress  (Ry/bohr**3)                   (kbar)     P=       -0.34
+  -0.00000229   0.00000000   0.00000000           -0.34        0.00        0.00
+   0.00000000  -0.00000229   0.00000000            0.00       -0.34        0.00
+   0.00000000   0.00000000  -0.00000229            0.00        0.00       -0.34
+
+     kinetic stress (kbar)  25151.91      0.00      0.00
+                                0.00  25151.91      0.00
+                                0.00      0.00  25151.91
+
+     local   stress (kbar)  -9874.87      0.00     -0.00
+                                0.00  -9874.87      0.00
+                               -0.00      0.00  -9874.87
+
+     nonloc. stress (kbar)   2521.58      0.00      0.00
+                                0.00   2521.58      0.00
+                                0.00      0.00   2521.58
+
+     hartree stress (kbar)   7971.52     -0.00      0.00
+                               -0.00   7971.52     -0.00
+                                0.00     -0.00   7971.52
+
+     exc-cor stress (kbar)  -1784.57     -0.00      0.00
+                               -0.00  -1784.57     -0.00
+                                0.00     -0.00  -1784.57
+
+     corecor stress (kbar)  -2726.93      0.00     -0.00
+                                0.00  -2726.93      0.00
+                               -0.00      0.00  -2726.93
+
+     ewald   stress (kbar) -21127.46      0.00      0.00
+                                0.00 -21127.46     -0.00
+                                0.00     -0.00 -21127.46
+
+     hubbard stress (kbar)   -131.52      0.00      0.00
+                                0.00   -131.52      0.00
+                                0.00      0.00   -131.52
+
+     DFT-D   stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     XDM     stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     dft-nl  stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     TS-vdW  stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     MDB     stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+     3D-RISM stress (kbar)      0.00      0.00      0.00
+                                0.00      0.00      0.00
+                                0.00      0.00      0.00
+
+
+     Writing all to output data dir ./pwscf.save/ :
+     XML data file, charge density, pseudopotentials, collected wavefunctions
+
+     init_run     :    356.65s CPU      2.72s WALL (       2 calls)
+     electrons    :   1508.02s CPU      5.94s WALL (       6 calls)
+     update_pot   :     37.45s CPU      0.17s WALL (       4 calls)
+     forces       :     55.73s CPU      0.26s WALL (       6 calls)
+     stress       :     70.71s CPU      0.61s WALL (       6 calls)
+
+     Called by init_run:
+     wfcinit      :     18.00s CPU      0.27s WALL (       2 calls)
+     wfcinit:wfcr :     14.93s CPU      0.26s WALL (       2 calls)
+     potinit      :     14.62s CPU      0.20s WALL (       2 calls)
+     hinit0       :    324.03s CPU      2.22s WALL (       2 calls)
+
+     Called by electrons:
+     c_bands      :    954.71s CPU      3.77s WALL (      65 calls)
+     sum_band     :    266.81s CPU      1.10s WALL (      65 calls)
+     v_of_rho     :    207.51s CPU      0.89s WALL (      70 calls)
+     v_h          :     32.71s CPU      0.11s WALL (      70 calls)
+     v_xc         :    207.78s CPU      0.93s WALL (      82 calls)
+     mix_rho      :     52.17s CPU      0.19s WALL (      65 calls)
+
+     Called by c_bands:
+     init_us_2    :     28.75s CPU      0.14s WALL (     150 calls)
+     regterg      :    871.35s CPU      3.41s WALL (      65 calls)
+
+     Called by sum_band:
+     sum_band:wei :      0.66s CPU      0.00s WALL (      65 calls)
+     sum_band:loo :    227.65s CPU      0.93s WALL (      65 calls)
+     sum_band:buf :      0.00s CPU      0.00s WALL (      65 calls)
+     sum_band:ini :     14.32s CPU      0.07s WALL (      65 calls)
+
+     Called by *egterg:
+     rdiaghg      :     35.85s CPU      0.15s WALL (     193 calls)
+     regterg:over :     22.52s CPU      0.09s WALL (     133 calls)
+     regterg:upda :     14.33s CPU      0.05s WALL (     133 calls)
+     regterg:last :     25.15s CPU      0.08s WALL (     105 calls)
+     h_psi        :    757.10s CPU      3.15s WALL (     200 calls)
+     g_psi        :      6.13s CPU      0.01s WALL (     133 calls)
+
+     Called by h_psi:
+     h_psi:calbec :     17.05s CPU      0.07s WALL (     200 calls)
+     vloc_psi     :    695.57s CPU      2.92s WALL (     200 calls)
+     add_vuspsi   :     13.44s CPU      0.05s WALL (     200 calls)
+     vhpsi        :     19.40s CPU      0.06s WALL (     200 calls)
+
+     General routines
+     calbec       :     43.95s CPU      0.19s WALL (     723 calls)
+     fft          :    495.76s CPU      2.47s WALL (     679 calls)
+     ffts         :     20.41s CPU      0.07s WALL (      65 calls)
+     fftw         :    672.45s CPU      2.78s WALL (    5717 calls)
+
+     Parallel routines
+
+     Hubbard U routines
+     new_ns       :      2.73s CPU      0.02s WALL (      65 calls)
+     vhpsi        :     19.40s CPU      0.06s WALL (     200 calls)
+     force_hub    :     14.91s CPU      0.05s WALL (       6 calls)
+                                        0.00s GPU  (       6 calls)
+     stres_hub    :     11.72s CPU      0.07s WALL (       6 calls)
+                                        0.00s GPU  (       6 calls)
+
+     PWSCF        :  34m 3.71s CPU      9.90s WALL
+
+
+   This run was terminated on:   9:25: 6   2Jul2025            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

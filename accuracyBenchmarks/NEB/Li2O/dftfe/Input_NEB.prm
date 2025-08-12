@@ -1,7 +1,7 @@
 set SOLVER MODE              = NEB
 set RESTART = false
 #set VERBOSITY = 4
-
+set USE GPU = true
 subsection Geometry
   set NATOMS=95
   set NATOM TYPES=2

@@ -44,16 +44,16 @@ Steps
         automatically from "GS" calculation in DFT-FE.
 
 <p align="center">
-    <img src="./output/bandsplot.png" width="450" height="300" alt="Bandstructure of FeCuPt2 (spin up)">
+    <img src="./output/bandsplot.png" width="450" height="300" alt="Bandstructure of FeCuPt2">
 </p>
 <p align="center">
-    <span>Figure 1: Bandstructure of FeCuPt<sub>2</sub>
-</p>
-
-<p align="center">
-    <img src="./output/dosplot.png" width="450" height="300" alt="Total DOS of FeCuPt2">
+    <span>Figure 1: Bandstructure of FeCuPt<sub>2</sub></span>
 </p>
 
 <p align="center">
-    <span>Figure 2: DOS of FeCuPt<sub>2</sub>
+    <img src="./output/dosplot.png" width="450" height="300" alt="DOS of FeCuPt2">
+</p>
+
+<p align="center">
+    <span>Figure 2: DOS of FeCuPt<sub>2</sub></span>
 </p>

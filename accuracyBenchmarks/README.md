@@ -34,9 +34,9 @@ This example demonstrates an all-electron ground-state calculation with non-peri
 
 This example demonstrates a ground-state calculation with fully periodic boundary conditions and combined ionic-cell relaxation on Al12Mg17 intermetallic. Multiple k-points for sampling the Brillouin zone, norm-conserving pseudopotential, and PBE exchange correlation are used.
 
-* **WS2-bilayer**
+* **CrI3-bilayer**
 
-This example demonstrates a spin-polarized and spin-unpolarized ground-state calculations with non-periodic boundary conditions and ionic relaxation on a isolated system containing WS2 bi-layer. Norm conserving pseudopotential and PBE exchange correlation is used
+This example demonstrates a ground-state calculation bilayer of CrI3 employing semi-periodic boundary conditions (non-periodic along z) and ion+cell relaxation employing periodic boundary conditions in all 3 directions. ONCV pseudopotential from PseudoDojo database, PBE exchange correlation and Fermi-Dirac smearing temperature of 500 K are used.
 
 * **LLZO** 
 
