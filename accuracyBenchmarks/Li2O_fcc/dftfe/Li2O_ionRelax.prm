@@ -9,7 +9,7 @@ subsection Geometry
   subsection Optimization
     set ION FORCE = true
     set OPTIMIZATION MODE = ION
-    set FORCE TOL = 1e-4
+    set FORCE TOL = 5e-4
   end
 end
 
