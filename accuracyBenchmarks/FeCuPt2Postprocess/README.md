@@ -47,7 +47,7 @@ Steps
     <img src="./output/bandsplot.png" width="450" height="300" alt="Bandstructure of FeCuPt2">
 </p>
 <p align="center">
-    <span>Figure 1: Bandstructure of FeCuPt<sub>2</sub></span>
+    <span>Figure 1: Spin-resolved bandstructure of FeCuPt<sub>2</sub></span>
 </p>
 
 <p align="center">
