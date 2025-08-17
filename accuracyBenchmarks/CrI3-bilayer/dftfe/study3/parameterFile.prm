@@ -13,7 +13,7 @@ subsection Geometry
     set CELL CONSTRAINT TYPE  = 10
     set REUSE WFC = false
     set FORCE TOL = 5e-4
-    set STRESS TOL = 1e-6
+    set STRESS TOL = 1e-7
   end
 end
 
